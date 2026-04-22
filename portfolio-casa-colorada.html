@@ -136,7 +136,8 @@
     }
 
     .main-viewport {
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 1 / 1;
+      max-height: 70vh;
       background: transparent;
       border: none;
       position: relative;
@@ -170,8 +171,9 @@
 
     .slide img {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
+      height: 100%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.02);
       border-radius: 1rem;
       filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
       transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
@@ -461,24 +463,38 @@
       <div class="container showcase-container reveal">
         <div class="main-viewport">
           <div class="slide active">
-            <img src="assets/img/portafolio/branding/casa-colorada/humanization.png" alt="Humanización del Comercio">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc1.jpg" alt="Casa Colorada 1">
             <div class="slide-caption">
-              <span>01 / El Rostro del Oficio</span>
-              <h4>El Locatario como Protagonista</h4>
+              <span>01 / 05</span>
+              <h4>Identidad Patrimonial</h4>
             </div>
           </div>
           <div class="slide">
-            <img src="assets/img/portafolio/branding/casa-colorada/lifestyle.png" alt="Oasis Urbano">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc2.jpg" alt="Casa Colorada 2">
             <div class="slide-caption">
-              <span>02 / Lifestyle & Patrimonio</span>
-              <h4>Arquitectura del Descubrimiento</h4>
+              <span>02 / 05</span>
+              <h4>Experiencia de Usuario</h4>
             </div>
           </div>
           <div class="slide">
-            <img src="assets/img/portafolio/branding/casa-colorada/grid.png" alt="Estrategia Visual">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc3.jpg" alt="Casa Colorada 3">
             <div class="slide-caption">
-              <span>03 / Identidad Digital Coherente</span>
-              <h4>Una Ventana al Oasis Urbano</h4>
+              <span>03 / 05</span>
+              <h4>Storytelling Visual</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc4.jpg" alt="Casa Colorada 4">
+            <div class="slide-caption">
+              <span>04 / 05</span>
+              <h4>Conexión con el Locatario</h4>
+            </div>
+          </div>
+          <div class="slide">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc5.jpg" alt="Casa Colorada 5">
+            <div class="slide-caption">
+              <span>05 / 05</span>
+              <h4>Oasis Urbano</h4>
             </div>
           </div>
         </div>
@@ -488,7 +504,7 @@
             <i data-lucide="chevron-left"></i>
           </button>
           <div class="showcase-counter">
-            <span class="showcase-current">01</span> / 03
+            <span class="showcase-current">01</span> / 05
           </div>
           <button class="control-btn btn-next" aria-label="Siguiente">
             <i data-lucide="chevron-right"></i>
@@ -497,13 +513,19 @@
 
         <div class="thumbnails">
           <div class="thumb active" data-index="0">
-            <img src="assets/img/portafolio/branding/casa-colorada/humanization.png" alt="Human Th">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc1.jpg" alt="Thumb 1">
           </div>
           <div class="thumb" data-index="1">
-            <img src="assets/img/portafolio/branding/casa-colorada/lifestyle.png" alt="Life Th">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc2.jpg" alt="Thumb 2">
           </div>
           <div class="thumb" data-index="2">
-            <img src="assets/img/portafolio/branding/casa-colorada/grid.png" alt="Grid Th">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc3.jpg" alt="Thumb 3">
+          </div>
+          <div class="thumb" data-index="4">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc4.jpg" alt="Thumb 4">
+          </div>
+          <div class="thumb" data-index="5">
+            <img src="assets/img/portafolio/branding/casa-colorada/cc5.jpg" alt="Thumb 5">
           </div>
         </div>
       </div>

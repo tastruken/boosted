@@ -136,7 +136,8 @@
     }
 
     .main-viewport {
-      aspect-ratio: 16 / 9;
+      aspect-ratio: 1 / 1;
+      max-height: 70vh;
       background: transparent;
       border: none;
       position: relative;
@@ -170,8 +171,9 @@
 
     .slide img {
       width: 100%;
-      aspect-ratio: 16 / 9;
-      object-fit: cover;
+      height: 100%;
+      object-fit: contain;
+      background: rgba(255, 255, 255, 0.02);
       border-radius: 1rem;
       filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
       transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
@@ -461,24 +463,24 @@
       <div class="container showcase-container reveal">
         <div class="main-viewport">
           <div class="slide active">
-            <img src="assets/img/portafolio/branding/kitty-zone/branding_1.png" alt="Identidad Visual Kitty Zone">
+            <img src="assets/img/portafolio/branding/kitty-zone/kitty1.jpg" alt="Kitty Zone 1">
             <div class="slide-caption">
-              <span>01 / Estética 'Dark & Classy'</span>
-              <h4>Identidad de Lujo Prohibido</h4>
+              <span>01 / 03</span>
+              <h4>Identidad Boutique</h4>
             </div>
           </div>
           <div class="slide">
-            <img src="assets/img/portafolio/branding/kitty-zone/ecommerce_1.png" alt="E-commerce UX">
+            <img src="assets/img/portafolio/branding/kitty-zone/kitty2.png" alt="Kitty Zone 2">
             <div class="slide-caption">
-              <span>02 / Conversión & Privacidad</span>
-              <h4>Tienda Online Seductora</h4>
+              <span>02 / 03</span>
+              <h4>E-commerce Premium</h4>
             </div>
           </div>
           <div class="slide">
-            <img src="assets/img/portafolio/branding/kitty-zone/packaging_1.png" alt="Packaging Premium">
+            <img src="assets/img/portafolio/branding/kitty-zone/kitty3.png" alt="Kitty Zone 3">
             <div class="slide-caption">
-              <span>03 / Experiencia Física</span>
-              <h4>Fidelización en el Unboxing</h4>
+              <span>03 / 03</span>
+              <h4>Packaging & Detalle</h4>
             </div>
           </div>
         </div>
@@ -497,13 +499,13 @@
 
         <div class="thumbnails">
           <div class="thumb active" data-index="0">
-            <img src="assets/img/portafolio/branding/kitty-zone/branding_1.png" alt="Brand Th">
+            <img src="assets/img/portafolio/branding/kitty-zone/kitty1.jpg" alt="Thumb 1">
           </div>
           <div class="thumb" data-index="1">
-            <img src="assets/img/portafolio/branding/kitty-zone/ecommerce_1.png" alt="Shop Th">
+            <img src="assets/img/portafolio/branding/kitty-zone/kitty2.png" alt="Thumb 2">
           </div>
           <div class="thumb" data-index="2">
-            <img src="assets/img/portafolio/branding/kitty-zone/packaging_1.png" alt="Pack Th">
+            <img src="assets/img/portafolio/branding/kitty-zone/kitty3.png" alt="Thumb 3">
           </div>
         </div>
       </div>
