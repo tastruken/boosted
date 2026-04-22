@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos y Condiciones | Boosted</title>
+  <meta name="description" content="Términos y condiciones de uso de los servicios de Boosted. Transparencia y compromiso en nuestra relación comercial.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@100..900&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Global Styles -->
+  <link rel="stylesheet" href="assets/css/styles.css">
+  
+  <style>
+    :root {
+      --boosted: #26ccca;
+      --boosted-light: rgba(38, 204, 202, 0.15);
+      --zinc-950: #09090b;
+      --zinc-900: #18181b;
+      --zinc-800: #27272a;
+      --zinc-700: #3f3f46;
+      --zinc-600: #52525b;
+      --zinc-500: #71717a;
+      --zinc-400: #a1a1aa;
+      --zinc-300: #d4d4d8;
+    }
+
+    body {
+      background-color: var(--zinc-950);
+      color: #fff;
+      font-family: 'Outfit', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* ── REUSABLE PREMIUM EFFECTS ── */
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .bg-grid {
+      position: fixed;
+      inset: 0;
+      background-image: 
+        linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 40px 40px;
+      z-index: -2;
+    }
+
+    .glow-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at 50% -20%, rgba(38,204,202,0.08), transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* ── HERO SECTION ── */
+    .legal-hero {
+      padding: 10rem 0 6rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .legal-hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      letter-spacing: 0.05em;
+      line-height: 0.9;
+      margin-bottom: 1.5rem;
+      background: linear-gradient(to bottom, #fff, var(--zinc-500));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .legal-hero p {
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--boosted);
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+    }
+
+    /* ── CONTENT SECTION ── */
+    .legal-content {
+      max-width: 900px;
+      margin: 0 auto 10rem;
+      padding: 0 1.5rem;
+    }
+
+    .legal-block {
+      margin-bottom: 4rem;
+    }
+
+    .legal-block h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 2.5rem;
+      color: var(--boosted);
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .legal-block h2 span {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1rem;
+      opacity: 0.5;
+    }
+
+    .legal-text {
+      color: var(--zinc-400);
+      line-height: 1.8;
+      font-size: 1.1rem;
+      font-weight: 300;
+    }
+
+    .legal-text p {
+      margin-bottom: 1.5rem;
+    }
+
+    .legal-text ul {
+      margin-bottom: 1.5rem;
+      list-style: none;
+      padding-left: 0.5rem;
+    }
+
+    .legal-text li {
+      margin-bottom: 0.75rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .legal-text li::before {
+      content: "→";
+      color: var(--boosted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .last-update {
+      text-align: center;
+      color: var(--zinc-600);
+      font-size: 0.85rem;
+      margin-bottom: 2rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    /* ── FOOTER ── */
+    footer { padding: 8rem 0 4rem; border-top: 1px solid rgba(255,255,255,0.05); background: #000; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 2rem; color: #fff; text-decoration: none; display: block; margin-bottom: 1.5rem; }
+    .footer-logo span { color: var(--boosted); }
+    .footer-desc { color: var(--zinc-500); line-height: 1.6; max-width: 300px; margin-bottom: 2rem; }
+    .footer-col h4 { font-family: 'Bebas Neue', sans-serif; font-size: 1.25rem; letter-spacing: 0.1em; margin-bottom: 1.5rem; }
+    .footer-col ul { list-style: none; padding: 0; }
+    .footer-col li { margin-bottom: 0.75rem; }
+    .footer-col a { color: var(--zinc-400); text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
+    .footer-col a:hover { color: var(--boosted); padding-left: 4px; }
+    .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; text-align: center; color: var(--zinc-600); font-size: 0.85rem; }
+
+    @media (max-width: 992px) {
+      .footer-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Términos y Condiciones | Boosted" />
+  <meta property="og:description" content="Términos y condiciones de uso de los servicios de Boosted. Transparencia y compromiso en nuestra relación comercial." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/terminos.html" />
+  <meta property="og:type" content="website" />
+</head>
+<body>
+
+  <div class="bg-grid"></div>
+  <div class="glow-overlay"></div>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+           <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a></li>
+              <li><a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a></li>
+              <li><a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a></li>
+              <li><a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a></li>
+              <li><a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a></li>
+              <li><a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a></li>
+              <li><a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <section class="legal-hero section-py">
+      <div class="container reveal">
+        <p>MARCO LEGAL PROFESIONAL</p>
+        <h1>Términos y Condiciones</h1>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="last-update reveal">Última actualización: 21 de Marzo, 2026</div>
+      
+      <section class="legal-content">
+        
+        <div class="legal-block reveal">
+          <h2><span>01</span> Aceptación de los Términos</h2>
+          <div class="legal-text">
+            <p>Al acceder y utilizar el sitio web de Boosted (boosted.cl) y nuestros servicios de consultoría, automatización y desarrollo, usted acepta quedar vinculado por estos términos. Si no está de acuerdo con alguna parte de los términos, no podrá acceder al servicio.</p>
+          </div>
+        </div>
+
+        <div class="legal-block reveal">
+          <h2><span>02</span> Prestación de Servicios</h2>
+          <div class="legal-text">
+            <p>Boosted se compromete a proporcionar servicios digitales de alta calidad, incluyendo:</p>
+            <ul>
+              <li>Arquitectura de automatización y flujos de trabajo.</li>
+              <li>Desarrollo de ecosistemas digitales a medida.</li>
+              <li>Consultoría estratégica de transformación digital.</li>
+            </ul>
+            <p>Los tiempos de entrega y alcances específicos se definirán individualmente en las propuestas comerciales aceptadas por el cliente.</p>
+          </div>
+        </div>
+
+        <div class="legal-block reveal">
+          <h2><span>03</span> Propiedad Intelectual</h2>
+          <div class="legal-text">
+            <p>Todo el contenido original, diseño, código fuente y metodologías presentadas en este sitio son propiedad exclusiva de Boosted. Queda prohibida la reproducción parcial o total sin autorización expresa por escrito.</p>
+            <p>En el caso de proyectos para clientes, la transferencia de propiedad intelectual sobre los activos desarrollados se regirá por el contrato de servicio específico firmado entre las partes.</p>
+          </div>
+        </div>
+
+        <div class="legal-block reveal">
+          <h2><span>04</span> Limitación de Responsabilidad</h2>
+          <div class="legal-text">
+            <p>Boosted implementa las mejores prácticas de seguridad y eficiencia; no obstante, no nos hacemos responsables por fallos técnicos derivados de plataformas de terceros (CRMs, APIs externas, hosts) que escapen a nuestro control directo.</p>
+          </div>
+        </div>
+
+        <div class="legal-block reveal">
+          <h2><span>05</span> Modificaciones</h2>
+          <div class="legal-text">
+            <p>Nos reservamos el derecho de modificar estos términos en cualquier momento. Los cambios entrarán en vigor inmediatamente después de su publicación en el sitio web.</p>
+          </div>
+        </div>
+
+        <div class="legal-block reveal">
+          <h2><span>06</span> Contacto Legal</h2>
+          <div class="legal-text">
+            <p>Para cualquier duda sobre estos términos, puede contactarnos en:</p>
+            <p><strong>Email:</strong> proyectos@boosted.cl<br>
+            <strong>Ubicación:</strong> Santiago, Chile</p>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    reveals.forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
+

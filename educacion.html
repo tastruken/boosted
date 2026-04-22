@@ -1,0 +1,874 @@
+<!doctype html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ══ SEO Primario ══ -->
+  <title>Software para Educación y Gestión Escolar en Chile | Boosted</title>
+  <meta name="description"
+    content="Ecosistemas digitales para colegios, jardines, universidades e institutos en Chile: comunicación con apoderados, captación de alumnos, Charlie AI y marca premium. Agenda tu diagnóstico gratuito." />
+  <meta name="keywords"
+    content="software educación Chile, gestión escolar digital, marketing educativo, comunicación apoderados, portal alumnos, realidad virtual educación, Boosted, transformación digital educación" />
+  <meta name="author" content="Boosted" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <link rel="canonical" href="https://boosted.cl/educacion" />
+
+  <!-- ══ Open Graph ══ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="es_CL" />
+  <meta property="og:site_name" content="Boosted" />
+  <meta property="og:url" content="https://boosted.cl/educacion.html" />
+  <meta property="og:title" content="Software para Educación y Gestión Escolar en Chile | Boosted" />
+  <meta property="og:description"
+    content="Colegios, universidades e institutos que operan con ecosistemas digitales logran comunicación fluida y captación constante. Diagnóstico gratuito." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/educacion-og.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Boosted – Soluciones digitales para educación en Chile" />
+
+  <!-- ══ Twitter Card ══ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@boostedcl" />
+  <meta name="twitter:title" content="Software para Educación y Gestión Escolar en Chile | Boosted" />
+  <meta name="twitter:description"
+    content="Comunicación organizada, captación de alumnos y marca premium para instituciones educativas." />
+  <meta name="twitter:image" content="https://boosted.cl/assets/img/educacion-og.jpg" />
+
+  <!-- ══ Theme & App ══ -->
+  <meta name="theme-color" content="#030303" />
+  <meta name="format-detection" content="telephone=no" />
+
+  <!-- ══ Performance Hints ══ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://images.unsplash.com" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link rel="preload" as="image"
+    href="https://images.unsplash.com/photo-1523050853021-0951b4efc92e?auto=format&fit=crop&q=80&w=1200" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- ══ Structured Data – LocalBusiness + Service (JSON-LD) ══ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://boosted.cl/#organization",
+        "name": "Boosted",
+        "url": "https://boosted.cl",
+        "logo": "https://boosted.cl/assets/img/logo.png",
+        "description": "Agencia de automatización y ecosistemas digitales en Chile especializada en educación, construcción y múltiples sectores.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "CL"
+        },
+        "telephone": "+56956173500",
+        "email": "proyectos@boosted.cl",
+        "sameAs": ["https://boosted.cl"]
+      },
+      {
+        "@type": "Service",
+        "@id": "https://boosted.cl/educacion#service",
+        "name": "Soluciones Digitales para Educación",
+        "description": "Ecosistemas digitales para colegios, universidades e institutos en Chile: comunicación fluida, CRM de admisión, Charlie AI y branding educativo.",
+        "provider": { "@id": "https://boosted.cl/#organization" },
+        "areaServed": { "@type": "Country", "name": "Chile" },
+        "serviceType": "Transformación Digital Educativa",
+        "url": "https://boosted.cl/educacion",
+        "offers": {
+          "@type": "Offer",
+          "availability": "https://schema.org/InStock",
+          "priceCurrency": "CLP",
+          "price": "0",
+          "name": "Diagnóstico Digital Gratuito"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Inicio",
+            "item": "https://boosted.cl"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Soluciones por Sector",
+            "item": "https://boosted.cl/#soluciones"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Educación",
+            "item": "https://boosted.cl/educacion"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- ══ Scripts ══ -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    :root {
+      --accent: #26ccca;
+      /* Brand Cyan Accent */
+      --accent-soft: rgba(38, 204, 202, 0.1);
+      --accent-border: rgba(38, 204, 202, 0.3);
+    }
+
+    /* Hero Educación */
+    #educacion-hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10rem;
+      padding-bottom: 12rem;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(38, 204, 202, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .sector-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--accent-soft);
+      border: 1px solid var(--accent-border);
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .hero-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      color: #fff;
+      margin-bottom: 2rem;
+    }
+
+    /* Columnas Pilares */
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+
+    .pillar-card:hover {
+      background: var(--accent-soft);
+      border-color: var(--accent-border);
+      transform: translateY(-5px);
+    }
+
+    .pillar-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 1rem;
+      background: var(--accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .pillar-card p {
+      margin-top: 1rem;
+      line-height: 1.7;
+    }
+
+    /* Mosaic Sectors */
+    .mosaic-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .mosaic-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+      }
+
+      .mosaic-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(5) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .mosaic-item:nth-child(6) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .mosaic-item {
+        min-height: 320px;
+      }
+    }
+
+    .mosaic-item {
+      position: relative;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: #000;
+      transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
+    }
+
+    .mosaic-item:hover {
+      border-color: rgba(38, 204, 202, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(38, 204, 202, 0.1);
+      z-index: 2;
+    }
+
+    .mosaic-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease, filter 0.4s ease;
+      filter: brightness(0.65) grayscale(15%);
+    }
+
+    .mosaic-item:hover .mosaic-img {
+      transform: scale(1.05);
+      filter: brightness(0.85) grayscale(0%);
+    }
+
+    .mosaic-content {
+      position: absolute;
+      inset: 0;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.45) 30%, transparent 55%);
+    }
+
+    .mosaic-title {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      color: #fff;
+      margin: 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
+      transition: color 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .mosaic-item:nth-child(1) .mosaic-title,
+    .mosaic-item:nth-child(4) .mosaic-title {
+      font-size: 1.85rem;
+    }
+
+    .mosaic-item:hover .mosaic-title {
+      color: var(--accent);
+    }
+
+    .mosaic-text {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.55;
+      font-weight: 300;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: max-height 0.4s ease, opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .mosaic-item:hover .mosaic-text {
+      max-height: 10rem;
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 0.5rem;
+    }
+
+    /* Cartelería Section */
+    .signage-card {
+      background: linear-gradient(135deg, rgba(38, 204, 202, 0.05), rgba(0, 0, 0, 0.4));
+      border: 1px solid var(--accent-border);
+      border-radius: 2rem;
+      padding: 6rem 4rem;
+      display: grid;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .signage-card {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* Benefits List */
+    .benefit-item {
+      display: flex;
+      gap: 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .benefit-icon {
+      color: var(--accent);
+      flex-shrink: 0;
+    }
+
+    .section-py {
+      padding-block: 8rem;
+    }
+
+    .section-header {
+      margin-bottom: 5rem;
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Software para Educación y Gestión Escolar en Chile | Boosted" />
+  <meta property="og:description"
+    content="Ecosistemas digitales para colegios, jardines, universidades e institutos en Chile: comunicación con apoderados, captación de alumnos, Charlie AI y marca premium. Agenda tu diagnóstico gratuito." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/educacion.html" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+                  medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a></li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+                  e
+                  Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+                  HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+                  Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main id="main-content">
+
+    <!-- Breadcrumbs -->
+    <nav aria-label="Ruta de navegación"
+      style="position:absolute; top: 7.75rem; left:50%; transform:translateX(-50%); width:100%; max-width:1200px; padding:0 1.5rem; z-index:10;">
+      <ol
+        style="display:flex; gap:0.5rem; align-items:center; list-style:none; margin:0; padding:0; font-size:0.8rem; color:var(--zinc-300); font-family:var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">
+        <li><a href="index.html" style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Inicio</a>
+        </li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><a href="index.html#soluciones"
+            style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Soluciones por Sector</a></li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><span style="color:var(--accent);" aria-current="page">Educación</span></li>
+      </ol>
+    </nav>
+
+    <!-- ── 1. HERO ── -->
+    <section id="educacion-hero" aria-labelledby="hero-heading">
+      <div class="hero-bg" aria-hidden="true"
+        style="background-image: url('https://images.unsplash.com/photo-1498243691581-b145c3f54a5a?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center; opacity: 0.2;">
+      </div>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="bg-grid"></div>
+      <div class="container">
+        <div style="display:grid; grid-template-columns: 1fr; gap: 4rem; align-items: center;">
+          <div class="anim-fadeup">
+            <div class="sector-badge">COMUNICACIÓN Y GESTIÓN <span class="dot"
+                style="width:4px;height:4px;background:currentColor;border-radius:50%;"></span> EDUCACIÓN</div>
+            <h1 class="hero-title" id="hero-heading">
+              Estrategia y Gestión para <br><span style="color:var(--accent);">Instituciones Educativas</span>
+            </h1>
+            <p
+              style="font-size: clamp(1.1rem, 2vw, 1.25rem); color: var(--zinc-400); font-weight: 300; line-height: 1.8; margin-bottom: 3.5rem; max-width: 48rem;">
+              Colegios, jardines infantiles, preuniversitarios, institutos, academias y universidades que operan con
+              ecosistemas digitales logran una comunicación fluida con apoderados. Diferenciación institucional clara.
+            </p>
+            <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+              <a href="index.html#contacto" class="btn-primary" style="padding: 1rem 2rem;">Agenda Diagnóstico Gratuito</a>
+              <a href="#subsectores" class="btn-ghost glass-card" style="padding: 1rem 2rem;">Ver Cómo Funciona</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2. INTRO ESTRATÉGICA ── -->
+    <section class="section-py" style="background: #09090b; padding-top: 10rem;" aria-labelledby="intro-heading">
+      <div class="container">
+        <div style="text-align: center; max-width: 52rem; margin: 0 auto 5rem;" class="reveal">
+          <h2 class="section-title" id="intro-heading" style="margin-bottom: 2rem; line-height: 1.2;">Transformación
+            Digital para el sector
+            de Educación</h2>
+          <p
+            style="color: var(--zinc-400); font-weight: 300; line-height: 2; font-size: 1.15rem; letter-spacing: 0.01em;">
+            Las soluciones digitales para educación transforman la forma en que operan colegios, jardines infantiles,
+            preuniversitarios, institutos, academias y universidades. Las instituciones que las implementan logran una
+            comunicación organizada con apoderados y estudiantes, captación constante de nuevos alumnos y una
+            diferenciación clara en un mercado educativo cada vez más competitivo.
+          </p>
+        </div>
+
+        <div style="display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div class="pillar-card reveal">
+            <div class="pillar-icon"><i data-lucide="message-square"></i></div>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">
+              Comunicación Fluida</h3>
+            <p style="color: var(--zinc-400); font-weight: 300; line-height: 1.6;">Moderniza el contacto con familias
+              mediante un portal centralizado y el asistente Charlie, eliminando definitivamente el caos de WhatsApp y
+              grupos informales.</p>
+          </div>
+          <div class="pillar-card reveal" style="transition-delay: 0.1s;">
+            <div class="pillar-icon"><i data-lucide="user-plus"></i></div>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">Captación
+              de Alumnos</h3>
+            <p style="color: var(--zinc-400); font-weight: 300; line-height: 1.6;">Asegura una matrícula saludable con
+              una presencia digital profesional y contenido estratégico que posiciona a tu institución como la mejor
+              opción de la zona.</p>
+          </div>
+          <div class="pillar-card reveal" style="transition-delay: 0.2s;">
+            <div class="pillar-icon"><i data-lucide="award"></i></div>
+            <h3 style="font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 1rem;">
+              Diferenciación Clara</h3>
+            <p style="color: var(--zinc-400); font-weight: 300; line-height: 1.6;">Proyecta una identidad de excelencia
+              con branding coherente y storytelling emocional que conecta con familias que valoran tu propuesta
+              específica.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. MOSAICO SECTORES ── -->
+    <section id="subsectores" class="section-py" aria-labelledby="subsectores-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow"
+            style="color: var(--accent); margin-bottom: 1.2rem; display: block;">Subsectores</span>
+          <h2 class="section-title" id="subsectores-heading">Soluciones Específicas por Tipo de institución</h2>
+        </div>
+      </div>
+
+      <div class="container reveal">
+        <div class="mosaic-wrapper">
+          <!-- Item 1 -->
+          <div class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?auto=format&fit=crop&q=80&w=600"
+              alt="Colegio moderno con infraestructura digital – Gestión escolar profesional" class="mosaic-img"
+              loading="eager" width="600" height="400">
+            <div class="mosaic-content">
+              <h3 class="mosaic-title">Colegios y Liceos</h3>
+              <p class="mosaic-text">Ordena la comunicación, centraliza pagos y potencia el posicionamiento con SEO
+                local. Charlie asiste familias 24/7 y desarrollamos videojuegos educativos personalizados.</p>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=600"
+              alt="Jardín infantil y sala cuna – comunicación confiable con familias" class="mosaic-img" loading="lazy"
+              width="600" height="400">
+            <div class="mosaic-content">
+              <h3 class="mosaic-title">Jardines y Salas Cuna</h3>
+              <p class="mosaic-text">Fortalece la confianza con canales digitales profesionales y capta matrículas con
+                branding cálido y Charlie resolviendo dudas frecuentes sobre admisión.</p>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600"
+              alt="Estudiantes en preuniversitario – marketing educativo orientado a resultados" class="mosaic-img"
+              loading="lazy" width="600" height="400">
+            <div class="mosaic-content">
+              <h3 class="mosaic-title">Preuniversitarios</h3>
+              <p class="mosaic-text">Impulsa la captación destacando resultados PAES y metodología académica. Charlie
+                gestiona consultas sobre cursos y aranceles mejorando la conversión.</p>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1541339907198-e08756ebafe3?auto=format&fit=crop&q=80&w=600"
+              alt="Campus universitario moderno – experiencias inmersivas VR y AR" class="mosaic-img" loading="lazy"
+              width="600" height="400">
+            <div class="mosaic-content">
+              <h3 class="mosaic-title">Universidades</h3>
+              <p class="mosaic-text">Refuerza la imagen corporativa con experiencias de Realidad Virtual (VR), Realidad
+                Aumentada (AR) y wayfinding digital. Charlie optimiza la atención a postulantes.</p>
+            </div>
+          </div>
+          <!-- Item 5 -->
+          <div class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=600"
+              alt="Instituto técnico – aprendizaje interactivo y branding de empleabilidad" class="mosaic-img"
+              loading="lazy" width="600" height="400">
+            <div class="mosaic-content">
+              <h3 class="mosaic-title">Institutos y Centros Técnicos</h3>
+              <p class="mosaic-text">Comunica empleabilidad y especialización mediante simulación interactiva y VR.
+                Charlie orienta a postulantes sobre procesos de matrícula y carreras.</p>
+            </div>
+          </div>
+          <!-- Item 6 -->
+          <div class="mosaic-item">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=600"
+              alt="Sala de idiomas – presencia digital estratégica para academias" class="mosaic-img" loading="lazy"
+              width="600" height="400">
+            <div class="mosaic-content">
+              <h3 class="mosaic-title">Academias de Idiomas</h3>
+              <p class="mosaic-text">Destaca metodologías y certificaciones con marketing educativo. Charlie responde
+                dudas sobre niveles y horarios 24/7 aumentando la conversión.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. CARTERIERÍA DIGITAL ── -->
+    <section class="section-py" style="background: #09090b;" aria-labelledby="signage-heading">
+      <div class="container">
+        <div class="signage-card reveal">
+          <div>
+            <span class="section-eyebrow" style="color: var(--accent); margin-bottom: 1.2rem; display: block;">Digital
+              Signage para Educación</span>
+            <h2 class="section-title" id="signage-heading" style="margin-bottom: 1.5rem;">Información Clave en Cada
+              Espacio
+            </h2>
+            <p style="color: var(--zinc-400); font-weight: 300; line-height: 1.7; margin-bottom: 2rem;">
+              La implementación de pantallas digitales en colegios y universidades transforma la comunicación. Muestra
+              anuncios académicos, actividades institucionales y logros estudiantiles en tiempo real con alto impacto
+              visual.
+            </p>
+            <a href="index.html#contacto" class="btn-primary">Descubrir Cartelería Digital</a>
+          </div>
+          <div class="mosaic-item reveal"
+            style="background: rgba(38, 204, 202, 0.1); border-radius: 1.5rem; height: 300px; overflow: hidden; border: 1px solid var(--accent-border);">
+            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800"
+              alt="Cartelería digital en campus educativo"
+              style="width:100%; height:100%; object-fit:cover; opacity: 0.6;">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. BENEFICIOS ── -->
+    <section class="section-py" aria-labelledby="beneficios-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2 class="section-title" id="beneficios-heading">¿Por qué trabajar con Boosted?</h2>
+        </div>
+
+        <div style="display: grid; gap: 4rem; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+          <div class="reveal">
+            <div class="benefit-item">
+              <i data-lucide="check-circle-2" class="benefit-icon"></i>
+              <p style="color: var(--zinc-300); font-weight: 300;"><strong>Ecosistema Integrado:</strong> Comunicación,
+                marketing y automatización conectadas.</p>
+            </div>
+            <div class="benefit-item">
+              <i data-lucide="check-circle-2" class="benefit-icon"></i>
+              <p style="color: var(--zinc-300); font-weight: 300;"><strong>Especialización Educación:</strong>
+                Entendemos los procesos internos de las instituciones.</p>
+            </div>
+            <div class="benefit-item">
+              <i data-lucide="check-circle-2" class="benefit-icon"></i>
+              <p style="color: var(--zinc-300); font-weight: 300;"><strong>Innovación Aplicada:</strong> VR, AR y
+                simulaciones alineadas a objetivos académicos.</p>
+            </div>
+          </div>
+          <div class="reveal" style="transition-delay: 0.1s;">
+            <div class="benefit-item">
+              <i data-lucide="check-circle-2" class="benefit-icon"></i>
+              <p style="color: var(--zinc-300); font-weight: 300;"><strong>Charlie 24/7:</strong> Optimiza la atención
+                inicial a postulantes y familias sin descanso.</p>
+            </div>
+            <div class="benefit-item">
+              <i data-lucide="check-circle-2" class="benefit-icon"></i>
+              <p style="color: var(--zinc-300); font-weight: 300;"><strong>Implementación Estratégica:</strong>
+                Evolución digital ordenada, sin interrupciones operativas.</p>
+            </div>
+            <div class="benefit-item">
+              <i data-lucide="check-circle-2" class="benefit-icon"></i>
+              <p style="color: var(--zinc-300); font-weight: 300;"><strong>Enfoque en Resultados:</strong> Mejor
+                experiencia familiar y mayor conversión de matrícula.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. FINAL CTA ── -->
+    <section class="section-py" style="background: #09090b;" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="glass-card reveal"
+          style="padding: 4rem; border-radius: 2rem; border-color: var(--accent); text-align: center;">
+          <p class="section-eyebrow" style="color: var(--accent); margin-bottom: 1.5rem;">CULTIVA LA EXCELENCIA DIGITAL
+            DE TU INSTITUCIÓN</p>
+          <h2 class="section-title" id="cta-heading" style="margin-bottom: 1.5rem;">¿Listo para impulsar la
+            transformación de tu institución?</h2>
+          <p
+            style="color: var(--zinc-400); max-width: 48rem; margin: 0 auto 3rem; font-weight: 300; font-size: 1.1rem;">
+            Agenda una reunión estratégica y descubre cómo implementar un ecosistema digital coherente que fortalezca el
+            posicionamiento de tu establecimiento.
+          </p>
+          <a href="index.html#contacto" class="btn-primary"
+            style="padding: 1.1rem 2.5rem; box-shadow: 0 0 40px rgba(38, 204, 202, 0.3);">AGENDAR REUNIÓN
+            ESTRATÉGICA</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+            conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
+              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
+                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+              Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+              Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Intersection Observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          // No unobserve to allow re-triggering if needed, or keep for performance
+        }
+      });
+    }, observerOptions);
+
+    // Apply to all animated elements
+    document.querySelectorAll('.reveal, .anim-fadeup, .reveal-scale').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+
+</html>

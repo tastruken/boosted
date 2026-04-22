@@ -1,0 +1,1356 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Branding B2B, Estrategia de Contenidos y Redes Sociales | Boosted</title>
+  <meta name="description"
+    content="Posiciona tu marca B2B con branding estratégico y contenidos de valor. Gestión de redes sociales enfocada en generar confianza y leads para tu ecosistema digital." />
+  <meta name="keywords"
+    content="branding B2B, estrategia de contenidos, redes sociales B2B, identidad visual corporativa, social selling, marketing de contenidos, marca profesional" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://boosted.cl/branding-y-contenido.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://boosted.cl/branding-y-contenido.html" />
+  <meta property="og:title" content="Branding B2B, Estrategia de Contenidos y Redes Sociales | Boosted" />
+  <meta property="og:description" content="Posiciona tu marca B2B con branding estratégico y contenidos de valor. Gestión de redes sociales enfocada en generar confianza y leads para tu ecosistema digital." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/branding-content.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://boosted.cl/branding-y-contenido.html" />
+  <meta property="twitter:title" content="Branding B2B y Estrategia de Contenidos | Boosted" />
+  <meta property="twitter:description" content="Posiciona tu marca B2B con branding estratégico y contenidos." />
+  <meta property="twitter:image" content="https://boosted.cl/assets/img/branding-content.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#030303" />
+
+  <!-- Preload Critical Hero Image for LCP -->
+  <link rel="preload" as="image" href="assets/img/branding-content.png" />
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    :root {
+      --accent: #26ccca;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Hero */
+    #branding-hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+    }
+
+    .branding-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(38, 204, 202, 0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .branding-hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 52rem;
+      margin: 0 auto;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .branding-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(38, 204, 202, 0.1);
+      border: 1px solid rgba(38, 204, 202, 0.3);
+      border-radius: 999px;
+      padding: 0.4rem 1rem;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .branding-hero-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      line-height: 0.95;
+      color: #fff;
+      margin-bottom: 2rem;
+      text-rendering: optimizeLegibility;
+    }
+
+    .branding-hero-sub {
+      font-size: clamp(1.1rem, 2vw, 1.25rem);
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 3rem;
+      max-width: 48rem;
+    }
+
+    /* Layout general secciones */
+    .section-py {
+      padding-block: 8rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .section-eyebrow {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+
+    /* Formas Grid (6 items) */
+    .formas-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 4rem;
+    }
+
+    @media (min-width: 768px) {
+      .formas-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .formas-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .forma-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+      transition: border-color 0.3s, transform 0.3s, background 0.3s;
+    }
+
+    .forma-card:hover {
+      background: rgba(38, 204, 202, 0.02);
+      border-color: rgba(38, 204, 202, 0.2);
+      transform: translateY(-4px);
+    }
+
+    .forma-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 1rem;
+      background: rgba(38, 204, 202, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .forma-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .forma-desc {
+      font-size: 0.9375rem;
+      color: var(--zinc-400);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Highlight Banner */
+    .highlight-banner {
+      background: rgba(38, 204, 202, 0.1);
+      border: 1px solid rgba(38, 204, 202, 0.3);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .highlight-banner p {
+      color: #fff;
+      font-size: 1.125rem;
+      line-height: 1.6;
+      max-width: 48rem;
+      margin: 0 auto;
+    }
+
+    /* Beneficios */
+    .ben-layout {
+      display: grid;
+      gap: 4rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .ben-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .ben-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .ben-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.5rem;
+      border-radius: 1.25rem;
+    }
+
+    .ben-item-icon {
+      width: 2rem;
+      height: 2rem;
+      flex-shrink: 0;
+      background: var(--accent);
+      color: #000;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ben-item-icon i {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .ben-item-text {
+      color: var(--zinc-300);
+      font-weight: 300;
+      line-height: 1.5;
+      font-size: 1rem;
+    }
+
+    /* Cross-sell Charlie */
+    .charlie-card {
+      background: linear-gradient(135deg, rgba(10, 10, 10, 0.8), rgba(20, 20, 20, 0.9));
+      border: 1px solid rgba(38, 204, 202, 0.2);
+      border-radius: 2rem;
+      padding: 4rem 3rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .charlie-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 100%, rgba(38, 204, 202, 0.1), transparent 60%);
+      pointer-events: none;
+    }
+
+    .charlie-icon {
+      width: 5rem;
+      height: 5rem;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      background: rgba(38, 204, 202, 0.1);
+      border: 1px solid rgba(38, 204, 202, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      box-shadow: 0 0 30px rgba(38, 204, 202, 0.2);
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Branding B2B, Estrategia de Contenidos y Redes Sociales | Boosted" />
+  <meta property="og:description" content="Posiciona tu marca B2B con branding estratégico y contenidos de valor. Gestión de redes sociales enfocada en generar confianza y leads para tu ecosistema digital." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/branding-y-contenido.html" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+                  medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a></li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+                  e
+                  Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+                  HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+                  Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Ruta de navegación"
+      style="position:absolute; top: 7.75rem; left:50%; transform:translateX(-50%); width:100%; max-width:1200px; padding:0 1.5rem; z-index:10;">
+      <ol
+        style="display:flex; gap:0.5rem; align-items:center; list-style:none; margin:0; padding:0; font-size:0.8rem; color:var(--zinc-300); font-family:var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">
+        <li><a href="index.html" style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Inicio</a>
+        </li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><a href="index.html#servicios"
+            style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Servicios</a></li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><span style="color:var(--accent);" aria-current="page">Branding y Contenido</span></li>
+      </ol>
+    </nav>
+    <!-- ── 1. HERO ── -->
+    <section id="branding-hero">
+      <div class="branding-hero-bg" aria-hidden="true"
+        style="background-image: url('assets/img/hero/branding-hero.png'); background-size: cover; background-position: center; opacity: 0.2;">
+      </div>
+      <div class="branding-hero-bg" aria-hidden="true"></div>
+      <div class="bg-grid"></div>
+      <div class="container">
+        <div class="branding-hero-content anim-fadeup">
+          <div class="branding-badge">PORTAFOLIO <span class="dot"
+              style="width:4px;height:4px;background:currentColor;border-radius:50%;"></span> BRANDING Y CONTENIDO</div>
+
+          <h1 class="branding-hero-title">
+            Branding Contenido y Redes:<br><span style="color:var(--accent);">Portafolio y Estrategias que Venden</span>
+          </h1>
+
+          <p class="branding-hero-sub">
+            Selección de proyectos donde transformamos la identidad visual y el ecosistema digital de nuestros clientes.
+          </p>
+
+          <div style="display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+            <a href="index.html#contacto" class="btn-primary"
+              style="font-size:1.1rem; padding:1rem 2rem; display:inline-flex;">HABLEMOS SOBRE MI MARCA Y CONTENIDO</a>
+            <a href="#portafolio" class="btn-ghost glass-card"
+              style="font-size:1.1rem; padding:1rem 2rem; display:inline-flex;">Ver proyectos</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2. INTRO ── -->
+    <section class="section-py" style="background:#09090b;">
+      <div class="container">
+        <div class="reveal" style="max-width:56rem; margin:0 auto; text-align:center;">
+          <p style="color:var(--zinc-400);font-size:1.1rem;line-height:1.8;font-weight:300;margin-bottom:2.5rem;">
+            En Boosted, no solo diseñamos logotipos o publicamos posts en redes sociales; construimos ecosistemas
+            digitales coherentes. Nuestro enfoque de Branding y Contenido se centra en traducir la propuesta de valor de
+            tu empresa en una identidad visual sólida y una comunicación estratégica.
+          </p>
+          <div style="display:flex;flex-direction:column;gap:1rem;text-align:left;max-width:42rem;margin:0 auto 3rem;">
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="color:var(--accent);flex-shrink:0;font-size:1.2rem;">→</span>
+              <p style="color:var(--zinc-300);font-weight:300;line-height:1.6;">Modernizar su imagen corporativa sin
+                perder su esencia.</p>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="color:var(--accent);flex-shrink:0;font-size:1.2rem;">→</span>
+              <p style="color:var(--zinc-300);font-weight:300;line-height:1.6;">Crear calendarios de contenidos que
+                generan interacción real.</p>
+            </div>
+            <div style="display:flex;gap:1rem;align-items:flex-start;">
+              <span style="color:var(--accent);flex-shrink:0;font-size:1.2rem;">→</span>
+              <p style="color:var(--zinc-300);font-weight:300;line-height:1.6;">Diseñar presentaciones y activos
+                digitales que cierran ventas.</p>
+            </div>
+          </div>
+          <a href="index.html#contacto" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.75rem;">HABLEMOS
+            SOBRE MI MARCA Y CONTENIDO <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. PORTAFOLIO ── -->
+    <section class="section-py" id="portafolio" style="background:#030303;">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Casos de Éxito</span>
+          <h2 class="section-title">Proyectos que Hablan por Sí Solos</h2>
+          <p
+            style="color:var(--zinc-400);max-width:48rem;margin:1.5rem auto 0;line-height:1.6;font-size:1.05rem;font-weight:300;">
+            A continuación, verás cómo hemos ayudado a empresas de Salud, Tecnología, Educación e industria a
+            transformar su presencia digital.
+          </p>
+        </div>
+
+        <div class="formas-grid">
+
+          <!-- 1: Ulloa y Cia -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/web/ulloa-rebranding/ulloa-logo.jpg" alt="Ulloa y Cía Renovación de Marca"
+                loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Branding · Contabilidad</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Ulloa y Cía: Renovación de Marca y Estrategia Digital Integral</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Re-posicionamos a Ulloa y Cía. como una firma referente en auditoría y asesoría tributaria mediante
+                rebranding completo y contenidos SEO de autoridad.</p>
+              <a href="portfolio-ulloa.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 2: ELD -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600"
+                alt="ELD Ingeniería Branding B2B" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Branding · Ingeniería B2B</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                ELD: Ingeniería de Autoridad mediante Estrategia de Branding y Diseño Web B2B</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Impulsamos la evolución de ELD hacia una firma de autoridad, con rediseño web corporativo y activación
+                en LinkedIn e Instagram.</p>
+              <a href="portfolio-eld.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 3: Health Chile -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=600"
+                alt="Health Chile Presentaciones Corporativas" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Diseño Editorial · Salud</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Diseño de Presentaciones Corporativas: Caso Health Chile</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Convertimos el material comercial de Health Chile en una suite de presentaciones modulares que segmenta
+                el mensaje por industria.</p>
+              <a href="portfolio-health-chile.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 4: Auditor Condominio -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600"
+                alt="Auditor Condominio Estrategia de Contenidos" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Contenidos · Educación Financiera</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Auditor Condominio: Estrategia de Contenidos para la Educación Financiera</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Diseñamos una estrategia de contenidos educativos que traduce la Ley 21.442 en mensajes claros que
+                posicionan la firma como especialista en copropiedad.</p>
+              <a href="portfolio-auditor-branding.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 5: IQ Facility Marketing B2B -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/web/iq-facility/hero.png" alt="IQ Facility Marketing B2B" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Marketing B2B · Energía</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                IQ Facility: Estrategia de Marketing B2B ante el Desafío Energético</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Convertimos el "tarifazo" eléctrico en el mayor catalizador comercial de IQ Facility, reposicionando la
+                marca como socio financiero en gestión energética.</p>
+              <a href="portfolio-iq-facility-branding.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 6: Ulloa Estrategia Contable -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/ulloa-cia-marketing/ull1.png" alt="Estrategia de Marketing Contable Ulloa"
+                loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Marketing · Contabilidad</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Ulloa y Cía: Estrategia de Marketing Contable y Tributario</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Construimos una voz digital de autoridad técnica para transformar la aridez normativa en beneficios de
+                negocio tangibles ante la gerencia.</p>
+              <a href="portfolio-ulloa-marketing.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 7: Instruvalve -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/instruvalve-editorial/hero.png" alt="Instruvalve Catálogo Técnico"
+                loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Editorial · Industrial</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Instruvalve: Proyecto Editorial Corporativo en Alianza</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Transformamos la ingeniería dura en una herramienta de venta ágil mediante una arquitectura de
+                información modular y evidencia visual.</p>
+              <a href="portfolio-instruvalve.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 8: Trenton 5 -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?auto=format&fit=crop&q=80&w=600"
+                alt="Trenton 5 Brochure Industrial" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Editorial · Localización</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Trenton 5: Brochure Industrial y Localización</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Localizamos el catálogo norteamericano resolviendo la expansión del texto en español sin alterar la
+                grilla ni la autoridad visual original.</p>
+              <a href="portfolio-trenton.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 9: Aros del Pacífico -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&q=80&w=600"
+                alt="Aros del Pacifico Diseño Industrial" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Diseño Gráfico · Industrial</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Aros del Pacífico: Diseño Gráfico y Marketing Industrial para Equipamiento Pesado</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Diseñamos una estética heavy duty poniendo el dato técnico en primer plano para posicionar la marca como
+                proveedor serio para flotas y faenas de alta exigencia.</p>
+              <a href="portfolio-aros-del-pacifico.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 10: IQ Facility Plataforma -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=600"
+                alt="IQ Facility Plataforma Digital" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Branding · Web B2B</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                IQ Facility: Plataforma Digital, Branding y Contenido para Consultoría B2B</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Diseñamos el sitio de IQ Facility como una plataforma de venta B2B que convierte la promesa de ahorro en
+                propuesta de valor clara y segmentada por industria.</p>
+              <a href="portfolio-iq-facility.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+
+          <!-- 11: Auditor Condominio Full Service -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=600"
+                alt="Auditor Condominio Lanzamiento" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Branding · Lanzamiento</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Auditor Condominio: Lanzamiento Full-Service de Marca, Web y Soporte Operativo</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Lanzamos Auditor Condominio como una marca senior desde el día uno, integrando branding, web de
+                conversión e infraestructura operativa gestionada.</p>
+              <a href="portfolio-auditor-branding.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 12: ARBMet -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/arbmet/logo.png" alt="ARBMet Identidad Industrial" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Identidad Corporativa · Industrial</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                ARBMet: Identidad Corporativa Industrial y Uniformidad B2B</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Transformamos la percepción de marca de un contratista a una empresa referente de montaje industrial
+                mediante un sistema visual de alto nivel.</p>
+              <a href="portfolio-arbmet.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+
+          <!-- 13: ELD Redes Sociales -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/web/eld-social/grid.png" alt="ELD Redes Sociales" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Redes Sociales · Ingeniería</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                ELD: Estrategia de Redes Sociales para Ingeniería de Alta Complejidad</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Convertimos las redes de ELD en un sistema de contenido B2B que educa y vende, traduciendo normativa
+                compleja en mensajes claros en LinkedIn e Instagram.</p>
+              <a href="portfolio-eld-social.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 14: Galería Casa Colorada -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/casa-colorada/grid.png" alt="Galería Casa Colorada Contenidos"
+                loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Contenidos · Comercio</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Galería Casa Colorada: Estrategia de Contenidos y Revitalización Comercial</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Reposicionamos Galería Casa Colorada como una experiencia urbana deseable, humanizando a los locatarios
+                y transformando su valor patrimonial en tráfico real.</p>
+              <a href="portfolio-casa-colorada.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 15: Broccato -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/broccato/lookbook.png" alt="Broccato Lookbook" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Diseño Editorial · Moda</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Broccato: Diseño de Lookbook Corporativo para Moda y Funcionalidad</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Posicionamos a Broccato con un Lookbook Corporativo de moda ejecutiva que eleva el ticket promedio y
+                tangibiliza la confección a medida ante gerencias exigentes.</p>
+              <a href="portfolio-broccato.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 16: CMET -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/cmet/magazine_1.png" alt="CMET Revista Digital" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Editorial · Medios</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                CMET: Diseño de Revista Digital y Guía Programática en la Era del Cable</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Convertimos la guía de programación de CMET en una revista digital interactiva que refuerza la
+                percepción de servicio premium en miles de hogares.</p>
+              <a href="portfolio-cmet.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 17: BAS -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/bas/brochure_1.png" alt="BAS Brochure Industrial" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Brochure · Ingeniería</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                BAS: Brochure Corporativo para el Sector Industrial</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Convertimos la experiencia de BAS en infraestructura crítica en un brochure de autoridad que respalda
+                licitaciones de salud, corporativo y retail.</p>
+              <a href="portfolio-bas.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 18: Maelstrom Studios -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/web/maelstrom/vfx_1.png" alt="Maelstrom Studios Portfolio" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Portfolio Web · Audiovisual</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Maelstrom Studios: El Estándar del Fotorrealismo en Diseño Web Portfolio Audiovisual</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Diseñamos un sitio portfolio audiovisual con interfaz dark minimalista y galería inmersiva que valida su
+                nivel cinematográfico en segundos.</p>
+              <a href="portfolio-maelstrom.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 19: Kitty Zone -->
+          <article class="forma-card reveal" style="padding:0;overflow:hidden;border-radius:1.5rem;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/kitty-zone/branding_1.png" alt="Kitty Zone Branding" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Branding · E-commerce</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Kitty Zone: Tienda Online y Branding para Boutique Erótica</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Diseñamos una boutique digital con marca dark &amp; classy y tienda online optimizada para compras
+                privadas desde el móvil con estética de lujo.</p>
+              <a href="portfolio-kitty-zone.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 20: Beltrán & Guzmán -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.05s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/beltran-guzman/branding_1.png" alt="Beltrán y Guzmán Branding Legal"
+                loading="lazy" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Branding · Legal</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Beltrán &amp; Guzmán: Branding Moderno y Sitio Web Integral</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Rejuvenecimos Beltrán &amp; Guzmán con un monograma geométrico con gradientes vibrantes y una interfaz
+                dinámica que proyecta sofisticación en digital y merchandising.</p>
+              <a href="portfolio-beltran-guzman.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+          <!-- 21: Akitec -->
+          <!-- 21: Akitec -->
+          <article class="forma-card reveal"
+            style="padding:0;overflow:hidden;border-radius:1.5rem;transition-delay:0.1s;">
+            <div style="aspect-ratio:16/9;overflow:hidden;">
+              <img src="assets/img/portafolio/branding/akitec/tech_1.png" alt="Akitec Portafolio Técnico B2B" loading="lazy"
+                style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
+                onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+            </div>
+            <div style="padding:1.5rem;">
+              <div
+                style="font-family:var(--font-mono);color:var(--accent);font-size:0.7rem;text-transform:uppercase;margin-bottom:0.4rem;">
+                Portfolio Técnico · B2B</div>
+              <h3
+                style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;margin-bottom:0.5rem;line-height:1.3;">
+                Akitec: Estrategia de Contenido B2B y Portafolio Técnico</h3>
+              <p style="font-size:0.875rem;color:var(--zinc-400);font-weight:300;line-height:1.5;margin-bottom:1rem;">
+                Convertimos la experiencia transversal de Akitec en un portafolio B2B segmentado por verticales que hace
+                visibles servicios intangibles para licitaciones de alto valor.</p>
+              <a href="portfolio-akitec.html"
+                style="font-size:0.8rem;color:var(--accent);font-family:var(--font-mono);text-decoration:none;">Leer más
+                →</a>
+            </div>
+          </article>
+
+        </div><!-- end formas-grid -->
+
+        <div style="text-align:center;margin-top:3rem;" class="reveal">
+          <a href="index.html#contacto" class="btn-primary">¿Quieres resultados similares? Conversemos</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── 4. NUESTRA METODOLOGÍA ── -->
+    <section class="section-py" style="background:#09090b;">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Nuestra Metodología</span>
+          <h2 class="section-title">¿Cómo integramos Branding Contenido y Redes en Boosted?</h2>
+          <p
+            style="color:var(--zinc-400);max-width:52rem;margin:1.5rem auto 0;line-height:1.8;font-size:1.05rem;font-weight:300;">
+            No creemos en las soluciones parche. Muchos clientes llegan habiendo contratado un logo por un lado y un
+            Community Manager por otro, resultando en una imagen fracturada. Nuestra metodología unifica estos mundos en
+            tres etapas diseñadas para la coherencia y la conversión.
+          </p>
+        </div>
+
+        <div style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));" class="reveal">
+          <div class="forma-card" style="border-color:rgba(38,204,202,0.3);position:relative;">
+            <div
+              style="font-family:var(--font-mono);color:var(--accent);font-size:3rem;font-weight:800;opacity:0.15;position:absolute;top:1rem;right:1.5rem;line-height:1;">
+              1</div>
+            <div class="forma-icon"><i data-lucide="scan-search"></i></div>
+            <h3 class="forma-title">Diagnóstico y ADN de Marca</h3>
+            <p class="forma-desc">Analizamos tu posición actual, tus competidores y la percepción que tiene tu
+              audiencia. Definimos el ADN de tu marca y los mensajes clave que diferencian tu propuesta de valor.</p>
+          </div>
+          <div class="forma-card" style="transition-delay:0.1s;position:relative;">
+            <div
+              style="font-family:var(--font-mono);color:var(--accent);font-size:3rem;font-weight:800;opacity:0.15;position:absolute;top:1rem;right:1.5rem;line-height:1;">
+              2</div>
+            <div class="forma-icon"><i data-lucide="palette"></i></div>
+            <h3 class="forma-title">Construcción de Identidad Visual</h3>
+            <p class="forma-desc">Diseñamos el sistema visual completo: logotipo, paleta cromática, tipografías,
+              templates y guía de marca. Todo para garantizar coherencia en cada punto de contacto con tu cliente.</p>
+          </div>
+          <div class="forma-card" style="transition-delay:0.2s;position:relative;">
+            <div
+              style="font-family:var(--font-mono);color:var(--accent);font-size:3rem;font-weight:800;opacity:0.15;position:absolute;top:1rem;right:1.5rem;line-height:1;">
+              3</div>
+            <div class="forma-icon"><i data-lucide="megaphone"></i></div>
+            <h3 class="forma-title">Despliegue en Canales Digitales</h3>
+            <p class="forma-desc">Activamos tu marca en redes sociales, web y materiales de venta con un calendario de
+              contenidos estratégico. Cada publicación educa, posiciona y acerca al prospecto a la decisión de compra.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. POR QUÉ UN ECOSISTEMA UNIFICADO ── -->
+    <section class="section-py" style="background:#030303;">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Ecosistema Unificado</span>
+          <h2 class="section-title">¿Por qué tu empresa necesita<br>un ecosistema unificado?</h2>
+          <p
+            style="color:var(--zinc-400);max-width:52rem;margin:1.5rem auto 0;line-height:1.8;font-size:1.05rem;font-weight:300;">
+            El mercado digital de hoy está saturado. Para destacar, la consistencia es la clave. Un servicio aislado de
+            redes sociales puede generar ruido momentáneo, pero sin una identidad de marca sólida ese ruido no construye
+            lealtad a largo plazo.
+          </p>
+        </div>
+
+        <div style="display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+          <div class="forma-card reveal">
+            <div class="forma-icon"><i data-lucide="clock"></i></div>
+            <h3 class="forma-title">Ahorro de Tiempo y Recursos</h3>
+            <p class="forma-desc">Al centralizar la estrategia en un solo equipo, eliminas los problemas de comunicación
+              entre múltiples proveedores y maximizas la inversión de cada pieza creada.</p>
+          </div>
+          <div class="forma-card reveal" style="transition-delay:0.1s;">
+            <div class="forma-icon"><i data-lucide="layers"></i></div>
+            <h3 class="forma-title">Mensaje Unificado</h3>
+            <p class="forma-desc">Tu sitio web, tus redes y tus presentaciones de ventas hablarán el mismo idioma,
+              aumentando la percepción de profesionalismo ante tus clientes en cada interacción.</p>
+          </div>
+          <div class="forma-card reveal" style="transition-delay:0.2s;">
+            <div class="forma-icon"><i data-lucide="trending-up"></i></div>
+            <h3 class="forma-title">Mejor Retorno de Inversión</h3>
+            <p class="forma-desc">El contenido bien diseñado y alineado con la marca tiene tasas de conversión más altas
+              que las publicaciones genéricas, generando resultados que se sostienen en el tiempo.</p>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:3rem;" class="reveal">
+          <a href="index.html#contacto" class="btn-primary" style="display:inline-flex;align-items:center;gap:0.75rem;">AGENDAR
+            UNA ASESORÍA GRATUITA <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 6. FAQ ── -->
+    <section class="section-py" style="background:#09090b;">
+      <div class="container" style="max-width:800px;">
+        <div class="section-header reveal">
+          <span class="section-eyebrow">Preguntas Frecuentes</span>
+          <h2 class="section-title">Preguntas Frecuentes sobre nuestros servicios</h2>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:1rem;" class="reveal">
+          <details
+            style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;padding:1.5rem;cursor:pointer;transition:border-color 0.3s;"
+            open>
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿Cuál es la diferencia entre un logo y el branding?
+              <i data-lucide="chevron-down" style="width:1.25rem;height:1.25rem;color:var(--accent);flex-shrink:0;"></i>
+            </summary>
+            <p style="color:var(--zinc-400);font-weight:300;line-height:1.7;margin-top:1rem;">Un logo es solo el símbolo
+              gráfico de tu empresa; el branding es el sistema completo que define la personalidad, los valores y la
+              forma en que tu marca se comunica en cada canal. Incluye tipografías, paleta de colores, tono de voz y
+              experiencia del cliente. Sin una estrategia de branding, el logo es solo una imagen.</p>
+          </details>
+
+          <details
+            style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;padding:1.5rem;cursor:pointer;transition:border-color 0.3s;">
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿Entregan los archivos editables de los diseños?
+              <i data-lucide="chevron-down" style="width:1.25rem;height:1.25rem;color:var(--accent);flex-shrink:0;"></i>
+            </summary>
+            <p style="color:var(--zinc-400);font-weight:300;line-height:1.7;margin-top:1rem;">Sí. Todos nuestros
+              proyectos incluyen la entrega de los archivos fuente en los formatos estándar de la industria
+              (Illustrator, Figma, InDesign, etc.). Tu marca te pertenece completamente y tendrás autonomía total para
+              usarla con cualquier proveedor en el futuro.</p>
+          </details>
+
+          <details
+            style="background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.08);border-radius:1rem;padding:1.5rem;cursor:pointer;transition:border-color 0.3s;">
+            <summary
+              style="font-family:var(--font-display);font-size:1.1rem;font-weight:700;color:#fff;list-style:none;display:flex;justify-content:space-between;align-items:center;">
+              ¿Cómo miden el éxito de una estrategia de contenidos?
+              <i data-lucide="chevron-down" style="width:1.25rem;height:1.25rem;color:var(--accent);flex-shrink:0;"></i>
+            </summary>
+            <p style="color:var(--zinc-400);font-weight:300;line-height:1.7;margin-top:1rem;">Definimos KPIs concretos
+              desde el inicio: alcance orgánico, engagement, tráfico web referido desde redes, leads generados y tasa de
+              conversión de contenido. Entregamos reportes mensuales y ajustamos la estrategia basándonos en datos
+              reales, no en suposiciones.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- ── 6. CROSS-SELL CHARLIE ── -->
+    <section class="section-py" id="branding-charlie">
+      <div class="container">
+        <div class="charlie-card reveal">
+          <div class="charlie-icon"><i data-lucide="zap" style="width:2.5rem;height:2.5rem;"></i></div>
+          <h2 class="section-title" style="margin-bottom:1.5rem; font-size:clamp(1.75rem,3vw,2.5rem);">IA que Distribuye
+            tu Marca
+          </h2>
+          <p
+            style="color:var(--zinc-400); font-size:1.1rem; line-height:1.6; max-width:48rem; margin:0 auto 2.5rem; font-weight:300;">
+            Imagina que tu estrategia de contenido sea potenciada por Charlie, nuestra IA capaz de calificar leads desde
+            tus redes y nutrir tu CRM con información valiosa en tiempo real.
+          </p>
+          <a href="charlie.html" class="btn-ghost glass-card" style="display:inline-flex;">Descubre el potencial de
+            Charlie <i data-lucide="arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 7. CTA FINAL ── -->
+    <section id="branding-cta" class="section-py">
+      <div class="container">
+        <div class="glass-card reveal"
+          style="padding: 4rem; border-radius: 2rem; border-color: var(--accent); position:relative; overflow:hidden;">
+          <div style="position:relative; z-index:2;">
+            <p class="section-eyebrow" style="text-align:center;">COMIENZA AHORA</p>
+            <h2 class="section-title" style="text-align:center; margin-bottom:1.5rem;">¿Listo para elevar la
+              imagen<br>de tu marca?</h2>
+            <p style="color:var(--zinc-400); text-align:center; max-width:48rem; margin:0 auto 3rem; font-weight:300;">
+              Ya viste lo que hicimos por nuestros clientes. Ahora diseñemos la estrategia para tu negocio. Agenda una
+              asesoría gratuita y definimos juntos el próximo paso.
+            </p>
+            <div style="display: grid; gap: 1rem; max-width: 40rem; margin: 0 auto 3rem;">
+              <div style="display:flex; gap:0.75rem; color:var(--zinc-400); font-weight:300;">
+                <span style="color:var(--accent);">→</span> Revisamos tu presencia actual (web, redes, mensaje)
+              </div>
+              <div style="display:flex; gap:0.75rem; color:var(--zinc-400); font-weight:300;">
+                <span style="color:var(--accent);">→</span> Analizamos tu diferenciación vs competencia
+              </div>
+              <div style="display:flex; gap:0.75rem; color:var(--zinc-400); font-weight:300;">
+                <span style="color:var(--accent);">→</span> Identificamos qué optimizar primero
+              </div>
+              <div style="display:flex; gap:0.75rem; color:var(--zinc-400); font-weight:300;">
+                <span style="color:var(--accent);">→</span> Definimos plan de implementación por fases
+              </div>
+            </div>
+            <div style="text-align:center;">
+              <a href="index.html#contacto" class="btn-primary" style="padding: 1.25rem 3rem;">AGENDAR DIAGNÓSTICO PRESENCIA
+                DIGITAL</a>
+              <p style="color:var(--zinc-500); font-size:0.85rem; margin-top:1.5rem;">Sin compromiso. Solo diagnóstico
+                objetivo de tu marca.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+            conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
+                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+              Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+              Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // Reveal elements for branding-y-contenido page
+    const reveals = document.querySelectorAll('.reveal, .anim-fadeup, .anim-fadescale');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('revealed');
+          observer.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '-20px' });
+
+    reveals.forEach(r => observer.observe(r));
+  </script>
+</body>
+
+</html>

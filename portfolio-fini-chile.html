@@ -1,0 +1,701 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fini Chile: Adaptación y Localización Web — Portafolio Boosted</title>
+  <meta name="description"
+    content="Caso de éxito: Localización y adaptación web de Fini en Chile. Cómo logramos que una marca global se sienta cercana y local mediante UX estratégica y tropicalización digital." />
+  <meta name="author" content="Boosted" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* ── PORTFOLIO INTERIOR STYLES ── */
+
+    /* Hero Portfolio */
+    #portfolio-hero {
+      position: relative;
+      padding-top: 10rem;
+      padding-bottom: 5rem;
+      overflow: hidden;
+    }
+
+    .portfolio-badge {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+    }
+
+    .portfolio-hero-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3.2rem, 6vw, 5.5rem);
+      color: #fff;
+      line-height: 0.95;
+      margin-bottom: 1.5rem;
+      letter-spacing: 0.05em;
+      max-width: 1000px;
+    }
+
+    .portfolio-hero-subtitle {
+      font-size: 1.25rem;
+      color: var(--zinc-300);
+      line-height: 1.6;
+      font-weight: 300;
+      max-width: 800px;
+      border-left: 3px solid var(--boosted);
+      padding-left: 1.5rem;
+    }
+
+    /* Meta & Intro Section */
+    #portfolio-intro {
+      padding-block: 4rem;
+      position: relative;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 4rem;
+    }
+
+    @media (max-width: 992px) {
+      .intro-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+    }
+
+    .intro-text p {
+      font-size: 1.125rem;
+      color: var(--zinc-400);
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-weight: 300;
+    }
+
+    /* Meta Card */
+    .meta-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      height: fit-content;
+    }
+
+    .meta-item {
+      margin-bottom: 1.75rem;
+    }
+
+    .meta-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .meta-label {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--zinc-500);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.5rem;
+    }
+
+    .meta-value {
+      font-family: var(--font-display);
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* Showcase Slider */
+    #portfolio-showcase {
+      padding-block: 4rem 8rem;
+      position: relative;
+    }
+
+    .showcase-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .main-viewport {
+      aspect-ratio: 16 / 9;
+      background: transparent;
+      border: none;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      perspective: 2000px;
+      margin-bottom: 2rem;
+    }
+
+    .slide {
+      position: absolute;
+      inset: 0;
+      margin: 0 auto;
+      width: 60%;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      z-index: 1;
+    }
+
+    .slide.active { opacity: 1; visibility: visible; z-index: 10; transform: translateX(0) translateZ(0) scale(1); }
+    .slide.prev { opacity: 0.5; visibility: visible; z-index: 5; transform: translateX(-70%) translateZ(-350px) scale(0.85); pointer-events: none; }
+    .slide.next { opacity: 0.5; visibility: visible; z-index: 5; transform: translateX(70%) translateZ(-350px) scale(0.85); pointer-events: none; }
+
+    .slide img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      border-radius: 1rem;
+      filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.4));
+      transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+    }
+
+    .slide-caption {
+      opacity: 0;
+      transform: translateY(15px);
+      transition: all 0.6s 0.4s ease;
+      text-align: center;
+      z-index: 20;
+    }
+
+    .slide.active .slide-caption { opacity: 1; transform: translateY(0); }
+    .slide-caption h4 { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 0.25rem; }
+    .slide-caption span { font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.2rem; }
+
+    .showcase-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 3rem;
+      position: relative;
+      z-index: 999;
+    }
+
+    .control-btn {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: all 0.4s;
+    }
+
+    .control-btn:hover { background: var(--boosted); color: #000; border-color: var(--boosted); transform: scale(1.1); }
+
+    .showcase-counter {
+      font-family: var(--font-mono);
+      font-size: 1.25rem;
+      color: var(--zinc-500);
+      letter-spacing: 0.3em;
+      min-width: 8rem;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.75rem 1.5rem;
+      border-radius: 2rem;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .showcase-current { color: var(--boosted); font-weight: 700; }
+
+    .thumbnails {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .thumb {
+      width: 70px;
+      aspect-ratio: 1;
+      border-radius: 0.75rem;
+      overflow: hidden;
+      cursor: pointer;
+      border: 2px solid transparent;
+      opacity: 0.4;
+      transition: all 0.3s;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .thumb.active { border-color: var(--boosted); opacity: 1; transform: translateY(-8px); }
+    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Solution Timeline/Grid */
+    #portfolio-solution { padding-block: 6rem; background: rgba(255, 255, 255, 0.01); border-block: 1px solid rgba(255, 255, 255, 0.05); }
+    .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
+    @media (max-width: 1024px) { .solution-grid { grid-template-columns: 1fr; } }
+    .solution-card { background: rgba(255, 255, 255, 0.02); border-radius: 1.5rem; padding: 2.5rem; border: 1px solid transparent; transition: all 0.3s; }
+    .solution-card:hover { background: rgba(38, 204, 202, 0.02); border-color: rgba(38, 204, 202, 0.2); }
+    .solution-num { width: 3rem; height: 3rem; border-radius: 50%; background: rgba(38, 204, 202, 0.1); color: var(--boosted); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; }
+    .solution-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.3; }
+    .solution-card p { color: var(--zinc-400); line-height: 1.7; margin-bottom: 1rem; font-weight: 300; }
+
+    /* Impact */
+    #portfolio-impact { padding-block: 6rem; position: relative; }
+    .impact-box { background: radial-gradient(circle at center, rgba(38, 204, 202, 0.1) 0%, transparent 80%); border: 1px solid rgba(38, 204, 202, 0.2); border-radius: 2rem; padding: 5rem 3rem; text-align: center; max-width: 1000px; margin: 0 auto; }
+    .impact-box h3 { font-family: var(--font-bebas); font-size: clamp(3rem, 5vw, 4rem); color: var(--boosted); margin-bottom: 1.5rem; line-height: 1; letter-spacing: 0.05em; }
+    .impact-desc { font-size: 1.25rem; color: var(--zinc-300); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+    .impact-list { display: flex; justify-content: center; gap: 3rem; margin-top: 4rem; flex-wrap: wrap; }
+    .impact-item { text-align: center; flex: 1; min-width: 250px; }
+    .impact-item-icon { width: 4rem; height: 4rem; border-radius: 50%; background: rgba(255, 255, 255, 0.05); color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; }
+    .impact-item h4 { color: #fff; font-size: 1.25rem; margin-bottom: 0.75rem; }
+    .impact-item p { color: var(--zinc-400); line-height: 1.6; font-weight: 300; }
+
+    /* Section Headers */
+    .section-header { margin-bottom: 3rem; }
+    .section-header-label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; display: block; }
+    .section-header-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Fini Chile: Adaptación y Localización Web — Portafolio Boosted" />
+  <meta property="og:description" content="Caso de éxito: Localización y adaptación web de Fini en Chile. Cómo logramos que una marca global se sienta cercana y local mediante UX estratégica y tropicalización digital." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/portfolio-fini-chile.html" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html" style="color:var(--accent);">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link" style="color:var(--accent);">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+                  medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a></li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+                  e
+                  Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+                  HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+                  Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ── 1. HERO PORTFOLIO ── -->
+    <section id="portfolio-hero">
+      <div class="hero-bg" aria-hidden="true" style="position: absolute; inset: 0; background-image: url('assets/img/portafolio/branding/akitec/hero.png'); background-size: cover; background-position: center; opacity: 0.15; filter: brightness(0.4);"></div>
+      <div class="bg-grid"></div>
+      <div class="container anim-fadeup">
+        <span class="portfolio-badge">Adaptación y Localización Web</span>
+        <h1 class="portfolio-hero-title">Fini Chile: Marca Global, Acento Local</h1>
+        <p class="portfolio-hero-subtitle">Trajimos una marca gigante de confitería al mercado chileno mediante una tropicalización digital de alta fidelidad visual y cultural.</p>
+      </div>
+    </section>
+
+    <!-- ── 2. INTRODUCCIÓN ── -->
+    <section id="portfolio-intro">
+      <div class="container intro-grid">
+        <div class="intro-text reveal">
+          <p>
+            Fini Brasil nos planteó una meta clara: ¿Cómo traer una potencia mundial en confitería al mercado chileno sin que parezca una traducción automática? Su presencia digital debía sentirse cercana y local, no como una sucursal lejana.
+          </p>
+          <p>
+            El reto no era diseñar desde cero, sino realizar una "tropicalización digital": replicar la arquitectura de éxito del sitio brasileño, adaptando la experiencia de usuario (UX) y el tono de comunicación a la idiosincrasia del consumidor chileno.
+          </p>
+        </div>
+        <div class="intro-meta reveal" style="transition-delay: 0.2s;">
+          <div class="meta-card">
+            <div class="meta-item">
+              <div class="meta-label">Cliente</div>
+              <div class="meta-value">Fini Chile</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Industria</div>
+              <div class="meta-value">Retail & Confitería Multinacional</div>
+            </div>
+            <div class="meta-item">
+              <div class="meta-label">Servicios</div>
+              <div class="meta-value">Localización Web, Replicación Técnica (UI), Redacción Cultural</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. SHOWCASE ── -->
+    <section id="portfolio-showcase">
+      <div class="container showcase-container reveal">
+        <div class="main-viewport">
+              <div class="slide active">
+                <img src="assets/img/portafolio/branding/akitec/tech_1.png" alt="Arquitectura Global">
+                <div class="slide-caption">
+                  <span>01 / Coherencia Visual</span>
+                  <h4>Replicación Técnica UI</h4>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="assets/img/portafolio/branding/akitec/tech_2.png" alt="Soporte Institucional">
+                <div class="slide-caption">
+                  <span>02 / Tropicalización</span>
+                  <h4>Ajuste Cultural y Normativo</h4>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="assets/img/portafolio/branding/akitec/tech_3.png" alt="UX Optimizado">
+                <div class="slide-caption">
+                  <span>03 / Rendimiento Local</span>
+                  <h4>Experiencia de Usuario Homologada</h4>
+                </div>
+              </div>
+            </div>
+            <div class="showcase-controls">
+          <button class="control-btn btn-prev" aria-label="Anterior">
+            <i data-lucide="chevron-left"></i>
+          </button>
+          <div class="showcase-counter">
+            <span class="showcase-current">01</span> / 03
+          </div>
+          <button class="control-btn btn-next" aria-label="Siguiente">
+            <i data-lucide="chevron-right"></i>
+          </button>
+        </div>
+
+        <div class="thumbnails">
+              <div class="thumb active" data-index="0">
+                <img src="assets/img/portafolio/branding/akitec/tech_1.png" alt="Thumb 1">
+              </div>
+              <div class="thumb" data-index="1">
+                <img src="assets/img/portafolio/branding/akitec/tech_2.png" alt="Thumb 2">
+              </div>
+              <div class="thumb" data-index="2">
+                <img src="assets/img/portafolio/branding/akitec/tech_3.png" alt="Thumb 3">
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <!-- ── 4. NUESTRA SOLUCIÓN ── -->
+    <section id="portfolio-solution">
+      <div class="container">
+        <div class="section-header text-center reveal">
+          <span class="section-header-label">Nuestra Solución</span>
+          <h2 class="section-header-title">Ingeniería de Marca Global</h2>
+        </div>
+
+        <div class="solution-grid">
+              <div class="solution-card reveal">
+                <div class="solution-num">1</div>
+                <h3>Replicación de Alta Fidelidad</h3>
+                <p>Clonamos milimétricamente la arquitectura y el diseño de la matriz en Brasil para que el usuario navegue en el mismo ecosistema premium global.</p>
+              </div>
+              <div class="solution-card reveal" style="transition-delay: 0.1s;">
+                <div class="solution-num">2</div>
+                <h3>Localización de Contenidos</h3>
+                <p>Evitamos el Google Translate. Reemplazamos giros brasileños por lenguaje chileno y adaptamos parámetros para cumplir normativas comerciales locales.</p>
+              </div>
+              <div class="solution-card reveal" style="transition-delay: 0.2s;">
+                <div class="solution-num">3</div>
+                <h3>UX Homologada</h3>
+                <p>Mantuvimos los flujos internacionales probados, pero optimizamos la rapidez y los servidores para asegurar una fluidez impecable desde Chile.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+    <!-- ── 5. RESULTADOS E IMPACTO ── -->
+    <section id="portfolio-impact">
+      <div class="container reveal-scale">
+        <div class="impact-box">
+          <h3>Marca Global, Identidad Cercana</h3>
+          <p class="impact-desc">El sitio web de Fini Chile se consolidó como el ancla digital de la marca en el país. Entregamos una extensión fiel a la matriz en tiempo récord.</p>
+
+          <div class="impact-list">
+            <div class="impact-item">
+              <div class="impact-item-icon"><i data-lucide="shield"></i></div>
+              <h4>Protección de Marca</h4>
+              <p>Evitamos deformaciones visuales. Fini sigue viéndose exactamente como el coloso en Brasil, manteniendo la línea gráfica idéntica.</p>
+            </div>
+            <div class="impact-item">
+              <div class="impact-item-icon"><i data-lucide="zap"></i></div>
+              <h4>Lanzamiento Rápido</h4>
+              <p>Al importar una arquitectura ganadora, cortamos fricciones logrando operar masivamente en un lapso comercial agresivo.</p>
+            </div>
+          </div>
+        </div>
+    </section>
+
+    <!-- ── 6. CTA FINAL ── -->
+    <section class="cta-section"
+      style="padding-block: 5rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+      <div class="container reveal">
+        <h2 style="font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2rem;">¿Listo para localizar tu marca multinacional con alta fidelidad?</h2>
+        <a href="index.html#contacto" class="btn-primary" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">AGENDAR UNA ASESORÍA GRATUITA</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    (function() {
+      let index = 0;
+      const slides = document.querySelectorAll('.slide');
+      const thumbs = document.querySelectorAll('.thumb');
+      const counter = document.querySelector('.showcase-current');
+      
+      if (!slides.length) return;
+
+      function update(newIdx) {
+        index = (newIdx + slides.length) % slides.length;
+        const prevIdx = (index - 1 + slides.length) % slides.length;
+        const nextIdx = (index + 1) % slides.length;
+        
+        slides.forEach((s, i) => {
+          s.classList.remove('active', 'prev', 'next');
+          if (i === index) s.classList.add('active');
+          else if (i === prevIdx) s.classList.add('prev');
+          else if (i === nextIdx) s.classList.add('next');
+        });
+
+        thumbs.forEach((t, i) => {
+          t.classList.toggle('active', i === index);
+        });
+
+        if (counter) counter.textContent = String(index + 1).padStart(2, '0');
+      }
+
+      const btnP = document.querySelector('.btn-prev');
+      const btnN = document.querySelector('.btn-next');
+      
+      if (btnP) btnP.onclick = () => update(index - 1);
+      if (btnN) btnN.onclick = () => update(index + 1);
+      
+      thumbs.forEach((t, i) => {
+        t.onclick = () => update(i);
+      });
+
+      document.onkeydown = (e) => {
+        if (e.key === 'ArrowLeft') update(index - 1);
+        if (e.key === 'ArrowRight') update(index + 1);
+      };
+
+      try {
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+      } catch(e) {}
+
+      const obs = new IntersectionObserver((es) => {
+        es.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.reveal, .reveal-scale, .anim-fadeup').forEach(el => obs.observe(el));
+
+      update(0);
+    })();
+  </script>
+</body>
+
+</html>
+

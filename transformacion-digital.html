@@ -1,0 +1,729 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Transformación Digital para Pymes y Empresas | Boosted</title>
+  <meta name="description"
+    content="Acompañamos la transformación digital de tu empresa rediseñando procesos y adoptando tecnología para una mayor eficiencia y crecimiento sostenible." />
+  <meta name="keywords"
+    content="transformación digital, madurez digital, hoja de ruta digital, digitalización procesos, consultoría digital, pymes chile" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://boosted.cl/transformacion-digital.html" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://boosted.cl/transformacion-digital.html" />
+  <meta property="og:title" content="Transformación Digital para Pymes y Empresas | Boosted" />
+  <meta property="og:description" content="Acompañamos la transformación digital de tu empresa rediseñando procesos y adoptando tecnología para una mayor eficiencia y crecimiento sostenible." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/digital-transformation.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://boosted.cl/transformacion-digital.html" />
+  <meta property="twitter:title" content="Transformación Digital B2B | Boosted" />
+  <meta property="twitter:description" content="Digitalizamos procesos clave, estandarizamos el conocimiento y modernizamos el núcleo operativo de tu empresa B2B." />
+  <meta property="twitter:image" content="https://boosted.cl/assets/img/digital-transformation.png" />
+
+  <!-- Theme Color -->
+  <meta name="theme-color" content="#030303" />
+
+  <!-- Preload Critical Hero Image for LCP -->
+  <link rel="preload" as="image" href="assets/img/digital-transformation.png" />
+
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+    
+  <!-- Scripts -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    :root {
+      --accent: #26ccca;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Hero */
+    #td-hero {
+      position: relative;
+      min-height: 90vh;
+      display: flex;
+      align-items: center;
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+    }
+
+    .td-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 30%, rgba(38, 204, 202, 0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .td-hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 60rem;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .td-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(38, 204, 202, 0.1);
+      border: 1px solid rgba(38, 204, 202, 0.3);
+      border-radius: 999px;
+      padding: 0.4rem 1.2rem;
+      font-size: 0.75rem;
+      font-family: var(--font-mono);
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 2.5rem;
+    }
+
+    .td-hero-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3.5rem, 8vw, 6rem);
+      line-height: 0.95;
+      color: #fff;
+      margin-bottom: 2rem;
+      letter-spacing: 0.02em;
+    }
+
+    .td-hero-sub {
+      font-size: clamp(1.1rem, 2vw, 1.3rem);
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.7;
+      margin-bottom: 3.5rem;
+      max-width: 52rem;
+      margin-inline: auto;
+    }
+
+    /* Layout general secciones */
+    .section-py {
+      padding-block: 8rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 5.5rem;
+    }
+
+    .section-eyebrow {
+      color: var(--accent);
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+    }
+
+    /* Pasos Grid (6 items) */
+    .pasos-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    @media (min-width: 768px) {
+      .pasos-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .pasos-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .paso-card {
+      background: rgba(255, 255, 255, 0.015);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.75rem;
+      padding: 3rem 2.25rem;
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .paso-card:hover {
+      background: rgba(38, 204, 202, 0.03);
+      border-color: rgba(38, 204, 202, 0.25);
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .paso-num {
+      position: absolute;
+      top: 1.5rem;
+      right: 2rem;
+      font-family: var(--font-bebas);
+      font-size: 3.5rem;
+      color: rgba(38, 204, 202, 0.06);
+      line-height: 1;
+      transition: color 0.3s;
+    }
+
+    .paso-card:hover .paso-num {
+      color: rgba(38, 204, 202, 0.12);
+    }
+
+    .paso-icon {
+      width: 3.5rem;
+      height: 3.5rem;
+      border-radius: 1.1rem;
+      background: rgba(38, 204, 202, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      margin-bottom: 2rem;
+    }
+
+    .paso-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      line-height: 1.3;
+      letter-spacing: -0.01em;
+    }
+
+    .paso-desc {
+      font-size: 0.95rem;
+      color: var(--zinc-400);
+      line-height: 1.65;
+      font-weight: 300;
+    }
+
+    /* Beneficios */
+    .ben-layout {
+      display: grid;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .ben-layout {
+        grid-template-columns: 1.1fr 0.9fr;
+      }
+    }
+
+    .ben-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .ben-item {
+      display: flex;
+      gap: 1.25rem;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 1.75rem 2rem;
+      border-radius: 1.5rem;
+      transition: background 0.3s, border-color 0.3s;
+    }
+
+    .ben-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .ben-item-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      flex-shrink: 0;
+      background: var(--accent);
+      color: #000;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .ben-item-text {
+      color: var(--zinc-300);
+      font-weight: 400;
+      line-height: 1.5;
+      font-size: 1.05rem;
+    }
+
+    /* Why Boosted */
+    .why-td {
+      background: rgba(10, 10, 10, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(10px);
+      padding: 4rem;
+      border-radius: 2.5rem;
+    }
+
+    .why-td-grid {
+      display: grid;
+      gap: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .why-td-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .why-td-item h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .why-td-item h4 i {
+      color: var(--accent);
+    }
+
+    .why-td-item p {
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.75;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Transformación Digital para Pymes y Empresas | Boosted" />
+  <meta property="og:description" content="Acompañamos la transformación digital de tu empresa rediseñando procesos y adoptando tecnología para una mayor eficiencia y crecimiento sostenible." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/transformacion-digital.html" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html" >Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link" >Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+                  medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a></li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+                  e
+                  Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+                  HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+                  Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Ruta de navegación" style="position:absolute; top: 7.75rem; left:50%; transform:translateX(-50%); width:100%; max-width:1200px; padding:0 1.5rem; z-index:10;">
+      <ol style="display:flex; gap:0.5rem; align-items:center; list-style:none; margin:0; padding:0; font-size:0.8rem; color:var(--zinc-300); font-family:var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">
+        <li><a href="index.html" style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Inicio</a></li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><a href="index.html#servicios" style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Servicios</a></li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><span style="color:var(--accent);" aria-current="page">Transformación Digital</span></li>
+      </ol>
+    </nav>
+    <!-- ── 1. HERO ── -->
+    <section id="td-hero">
+      <div class="td-hero-bg" aria-hidden="true" style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center; opacity: 0.2;"></div>
+      <div class="td-hero-bg" aria-hidden="true"></div>
+      <div class="bg-grid"></div>
+      <div class="container">
+        <div class="td-hero-content anim-fadeup">
+          <div class="td-badge">Servicio <span class="dot"
+              style="width:4px;height:4px;background:currentColor;border-radius:50%;"></span> Transformación Digital</div>
+          <h1 class="td-hero-title">
+            Transformación digital para<br>
+            <span style="color:var(--accent);">empresas y pymes</span>
+          </h1>
+          <p class="td-hero-sub">
+            De procesos manuales a ecosistemas digitales. Rediseñamos tu operación y adoptamos tecnología para que la
+            digitalización se traduzca en más eficiencia, mejor experiencia y crecimiento sostenible.
+          </p>
+          <a href="index.html#contacto" class="btn-primary" style="font-size:1.1rem; padding:1.1rem 2.25rem;">HABLEMOS SOBRE TU
+            TRANSFORMACIÓN DIGITAL</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 2. CÓMO ABORDAMOS ── -->
+    <section class="section-py" id="td-pasos" style="background:#09090b;">
+      <div class="container">
+        <div class="section-header reveal">
+          <p class="section-eyebrow">Nuestra Metodología</p>
+          <h2 class="section-title">¿Cómo abordamos la transformación<br>digital para empresas?</h2>
+          <p
+            style="color:var(--zinc-400); max-width:48rem; margin:1.75rem auto 0; line-height:1.7; font-size:1.1rem; font-weight:300;">
+            Partimos entendiendo cómo funciona hoy tu negocio, definimos qué debe cambiar y construimos una hoja de ruta
+            que conecta procesos, personas y tecnología en un ecosistema inteligente.
+          </p>
+        </div>
+
+        <div class="pasos-grid">
+          <!-- Paso 1 -->
+          <article class="paso-card reveal">
+            <div class="paso-num">01</div>
+            <div class="paso-icon"><i data-lucide="search"></i></div>
+            <h3 class="paso-title">Diagnóstico de procesos y madurez digital</h3>
+            <p class="paso-desc">Analizamos cómo trabajas hoy, qué herramientas usas y dónde se pierden tiempo e
+              información, para priorizar qué mejorar primero.</p>
+          </article>
+
+          <!-- Paso 2 -->
+          <article class="paso-card reveal" style="transition-delay:0.1s">
+            <div class="paso-num">02</div>
+            <div class="paso-icon"><i data-lucide="map"></i></div>
+            <h3 class="paso-title">Definición de objetivos y hoja de ruta</h3>
+            <p class="paso-desc">Establecemos metas concretas y medibles, y un plan por etapas que conecta procesos,
+              tecnología y equipos.</p>
+          </article>
+
+          <!-- Paso 3 -->
+          <article class="paso-card reveal" style="transition-delay:0.2s">
+            <div class="paso-num">03</div>
+            <div class="paso-icon"><i data-lucide="layout"></i></div>
+            <h3 class="paso-title">Diseño del nuevo modelo de operación</h3>
+            <p class="paso-desc">Rediseñamos flujos clave y definimos qué se automatiza, qué se simplifica y qué
+              herramientas se integran o reemplazan.</p>
+          </article>
+
+          <!-- Paso 4 -->
+          <article class="paso-card reveal">
+            <div class="paso-num">04</div>
+            <div class="paso-icon"><i data-lucide="cpu"></i></div>
+            <h3 class="paso-title">Implementación de herramientas</h3>
+            <p class="paso-desc">Configuramos e integramos soluciones digitales, automatizaciones y desarrollos a medida
+              según las prioridades del plan.</p>
+          </article>
+
+          <!-- Paso 5 -->
+          <article class="paso-card reveal" style="transition-delay:0.1s">
+            <div class="paso-num">05</div>
+            <div class="paso-icon"><i data-lucide="users"></i></div>
+            <h3 class="paso-title">Habilitación y acompañamiento de equipos</h3>
+            <p class="paso-desc">Establecemos metas concretas y medibles, y un plan por etapas que conecta procesos,
+              tecnología y equipos.</p>
+          </article>
+
+          <!-- Paso 6 -->
+          <article class="paso-card reveal" style="transition-delay:0.2s">
+            <div class="paso-num">06</div>
+            <div class="paso-icon"><i data-lucide="trending-up"></i></div>
+            <h3 class="paso-title">Medición, ajustes y mejora continua</h3>
+            <p class="paso-desc">Definimos indicadores, medimos resultados y vamos ajustando el sistema para mantener y
+              aumentar el impacto en el tiempo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. BENEFICIOS ── -->
+    <section class="section-py" id="td-beneficios">
+      <div class="container ben-layout">
+        <div class="ben-text reveal">
+          <p class="section-eyebrow" style="text-align:left;">Impacto Real</p>
+          <h2 class="section-title" style="margin-bottom:1.75rem; text-align:left;">Beneficios de la transformación<br>digital
+            con Boosted</h2>
+          <p style="color:var(--zinc-400); font-size:1.15rem; line-height:1.7; font-weight:300; margin-bottom:3.5rem;">
+            Lo que cambia cuando la transformación digital se conecta con resultados tangibles en tu día a día:
+          </p>
+
+          <div class="ben-list">
+            <div class="ben-item">
+              <div class="ben-item-icon"><i data-lucide="zap"></i></div>
+              <div class="ben-item-text">Procesos más eficientes, con menos pasos manuales y menos retrabajo.</div>
+            </div>
+            <div class="ben-item">
+              <div class="ben-item-icon"><i data-lucide="bar-chart-3"></i></div>
+              <div class="ben-item-text">Mejor visibilidad del negocio gracias a datos centralizados y reportes claros.
+              </div>
+            </div>
+            <div class="ben-item">
+              <div class="ben-item-icon"><i data-lucide="user-plus"></i></div>
+              <div class="ben-item-text">Equipos más alineados y preparados para trabajar en un entorno digital.</div>
+            </div>
+            <div class="ben-item">
+              <div class="ben-item-icon"><i data-lucide="rocket"></i></div>
+              <div class="ben-item-text">Mayor capacidad de adaptación, innovación y crecimiento en el tiempo.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ben-why reveal" style="transition-delay:0.2s;">
+          <div class="why-td">
+            <h3
+              style="font-family:var(--font-display); font-size:2rem; color:#fff; font-weight:800; margin-bottom:2.5rem; letter-spacing:-0.02em;">
+              ¿Por qué impulsar tu transformación digital con Boosted?</h3>
+            <div class="why-td-grid">
+              <div class="why-td-item">
+                <h4><i data-lucide="target"></i> Enfoque Estratégico</h4>
+                <p>Combinamos visión de negocio, diseño de experiencia y tecnología para que la transformación no se
+                  quede en un documento, sino en procesos que funcionan.</p>
+              </div>
+              <div class="why-td-item">
+                <h4><i data-lucide="layers"></i> Ecosistema Integrado</h4>
+                <p>Integramos automatización, desarrollos a medida y presencia digital dentro de un mismo ecosistema,
+                  alineado a metas concretas de tu empresa.</p>
+              </div>
+            </div>
+            <a href="index.html#contacto" class="btn-primary"
+              style="width:100%; text-align:center; justify-content:center; margin-top:2rem;">AGENDAR UNA ASESORÍA
+              GRATUITA</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA FINAL ── -->
+    <section id="nosotros-cta">
+      <div class="nosotros-cta-glow"></div>
+      <div class="container">
+        <div class="cta-inner reveal">
+          <p class="nosotros-cta-label">Comienza ahora</p>
+          <h2 class="nosotros-cta-title" style="max-width:32rem; margin-inline:auto;">
+            Definamos juntos tu
+            <span class="text-gradient">hoja de ruta digital</span>
+          </h2>
+          <p class="nosotros-cta-desc">
+            Agenda una sesión con Boosted para evaluar el estado actual de tu negocio, priorizar iniciativas y diseñar
+            un plan de transformación digital conectado a resultados claros.
+          </p>
+          <a href="index.html#contacto" class="btn-primary"
+            style="font-size:1rem; padding: 1.1rem 2.5rem; box-shadow: 0 0 40px rgba(38,204,202,0.3);">
+            AGENDAR UNA CONSULTORÍA GRATUITA
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    lucide.createIcons();
+    // Intersection Observer for reveal animations
+    const observerOptions = { threshold: 0.12, rootMargin: '-20px' };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal, .anim-fadeup, .anim-fadescale').forEach(el => observer.observe(el));
+  </script>
+</body>
+
+</html>
+

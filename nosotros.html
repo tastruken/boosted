@@ -1,0 +1,817 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boosted | Nosotros — Agencia de Ecosistemas Digitales</title>
+  <meta name="description"
+    content="Somos una agencia híbrida de diseño, desarrollo y automatización con base en Chile. Combinamos automatización de procesos con diseño web, branding y contenido." />
+  <meta name="author" content="Boosted" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* ── NOSOTROS PAGE SPECIFIC ── */
+
+    /* Shared Background Elements (Consistent with Blog) */
+    .nos-glow-1 {
+      position: absolute;
+      top: 5%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(38, 204, 202, 0.08) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .nos-glow-2 {
+      position: absolute;
+      bottom: 20%;
+      left: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(38, 204, 202, 0.05) 0%, transparent 70%);
+      filter: blur(80px);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    /* Hero Nosotros */
+    #nosotros-hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 12rem;
+      padding-bottom: 8rem;
+      background: #000;
+    }
+
+    .hero-bg-media {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+      opacity: 0.2;
+      background-size: cover;
+      background-position: center;
+      transition: transform 0.8s ease;
+    }
+
+    #nosotros-hero:hover .hero-bg-media {
+      transform: scale(1.02);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at center, transparent 0%, #000 100%);
+      z-index: 1;
+    }
+
+    .nosotros-hero-grid {
+      position: relative;
+      z-index: 10;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .nosotros-hero-label {
+      font-size: 0.8rem;
+      font-family: var(--font-mono);
+      color: var(--boosted);
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.5rem 1.25rem;
+      background: rgba(38, 204, 202, 0.05);
+      border: 1px solid rgba(38, 204, 202, 0.1);
+      border-radius: 999px;
+    }
+
+    .nosotros-hero-label span {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--boosted);
+      box-shadow: 0 0 10px var(--boosted);
+    }
+
+    .nosotros-hero-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(4rem, 9vw, 6.5rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      color: #fff;
+      line-height: 0.9;
+      margin-bottom: 2.5rem;
+    }
+
+    .nosotros-hero-title .accent {
+      color: var(--boosted);
+    }
+
+    .nosotros-hero-desc {
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      color: var(--zinc-400);
+      line-height: 1.7;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto 4rem;
+    }
+
+    /* Stats Grid */
+    .nosotros-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      width: 100%;
+      max-width: 900px;
+      margin: 5rem auto 0;
+    }
+
+    .stat-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 2rem;
+      padding: 2.5rem 1.5rem;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stat-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--boosted), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+    }
+
+    .stat-card:hover::before {
+      transform: translateX(100%);
+    }
+
+    .stat-card:hover {
+      background: rgba(255, 255, 255, 0.05);
+      border-color: rgba(38, 204, 202, 0.3);
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--zinc-500);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+    }
+
+    /* Manifesto Section */
+    #manifesto {
+      padding-block: 10rem;
+      position: relative;
+    }
+
+    .manifesto-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    @media (max-width: 992px) {
+      .manifesto-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+    }
+
+    .manifesto-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .manifesto-body {
+      font-size: 1.15rem;
+      color: var(--zinc-400);
+      line-height: 1.8;
+      font-weight: 300;
+    }
+
+    .manifesto-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.01) 100%);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 3rem;
+      padding: 4rem;
+      position: relative;
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    /* Pillars */
+    #pilares {
+      padding-block: 8rem 12rem;
+      background: radial-gradient(circle at 10% 90%, rgba(38, 204, 202, 0.05) 0%, transparent 50%);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 5rem;
+    }
+
+    @media (max-width: 1200px) {
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .pillar-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 2rem;
+      padding: 3rem 2rem;
+      text-align: center;
+      transition: all 0.4s ease;
+    }
+
+    .pillar-card:hover {
+      background: rgba(38, 204, 202, 0.03);
+      border-color: rgba(38, 204, 202, 0.2);
+      transform: translateY(-8px);
+    }
+
+    .pillar-icon {
+      width: 4rem;
+      height: 4rem;
+      background: rgba(38, 204, 202, 0.1);
+      border-radius: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--boosted);
+      margin: 0 auto 2rem;
+      transition: transform 0.4s ease;
+    }
+
+    .pillar-card:hover .pillar-icon {
+      transform: rotate(5deg) scale(1.1);
+    }
+
+    .pillar-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .pillar-desc {
+      font-size: 0.9rem;
+      color: var(--zinc-500);
+      line-height: 1.6;
+      font-weight: 300;
+    }
+
+    /* Process Section */
+    #proceso {
+      padding-block: 10rem;
+      position: relative;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-top: 6rem;
+    }
+
+    @media (max-width: 900px) {
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .process-step {
+      position: relative;
+      padding-top: 3rem;
+    }
+
+    .process-num {
+      font-family: var(--font-bebas);
+      font-size: 6rem;
+      line-height: 1;
+      color: rgba(255, 255, 255, 0.03);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    .process-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .process-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .process-title::before {
+      content: '';
+      width: 2rem;
+      height: 2px;
+      background: var(--boosted);
+    }
+
+    .process-desc {
+      font-size: 1rem;
+      color: var(--zinc-400);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    /* Label Generic */
+    .section-label {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      margin-bottom: 1.5rem;
+      display: block;
+    }
+
+    .cta-mini-stat-label {
+      font-size: 0.8rem;
+      color: var(--zinc-500);
+      font-weight: 300;
+      margin-top: 0.2rem;
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Boosted | Nosotros — Agencia de Ecosistemas Digitales" />
+  <meta property="og:description" content="Somos una agencia híbrida de diseño, desarrollo y automatización con base en Chile. Combinamos automatización de procesos con diseño web, branding y contenido." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/nosotros.html" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html" style="color:var(--accent);">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link" style="color:var(--accent);">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+                  medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a></li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+                  e
+                  Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+                  HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+                  Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <div class="nos-glow-1"></div>
+    <div class="nos-glow-2"></div>
+
+    <!-- ── HERO NOSOTROS ── -->
+    <section id="nosotros-hero">
+      <div class="hero-bg-media"
+        style="background-image: url('https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&q=80&w=1200');">
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="bg-grid"></div>
+
+      <div class="container nosotros-hero-grid">
+        <div class="anim-fadeup">
+          <div class="nosotros-hero-label">
+            <span></span> ADNVANCE STRATEGY & TECH
+          </div>
+          <h1 class="nosotros-hero-title">
+            Escalamos Negocios <br>mediante <span class="accent">Inteligencia Digital</span>
+          </h1>
+          <p class="nosotros-hero-desc">
+            En un mundo saturado de herramientas, nosotros construimos sistemas. Unimos arquitectura de datos, diseño de
+            conversión y automatización para que tu operación crezca sin fricciones.
+          </p>
+
+          <div class="nosotros-stats anim-fadescale">
+            <div class="stat-card">
+              <span class="stat-number">+10</span>
+              <span class="stat-label">Años de Ingeniería</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">B2B</span>
+              <span class="stat-label">Foco en Resultados</span>
+            </div>
+            <div class="stat-card">
+              <span class="stat-number">360°</span>
+              <span class="stat-label">Visión Sistémica</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MANIFIESTO BOOSTED ── -->
+    <section id="manifesto">
+      <div class="container manifesto-grid">
+        <div class="reveal">
+          <span class="section-label">NUESTRO MANIFIESTO</span>
+          <h2 class="manifesto-title">No hacemos sitios,<br>creamos activos</h2>
+          <div class="manifesto-body">
+            <p style="margin-bottom: 1.5rem;">
+              La mayoría de las empresas tienen "herramientas sueltas": un sitio web que no vende, un CRM que nadie usa
+              y procesos manuales que queman tiempo.
+            </p>
+            <p>
+              En <strong>Boosted</strong>, creemos que la tecnología solo tiene valor si está al servicio de la
+              estrategia. Nuestra misión es transformar tu caos digital en un ecosistema fluido, escalable y sobre todo,
+              rentable.
+            </p>
+          </div>
+        </div>
+
+        <div class="manifesto-card reveal" style="transition-delay: 0.2s;">
+          <h3 style="color:#fff; font-size: 1.5rem; margin-bottom: 2rem; font-family: var(--font-display);">La Filosofía
+            Híbrida</h3>
+          <p style="color:var(--zinc-500); font-weight: 300; line-height: 1.6;">
+            Somos un equipo donde el diseño entiende de ROI y la ingeniería entiende de experiencia de usuario. Esta
+            visión híbrida es lo que nos permite resolver problemas de negocio complejos que las agencias tradicionales
+            simplemente no ven.
+          </p>
+          <div style="margin-top: 3rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+            <div class="glass-card"
+              style="padding: 1rem; border-radius: 1rem; font-size: 0.8rem; color: var(--boosted);">#EstrategiaPrimero
+            </div>
+            <div class="glass-card"
+              style="padding: 1rem; border-radius: 1rem; font-size: 0.8rem; color: var(--boosted);">#IngenieríaUX</div>
+            <div class="glass-card"
+              style="padding: 1rem; border-radius: 1rem; font-size: 0.8rem; color: var(--boosted);">#SistemasVivos</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 3. PILARES ESTRATÉGICOS ── -->
+    <section id="pilares">
+      <div class="container">
+        <div class="reveal" style="text-align:center; max-width:50rem; margin-inline:auto;">
+          <span class="section-label">LOS PILARES DE BOOSTED</span>
+          <h2 class="manifesto-title">Fuerzas que impulsan <br>tu crecimiento</h2>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card reveal">
+            <div class="pillar-icon"><i data-lucide="target"></i></div>
+            <h3 class="pillar-title">Estrategia</h3>
+            <p class="pillar-desc">Cimentamos cada acción en objetivos comerciales reales. Si no genera ROI, no es parte
+              del plan.</p>
+          </div>
+          <div class="pillar-card reveal" style="transition-delay:0.1s;">
+            <div class="pillar-icon"><i data-lucide="layout"></i></div>
+            <h3 class="pillar-title">Diseño de Conversión</h3>
+            <p class="pillar-desc">No solo estética. Diseñamos experiencias psicológicamente optimizadas para guiar al
+              usuario al "Sí".</p>
+          </div>
+          <div class="pillar-card reveal" style="transition-delay:0.2s;">
+            <div class="pillar-icon"><i data-lucide="cpu"></i></div>
+            <h3 class="pillar-title">Ingeniería Operativa</h3>
+            <p class="pillar-desc">Automatizamos lo repetitivo para liberar el talento humano. Escalamos tu operación
+              sin sumar headcount.</p>
+          </div>
+          <div class="pillar-card reveal" style="transition-delay:0.3s;">
+            <div class="pillar-icon"><i data-lucide="line-chart"></i></div>
+            <h3 class="pillar-title">Evolución Continua</h3>
+            <p class="pillar-desc">Tu ecosistema digital es un organismo vivo. Medimos, aprendemos y optimizamos en cada
+              ciclo.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. NUESTRO PROCESO ── -->
+    <section id="proceso">
+      <div class="container">
+        <div class="reveal">
+          <span class="section-label">METODOLOGÍA DE ALTO IMPACTO</span>
+          <h2 class="manifesto-title">Del caos al sistema <br>en 3 pasos</h2>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <span class="process-num">01</span>
+            <div class="process-content">
+              <h3 class="process-title">Auditoría Sistémica</h3>
+              <p class="process-desc">
+                No partimos por la herramienta. Mapeamos tus procesos actuales, identificamos cuellos de botella y
+                definimos la arquitectura ideal.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal" style="transition-delay:0.1s;">
+            <span class="process-num">02</span>
+            <div class="process-content">
+              <h3 class="process-title">Construcción & Vínculo</h3>
+              <p class="process-desc">
+                Implementamos el sitio web y las automatizaciones centrales, asegurando que cada dato fluya
+                correctamente entre todas tus plataformas.
+              </p>
+            </div>
+          </div>
+          <div class="process-step reveal" style="transition-delay:0.2s;">
+            <span class="process-num">03</span>
+            <div class="process-content">
+              <h3 class="process-title">Escalamiento</h3>
+              <p class="process-desc">
+                Una vez el sistema está ordenado, le metemos potencia. Optimizamos la conversión y refinamos los flujos
+                para que le crecimiento sea sostenible.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 5. CTA FINAL ── -->
+    <section id="nosotros-cta">
+      <div class="nos-glow-1" style="top:50%; left:50%; transform:translate(-50%,-50%); width: 800px; opacity: 0.1;">
+      </div>
+      <div class="container" style="position:relative; z-index:10;">
+        <div class="reveal" style="text-align:center; max-width:55rem; margin-inline:auto;">
+          <span class="section-label">READY TO GET BOOSTED?</span>
+          <h2 class="nosotros-hero-title">Tu negocio creció. <br>Hagamos que tu <span class="accent">Sistema
+              Digital</span> esté a la altura.</h2>
+          <p class="nosotros-hero-desc">
+            Si sientes que tus herramientas actuales frenan tu crecimiento en lugar de impulsarlo, es hora de dar el
+            siguiente paso técnico y estratégico.
+          </p>
+          <div style="display:flex; justify-content:center; gap:1.5rem; flex-wrap:wrap;">
+            <a href="index.html#contacto" class="btn-primary">AGENDAR CONSULTORÍA ESTRATÉGICA</a>
+            <a href="sitios-web.html" class="btn-ghost glass-card">VER PORTAFOLIO</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    (function () {
+      // Scroll reveal para esta página
+      const revealElsLocal = document.querySelectorAll('.reveal, .reveal-scale, .anim-fadeup, .anim-fadescale');
+      const obsLocal = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            obsLocal.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '-40px' });
+      revealElsLocal.forEach(el => obsLocal.observe(el));
+
+      // Init icons
+      lucide.createIcons();
+    })();
+  </script>
+
+</body>
+
+</html>

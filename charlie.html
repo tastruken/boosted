@@ -1,0 +1,1296 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Charlie IA | Agente de Automatización 24/7 — Boosted</title>
+  <meta name="description"
+    content="Charlie es el agente de IA de Boosted que califica leads, automatiza seguimientos y opera 24/7. Conecta CRM, ERP y Email en un solo flujo. Conversión 2–3x en 90 días." />
+  <meta name="keywords"
+    content="automatización de procesos IA, agente IA ventas, calificación leads automática, CRM automatizado, Charlie Boosted, ecosistema digital Chile" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://boosted.cl/charlie.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Charlie IA | Agente de Automatización 24/7 — Boosted" />
+  <meta property="og:description"
+    content="Agente de IA que califica leads, automatiza seguimientos y opera 24/7 dentro de tu ecosistema digital." />
+  <meta property="og:url" content="https://boosted.cl/charlie.html" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Charlie","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"Agente de inteligencia artificial que califica leads, automatiza seguimientos y opera 24/7.","provider":{"@type":"Organization","name":"Boosted","url":"https://boosted.cl"}}
+  </script>
+
+  <style>
+    /* ── Charlie page vars ── */
+    :root {
+      --charlie: #26ccca;
+    }
+
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ─────────────── HERO ─────────────── */
+    #charlie-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      padding-top: 10rem;
+      padding-bottom: 8rem;
+    }
+
+    .ch-hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 65% 40%, rgba(38, 204, 202, 0.13) 0%, transparent 55%),
+        radial-gradient(ellipse at 10% 85%, rgba(38, 204, 202, 0.05) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .ch-hero-layout {
+      position: relative;
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 3rem;
+    }
+
+    .ch-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(38, 204, 202, 0.08);
+      border: 1px solid rgba(38, 204, 202, 0.22);
+      border-radius: 999px;
+      padding: 0.4rem 1.1rem;
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      color: var(--charlie);
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 2rem;
+    }
+
+    .ch-badge .dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--charlie);
+      animation: pulse 2s infinite;
+    }
+
+    .ch-hero-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      line-height: 0.92;
+      color: #fff;
+      margin-bottom: 1.75rem;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+    }
+
+    .ch-hero-title .accent {
+      color: var(--charlie);
+    }
+
+    .ch-hero-sub {
+      font-size: clamp(1.1rem, 2vw, 1.35rem);
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.7;
+      max-width: 48rem;
+      margin-inline: auto;
+      margin-bottom: 3rem;
+    }
+
+    .ch-features-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 3rem;
+    }
+
+    .ch-feat-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 999px;
+      padding: 0.45rem 1rem;
+      font-size: 0.82rem;
+      color: var(--zinc-300);
+      font-weight: 300;
+    }
+
+    .ch-feat-pill i {
+      width: 0.875rem;
+      height: 0.875rem;
+      color: var(--charlie);
+    }
+
+    .ch-result-bar {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: rgba(38, 204, 202, 0.07);
+      border: 1px solid rgba(38, 204, 202, 0.2);
+      border-radius: 1rem;
+      padding: 1rem 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .ch-result-num {
+      font-family: var(--font-bebas);
+      font-size: 2.5rem;
+      color: var(--charlie);
+      letter-spacing: 0.03em;
+      line-height: 1;
+    }
+
+    .ch-result-text {
+      font-size: 0.875rem;
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.4;
+      max-width: 12rem;
+    }
+
+    .ch-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    /* Hero right panel */
+    .ch-stats-panel {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(38, 204, 202, 0.12);
+      border-radius: 1.75rem;
+      padding: 2.25rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .ch-stats-panel::before {
+      content: '';
+      position: absolute;
+      top: -3rem;
+      right: -3rem;
+      width: 14rem;
+      height: 14rem;
+      background: radial-gradient(circle, rgba(38, 204, 202, 0.12) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .ch-stat-big {
+      padding-bottom: 1.75rem;
+      margin-bottom: 1.75rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .ch-stat-num {
+      font-family: var(--font-bebas);
+      font-size: 4rem;
+      color: var(--charlie);
+      line-height: 1;
+      letter-spacing: 0.02em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .ch-stat-label {
+      font-size: 0.875rem;
+      color: var(--zinc-400);
+      font-weight: 300;
+      margin-top: 0.25rem;
+    }
+
+    .ch-stats-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .ch-stat-item-num {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 0.25rem;
+    }
+
+    .ch-stat-item-label {
+      font-size: 0.825rem;
+      color: var(--zinc-500);
+      font-weight: 400;
+      line-height: 1.4;
+    }
+
+    .ch-stat-footer {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.82rem;
+      color: var(--charlie);
+      font-family: var(--font-mono);
+      letter-spacing: 0.04em;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1.25rem;
+    }
+
+    .ch-stat-footer i {
+      width: 0.9rem;
+      height: 0.9rem;
+      animation: pulse 2s infinite;
+    }
+
+    /* ─────────────── PROBLEM STATEMENT ─────────────── */
+    #charlie-problema {
+      padding-block: 8rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .prob-layout {
+      display: grid;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    @media (min-width: 900px) {
+      .prob-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    .prob-eyebrow {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      color: var(--charlie);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1.25rem;
+    }
+
+    .prob-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
+
+    .prob-body {
+      font-size: 1.0625rem;
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Charlie's answer list */
+    .ch-answers {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .ch-answer {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .ch-answer:hover {
+      border-color: rgba(38, 204, 202, 0.2);
+      background: rgba(38, 204, 202, 0.02);
+    }
+
+    .ch-ans-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 0.75rem;
+      background: rgba(38, 204, 202, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charlie);
+      flex-shrink: 0;
+    }
+
+    .ch-ans-icon i {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .ch-ans-title {
+      font-weight: 600;
+      color: #fff;
+      font-size: 0.9375rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .ch-ans-text {
+      font-size: 0.875rem;
+      color: var(--zinc-500);
+      font-weight: 300;
+      line-height: 1.55;
+    }
+
+    /* ─────────────── DIFERENCIADORES ─────────────── */
+    #charlie-diferente {
+      padding-block: 8rem;
+      background: var(--bg-card);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      text-align: center;
+    }
+
+    .dif-intro {
+      max-width: 44rem;
+      margin-inline: auto;
+      margin-bottom: 5rem;
+    }
+
+    .ch-section-eyebrow {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      color: var(--charlie);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .ch-section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+    }
+
+    /* Diferenciadores — clean columns */
+    .dif-cols {
+      display: grid;
+      gap: 0;
+    }
+
+    @media (min-width: 900px) {
+      .dif-cols {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .dif-col {
+      padding: 2.5rem 2.5rem 2.5rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      position: relative;
+      transition: border-top-color 0.3s;
+    }
+
+    @media (min-width: 900px) {
+      .dif-col {
+        padding: 0 3rem 0 0;
+        border-top: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.06);
+      }
+
+      .dif-col:first-child {
+        border-left: none;
+        padding-left: 0;
+      }
+
+      .dif-col:not(:first-child) {
+        padding-left: 3rem;
+      }
+    }
+
+    .dif-col:hover .dif-bar {
+      opacity: 1;
+    }
+
+    .dif-bar {
+      width: 2.5rem;
+      height: 2px;
+      background: var(--charlie);
+      margin-bottom: 2rem;
+      opacity: 0.5;
+      transition: opacity 0.3s;
+    }
+
+    .dif-icon-bare {
+      color: var(--charlie);
+      margin-bottom: 1.5rem;
+      opacity: 0.8;
+    }
+
+    .dif-icon-bare i {
+      width: 2rem;
+      height: 2rem;
+    }
+
+    .dif-heading {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.875rem;
+      letter-spacing: -0.02em;
+    }
+
+    .dif-desc {
+      font-size: 0.9375rem;
+      color: var(--zinc-500);
+      font-weight: 300;
+      line-height: 1.7;
+    }
+
+    /* ─────────────── CAPACIDADES ─────────────── */
+    #charlie-caps {
+      padding-block: 8rem;
+    }
+
+    .caps-intro {
+      max-width: 40rem;
+      margin-bottom: 5rem;
+    }
+
+    .caps-tab-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+    }
+
+    .caps-tab {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      padding: 0.75rem 1.5rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 0.875rem;
+      color: var(--zinc-400);
+      cursor: pointer;
+      background: transparent;
+      font-family: var(--font-display);
+      transition: all 0.3s;
+    }
+
+    .caps-tab i {
+      width: 0.9rem;
+      height: 0.9rem;
+    }
+
+    .caps-tab.active,
+    .caps-tab:hover {
+      border-color: var(--charlie);
+      color: var(--charlie);
+      background: rgba(38, 204, 202, 0.06);
+    }
+
+    .caps-panel {
+      display: none;
+    }
+
+    .caps-panel.active {
+      display: grid;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .caps-panel.active {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .caps-panel.active {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .cap-card {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+
+    .cap-card:hover {
+      border-color: rgba(38, 204, 202, 0.2);
+      background: rgba(38, 204, 202, 0.025);
+    }
+
+    .cap-icon {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 0.75rem;
+      background: rgba(38, 204, 202, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--charlie);
+      margin-bottom: 1rem;
+    }
+
+    .cap-icon i {
+      width: 1.2rem;
+      height: 1.2rem;
+    }
+
+    .cap-title {
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.4rem;
+      font-size: 0.9375rem;
+    }
+
+    .cap-text {
+      font-size: 0.875rem;
+      color: var(--zinc-500);
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    /* ─────────────── TABLA ─────────────── */
+    #charlie-tabla {
+      padding-block: 8rem;
+      background: var(--bg-card);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tabla-layout {
+      display: grid;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    @media (min-width: 900px) {
+      .tabla-layout {
+        grid-template-columns: 0.8fr 1.2fr;
+      }
+    }
+
+    .tabla-intro-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3rem, 6vw, 5rem);
+      color: #fff;
+      letter-spacing: 0.03em;
+      line-height: 1;
+      margin-bottom: 1.25rem;
+    }
+
+    .tabla-intro-title span {
+      color: var(--charlie);
+    }
+
+    .tabla-body {
+      font-size: 1rem;
+      color: var(--zinc-400);
+      font-weight: 300;
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .tabla-wrap {
+      border-radius: 1.25rem;
+      border: 1px solid rgba(255, 255, 255, 0.07);
+      overflow: hidden;
+    }
+
+    table.c-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.875rem;
+    }
+
+    .c-table thead tr {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .c-table th {
+      padding: 1.1rem 1.5rem;
+      text-align: left;
+      font-family: var(--font-mono);
+      font-size: 0.67rem;
+      letter-spacing: 0.1em;
+      color: var(--zinc-500);
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .c-table th.th-c {
+      color: var(--charlie);
+    }
+
+    .c-table td {
+      padding: 0.9rem 1.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      color: var(--zinc-400);
+      font-weight: 300;
+    }
+
+    .c-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .c-table td:first-child {
+      color: var(--zinc-300);
+      font-weight: 500;
+      font-size: 0.8125rem;
+    }
+
+    .c-table .human {
+      color: var(--zinc-600);
+    }
+
+    .c-table .cv {
+      color: var(--charlie);
+      font-weight: 500;
+    }
+
+    /* ─────────────── CTA FINAL ─────────────── */
+    #charlie-cta {
+      padding-block: 10rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #charlie-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60rem;
+      height: 28rem;
+      background: radial-gradient(ellipse at top, rgba(38, 204, 202, 0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+
+    .ch-cta-inner {
+      position: relative;
+      z-index: 10;
+      max-width: 44rem;
+      margin-inline: auto;
+    }
+
+    .ch-cta-eyebrow {
+      font-size: 0.7rem;
+      font-family: var(--font-mono);
+      color: var(--charlie);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+    }
+
+    .ch-cta-eyebrow::before,
+    .ch-cta-eyebrow::after {
+      content: '';
+      height: 1px;
+      width: 2.5rem;
+      background: linear-gradient(to right, transparent, rgba(38, 204, 202, 0.5));
+    }
+
+    .ch-cta-eyebrow::after {
+      background: linear-gradient(to left, transparent, rgba(38, 204, 202, 0.5));
+    }
+
+    .ch-cta-title {
+      font-family: var(--font-bebas);
+      font-size: clamp(3rem, 7vw, 5.5rem);
+      letter-spacing: 0.04em;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 1.5rem;
+    }
+
+    .ch-cta-desc {
+      font-size: 1.0625rem;
+      color: var(--zinc-400);
+      font-weight: 300;
+      margin-bottom: 3rem;
+      line-height: 1.75;
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Charlie IA | Agente de Automatización 24/7 — Boosted" />
+  <meta property="og:description" content="Charlie es el agente de IA de Boosted que califica leads, automatiza seguimientos y opera 24/7. Conecta CRM, ERP y Email en un solo flujo. Conversión 2–3x en 90 días." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:url" content="https://boosted.cl/charlie.html" />
+  <meta property="og:type" content="website" />
+</head>
+
+<body>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html" >Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html">Blog</a></li>
+        </ul>
+        <a href="index.html#contacto" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link" >Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+                  medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a></li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+                  e
+                  Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+                  HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+                  Experiencias Digitales</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link">Blog</a></li>
+          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main id="main-content">
+    <!-- Breadcrumbs -->
+    <nav aria-label="Ruta de navegación"
+      style="position:absolute; top: 7.75rem; left:50%; transform:translateX(-50%); width:100%; max-width:1200px; padding:0 1.5rem; z-index:10;">
+      <ol
+        style="display:flex; gap:0.5rem; align-items:center; list-style:none; margin:0; padding:0; font-size:0.8rem; color:var(--zinc-300); font-family:var(--font-mono); text-transform: uppercase; letter-spacing: 0.05em; font-weight: 500;">
+        <li><a href="index.html" style="color:var(--zinc-300); text-decoration:none; transition: color 0.2s;">Inicio</a>
+        </li>
+        <li aria-hidden="true" style="color:var(--zinc-500)">/</li>
+        <li><span style="color:var(--charlie);" aria-current="page">Charlie IA</span></li>
+      </ol>
+    </nav>
+
+    <!-- ── 1. HERO ── -->
+    <section id="charlie-hero">
+      <div class="ch-hero-bg" aria-hidden="true"
+        style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center; opacity: 0.25;">
+      </div>
+      <div class="ch-hero-bg" aria-hidden="true"></div>
+      <div class="bg-grid"></div>
+      <div class="container ch-hero-layout">
+
+        <!-- Left: text -->
+        <div class="anim-fadeup">
+
+          <div class="ch-badge"><span class="dot"></span> Agente IA · Boosted</div>
+
+          <h1 class="ch-hero-title">
+            Tu agente.<br>
+            Tu ritmo.<br>
+            <span class="accent">24/7.</span>
+          </h1>
+
+          <p class="ch-hero-sub">
+            Charlie califica leads según intención de compra, asigna al vendedor correcto y ejecuta seguimientos
+            automáticamente — sin que tu equipo mueva un dedo.
+          </p>
+
+          <div class="ch-features-row">
+            <div class="ch-feat-pill"><i data-lucide="filter"></i> Scoring de leads</div>
+            <div class="ch-feat-pill"><i data-lucide="user-check"></i> Asignación automática</div>
+            <div class="ch-feat-pill"><i data-lucide="zap"></i> Seguimientos 24/7</div>
+            <div class="ch-feat-pill"><i data-lucide="link-2"></i> CRM · ERP · Email</div>
+          </div>
+
+          <div class="ch-ctas">
+            <a href="index.html#contacto" class="btn-primary">Hablar con un asesor</a>
+            <a href="#charlie-caps" class="btn-ghost glass-card">
+              Ver qué hace Charlie <i data-lucide="chevron-down"></i>
+            </a>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 2. EL PROBLEMA Y LA SOLUCIÓN ── -->
+    <section id="charlie-problema">
+      <div class="glow-blob glow-boosted" style="top:30%;right:5%;opacity:0.5;"></div>
+      <div class="container prob-layout">
+
+        <div class="reveal">
+          <p class="prob-eyebrow">El problema real</p>
+          <h2 class="prob-title">No es falta de leads.<br>Es que respondes tarde.</h2>
+          <p class="prob-body">
+            Cada hora sin respuesta es un lead que se enfría. Cada tarea manual es una venta que depende de que alguien
+            esté disponible. Charlie resuelve eso.
+          </p>
+          <a href="index.html#contacto" class="btn-ghost glass-card" style="display:inline-flex;">
+            Agendar diagnóstico <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+
+        <div class="ch-answers reveal" style="transition-delay:0.15s;">
+          <div class="ch-answer">
+            <div class="ch-ans-icon"><i data-lucide="filter"></i></div>
+            <div>
+              <div class="ch-ans-title">Califica leads automáticamente</div>
+              <div class="ch-ans-text">Puntúa la intención de compra y decide en segundos si derivar a ventas.</div>
+            </div>
+          </div>
+          <div class="ch-answer">
+            <div class="ch-ans-icon"><i data-lucide="user-check"></i></div>
+            <div>
+              <div class="ch-ans-title">Asigna sin intervención manual</div>
+              <div class="ch-ans-text">El lead llega al vendedor correcto según las reglas de tu negocio.</div>
+            </div>
+          </div>
+          <div class="ch-answer">
+            <div class="ch-ans-icon"><i data-lucide="clock"></i></div>
+            <div>
+              <div class="ch-ans-title">Ejecuta seguimientos 24/7</div>
+              <div class="ch-ans-text">Nada cae. Nada se pierde. Cada contacto recibe su secuencia a tiempo.</div>
+            </div>
+          </div>
+          <div class="ch-answer">
+            <div class="ch-ans-icon"><i data-lucide="plug"></i></div>
+            <div>
+              <div class="ch-ans-title">Un solo flujo conectado</div>
+              <div class="ch-ans-text">CRM, ERP, Email y WhatsApp operando como un sistema único y coherente.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 3. DIFERENCIADORES ── -->
+    <section id="charlie-diferente">
+      <div class="container">
+        <div class="dif-intro reveal">
+          <p class="ch-section-eyebrow">Por qué Charlie</p>
+          <h2 class="ch-section-title" style="margin-bottom:0.75rem;">No es un chatbot.<br>Es tu operación automatizada.
+          </h2>
+          <p style="font-size:1rem;color:var(--zinc-400);font-weight:300;line-height:1.7;margin-top:1rem;">
+            Diseñado específicamente para ejecutar <em>tus</em> procesos dentro de <em>tu</em> ecosistema.
+          </p>
+        </div>
+
+        <div class="dif-cols">
+
+          <div class="dif-col reveal">
+            <div class="dif-bar"></div>
+            <div class="dif-icon-bare"><i data-lucide="shield-check"></i></div>
+            <div class="dif-heading">Opera con tus reglas</div>
+            <div class="dif-desc">No improvisa. Cada acción responde a la lógica que diseñamos contigo. Sin sorpresas,
+              sin desviaciones.</div>
+          </div>
+
+          <div class="dif-col reveal" style="transition-delay:0.12s;">
+            <div class="dif-bar"></div>
+            <div class="dif-icon-bare"><i data-lucide="plug"></i></div>
+            <div class="dif-heading">Se conecta con lo que ya tienes</div>
+            <div class="dif-desc">CRM, ERP, Email, WhatsApp — sin silos, sin pérdida de datos, sin empezar de cero.
+            </div>
+          </div>
+
+          <div class="dif-col reveal" style="transition-delay:0.24s;">
+            <div class="dif-bar"></div>
+            <div class="dif-icon-bare"><i data-lucide="trending-up"></i></div>
+            <div class="dif-heading">Amplifica tu estrategia</div>
+            <div class="dif-desc">Libera horas del equipo en tareas repetitivas para que el talento se concentre donde
+              importa.</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ── 4. CAPACIDADES (con tabs) ── -->
+    <section id="charlie-caps">
+      <div class="container">
+
+        <div class="caps-intro reveal">
+          <p class="ch-section-eyebrow">Capacidades</p>
+          <h2 class="ch-section-title" style="margin-bottom:1rem;">Front-End y Back-End.<br>Un solo agente.</h2>
+          <p style="font-size:1rem;color:var(--zinc-400);font-weight:300;line-height:1.75;">
+            Interacción directa con prospectos más los procesos invisibles que sostienen tu operación.
+          </p>
+        </div>
+
+        <!-- Tabs -->
+        <div class="caps-tab-row reveal">
+          <button class="caps-tab active" onclick="switchTab(this,'front')">
+            <i data-lucide="monitor"></i> Interacción (Front-End)
+          </button>
+          <button class="caps-tab" onclick="switchTab(this,'back')">
+            <i data-lucide="server"></i> Operaciones (Back-End)
+          </button>
+        </div>
+
+        <!-- Front panel -->
+        <div class="caps-panel active" id="panel-front">
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="target"></i></div>
+            <div class="cap-title">Scoring de Leads</div>
+            <div class="cap-text">Perfila y puntúa la intención de compra. Deriva solo los leads calificados a ventas.
+            </div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="calendar-check"></i></div>
+            <div class="cap-title">Agendamiento Dinámico</div>
+            <div class="cap-text">Bloquea citas en Google/Outlook en tiempo real, sin intervención del equipo.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="file-check-2"></i></div>
+            <div class="cap-title">Onboarding Automatizado</div>
+            <div class="cap-text">Solicita documentación y genera contratos digitales al instante tras el cierre.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="headphones"></i></div>
+            <div class="cap-title">Soporte y Enrutamiento</div>
+            <div class="cap-text">Resuelve consultas L1 y escala tickets por análisis de sentimiento automático.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="shopping-cart"></i></div>
+            <div class="cap-title">Recuperación de Carritos</div>
+            <div class="cap-text">Reactiva ventas perdidas con secuencias multicanal WhatsApp + Email.</div>
+          </div>
+        </div>
+
+        <!-- Back panel -->
+        <div class="caps-panel" id="panel-back">
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="refresh-cw"></i></div>
+            <div class="cap-title">Sincronización Bidireccional</div>
+            <div class="cap-text">Un cambio en CRM se replica en facturación y marketing de forma simultánea.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="receipt"></i></div>
+            <div class="cap-title">Facturación SII</div>
+            <div class="cap-text">Detecta pagos, genera boleta y cuadra caja automáticamente.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="package-search"></i></div>
+            <div class="cap-title">Inventario Predictivo</div>
+            <div class="cap-text">Alertas de reposición basadas en tendencias históricas de venta.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="mail-check"></i></div>
+            <div class="cap-title">Lead Nurturing</div>
+            <div class="cap-text">Secuencias de reactivación a largo plazo para bases de datos inactivas.</div>
+          </div>
+          <div class="cap-card">
+            <div class="cap-icon"><i data-lucide="bar-chart-2"></i></div>
+            <div class="cap-title">Reporte Diario</div>
+            <div class="cap-text">Métricas de todas tus plataformas consolidadas en un solo informe automático.</div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 5. TABLA COMPARATIVA ── -->
+    <section id="charlie-tabla">
+      <div class="container tabla-layout">
+
+        <div class="reveal">
+          <p class="ch-section-eyebrow">Rendimiento</p>
+          <h2 class="tabla-intro-title">Humano<br>vs.<br><span>Charlie</span></h2>
+          <p class="tabla-body">
+            Tu competencia contrata para sumar. Tú contratas para multiplicar. La única vía para crecer sin sacrificar
+            márgenes es la automatización.
+          </p>
+          <a href="index.html#contacto" class="btn-primary">Solicitar demo</a>
+        </div>
+
+        <div class="tabla-wrap reveal" style="transition-delay:0.15s;">
+          <table class="c-table">
+            <thead>
+              <tr>
+                <th>Indicador</th>
+                <th>Gestión Humana</th>
+                <th class="th-c">Charlie IA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Disponibilidad</td>
+                <td class="human">40–45 h / sem</td>
+                <td class="cv">168 h (24/7/365)</td>
+              </tr>
+              <tr>
+                <td>Procesamiento</td>
+                <td class="human">1 tarea · lineal</td>
+                <td class="cv">Multihilo ilimitado</td>
+              </tr>
+              <tr>
+                <td>Latencia</td>
+                <td class="human">Minutos a horas</td>
+                <td class="cv">&lt; 2 segundos</td>
+              </tr>
+              <tr>
+                <td>Tasa de error</td>
+                <td class="human">3–5 %</td>
+                <td class="cv">0 % (reglas lógicas)</td>
+              </tr>
+              <tr>
+                <td>Escalabilidad</td>
+                <td class="human">Lenta · contratación</td>
+                <td class="cv">Inmediata · cloud</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── 6. CTA FINAL ── -->
+    <section id="charlie-cta">
+      <div class="container">
+        <div class="ch-cta-inner reveal">
+          <p class="ch-cta-eyebrow">Comienza ahora</p>
+          <h2 class="ch-cta-title">
+            Automaticemos juntos<br>tu primer proceso
+          </h2>
+          <p class="ch-cta-desc">
+            Agenda una sesión para mapear tareas repetitivas, priorizar flujos y diseñar tu plan de automatización
+            integrado.
+          </p>
+          <a href="index.html#contacto" class="btn-primary"
+            style="font-size:1rem;padding:1.1rem 2.5rem;box-shadow:0 0 40px rgba(38,204,202,0.3);">
+            AGENDAR CONSULTORÍA GRATUITA
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    // Expose tab function globally BEFORE lucide replaces icons
+    window.switchTab = function (btn, tab) {
+      document.querySelectorAll('.caps-tab').forEach(function (b) { b.classList.remove('active'); });
+      document.querySelectorAll('.caps-panel').forEach(function (p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('panel-' + tab).classList.add('active');
+    };
+
+    // Reveal (wrapped to avoid const conflict with script.js)
+    (function () {
+      var els = document.querySelectorAll('.reveal,.anim-fadeup,.anim-fadescale');
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add('revealed'); io.unobserve(e.target); }
+        });
+      }, { threshold: 0.07, rootMargin: '-20px' });
+      els.forEach(function (el) { io.observe(el); });
+    })();
+
+    lucide.createIcons();
+  </script>
+
+</body>
+
+</html>
