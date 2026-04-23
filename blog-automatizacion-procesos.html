@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Automatización de Procesos Empresariales: ¿Cuánto dinero pierde tu empresa? — Boosted Blog</title>
+  <meta name="description"
+    content="Descubre el costo real de las tareas manuales repetitivas y cómo la automatización de procesos puede salvar la rentabilidad de tu empresa." />
+  <meta name="author" content="Charlie - Boosted" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Estilos compartidos -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    /* ── ARTICLE PAGE SPECIFIC ── */
+    .article-header {
+      position: relative;
+      padding-top: 10rem;
+      padding-bottom: 4rem;
+      background: #09090b;
+      overflow: hidden;
+    }
+
+    .article-bg {
+      position: absolute;
+      inset: 0;
+      background-size: cover;
+      background-position: center;
+      opacity: 0.15;
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .article-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 0%, #09090b 100%);
+    }
+
+    .article-header-content {
+      position: relative;
+      z-index: 10;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      padding: 0 1.5rem;
+    }
+
+    .article-category {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      border-color: var(--boosted);
+      transform: translateY(-2px);
+    }
+
+    /* Minimalist Related Section */
+    .related-section {
+      margin-top: 6rem;
+      padding-top: 4rem;
+      padding-bottom: 6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .related-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--zinc-400);
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .related-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .related-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .related-item:hover {
+      background: rgba(38, 204, 202, 0.05);
+      border-color: rgba(38, 204, 202, 0.2);
+      transform: translateX(5px);
+    }
+
+    .related-item-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+    }
+
+    .related-item-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .related-item-more {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--zinc-500);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .related-item:hover .related-item-more {
+      color: var(--boosted);
+    }
+
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5.5vw, 4rem);
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      font-weight: 800;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+      color: var(--zinc-400);
+      margin-bottom: 2rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .author-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      color: #fff;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .author-badge:hover {
+      background: rgba(38, 204, 202, 0.1);
+      border-color: rgba(38, 204, 202, 0.3);
+      color: var(--boosted);
+    }
+
+    /* Article Body */
+    .article-body {
+      padding-block: 4rem 8rem;
+      background: #09090b;
+      position: relative;
+    }
+
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 350px;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    @media (max-width: 992px) {
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .article-content {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--zinc-300);
+      font-weight: 300;
+    }
+
+    .drop-cap {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 6rem;
+      line-height: 0.8;
+      padding-top: 0.5rem;
+      padding-right: 1rem;
+      color: var(--boosted);
+      font-weight: 800;
+    }
+
+    .article-content p {
+      margin-bottom: 1.5rem;
+    }
+
+    /* Ambient Glows */
+    .article-ambient-glow {
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(38, 204, 202, 0.05) 0%, transparent 70%);
+      filter: blur(100px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .glow-top-left {
+      top: -5%;
+      left: -20%;
+    }
+
+    .glow-bottom-right {
+      bottom: 10%;
+      right: -20%;
+      background: radial-gradient(circle, rgba(232, 121, 249, 0.03) 0%, transparent 70%);
+    }
+
+    /* Reading Progress */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--boosted), #e879f9);
+      z-index: 9999;
+      transition: width 0.1s ease-out;
+    }
+
+    .article-content h2 {
+      font-family: var(--font-display);
+      font-size: 2.2rem;
+      background: linear-gradient(90deg, #fff, var(--zinc-400));
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-top: 4rem;
+      margin-bottom: 2rem;
+      line-height: 1.3;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      position: relative;
+      scroll-margin-top: 120px;
+    }
+
+    .article-content h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      width: 60px;
+      height: 2px;
+      background: var(--boosted);
+    }
+
+    .article-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #fff;
+      margin-top: 2.5rem;
+      margin-bottom: 1rem;
+      scroll-margin-top: 120px;
+    }
+
+    .article-content strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .article-content ul:not(.toc-list) {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li:not(.toc-list li) {
+      margin-bottom: 1rem;
+      position: relative;
+      list-style-type: none;
+    }
+
+    .article-content li:not(.toc-list li)::before {
+      content: '→';
+      position: absolute;
+      left: -1.5rem;
+      color: var(--boosted);
+      font-family: var(--font-mono);
+    }
+
+    .article-quote {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      color: #fff;
+      line-height: 1.5;
+      padding: 2.5rem 3rem;
+      margin: 4rem 0;
+      border: 1px solid rgba(38, 204, 202, 0.2);
+      border-left: 4px solid var(--boosted);
+      background: linear-gradient(90deg, rgba(38, 204, 202, 0.05) 0%, transparent 100%);
+      border-radius: 0 1.5rem 1.5rem 0;
+      position: relative;
+      box-shadow: 0 10px 40px -10px rgba(38, 204, 202, 0.1);
+    }
+
+    .article-quote::before {
+      content: '"';
+      position: absolute;
+      top: -20px;
+      left: 20px;
+      font-family: var(--font-display);
+      font-size: 6rem;
+      color: rgba(38, 204, 202, 0.2);
+      line-height: 1;
+    }
+
+    .article-image {
+      margin: 4rem 0;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 60px rgba(38, 204, 202, 0.1);
+    }
+
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-image-caption {
+      text-align: center;
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--zinc-500);
+      margin-top: 1rem;
+    }
+
+    .tags-container {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tag-pill {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--zinc-300);
+      background: rgba(255, 255, 255, 0.03);
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+
+    .tag-pill:hover {
+      background: rgba(38, 204, 202, 0.1);
+      border-color: rgba(38, 204, 202, 0.3);
+      color: var(--boosted);
+    }
+
+    /* Sidebar */
+    .sticky-sidebar {
+      position: sticky;
+      top: 120px;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .sidebar-widget {
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      padding: 2rem;
+      backdrop-filter: blur(10px);
+    }
+
+    .widget-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .toc-list {
+      list-style: none !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .toc-list li {
+      margin: 0 !important;
+    }
+
+    .toc-list li::before {
+      display: none !important;
+    }
+
+    .toc-link {
+      color: var(--zinc-400);
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: block;
+      line-height: 1.4;
+    }
+
+    .toc-link:hover,
+    .toc-link.active {
+      color: var(--boosted);
+    }
+
+    .toc-link.active {
+      font-weight: 600;
+      transform: translateX(5px);
+    }
+
+    .author-info {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .author-avatar {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: rgba(38, 204, 202, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--boosted);
+      border: 1px solid rgba(38, 204, 202, 0.2);
+    }
+
+    .author-name {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      color: #fff;
+      margin-bottom: 0.2rem;
+    }
+
+    .author-role {
+      font-family: var(--font-mono);
+      font-size: 0.75rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+    }
+
+    .author-bio {
+      font-size: 0.9rem;
+      color: var(--zinc-400);
+      line-height: 1.6;
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Automatización de Procesos: ¿Cuánto dinero pierde tu empresa?" />
+  <meta property="og:description"
+    content="Análisis profundo sobre el costo de las tareas manuales y cómo la automatización de procesos libera el potencial de tu equipo." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200" />
+  <meta property="og:url" content="https://boosted.cl/blog-automatizacion-procesos.html" />
+  <meta property="og:type" content="article" />
+</head>
+
+<body>
+  <div class="reading-progress" id="readingProgress"></div>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html" style="color:var(--accent);">Blog</a></li>
+        </ul>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
+          target="_blank" rel="noopener noreferrer" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+                  sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+                  Estética</a>
+              </li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Construcción e Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Hospitalidad – HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Branding</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio
+                  Web</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link" style="color:var(--accent);">Blog</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ── HEADER DEL ARTÍCULO ── -->
+    <article>
+      <header class="article-header">
+        <div class="article-bg"
+          style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200');">
+        </div>
+        <div class="container article-header-content anim-fadeup">
+          <span class="article-category">Automatización</span>
+          <h1 class="article-title">¿Cuánto dinero pierde tu empresa por no automatizar?</h1>
+
+          <div class="article-meta">
+            <div class="meta-item">
+              <i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
+              26 de Diciembre de 2025
+            </div>
+            <div class="meta-item">
+              <i data-lucide="clock" style="width: 1rem; height: 1rem;"></i>
+              6 min lectura
+            </div>
+          </div>
+
+          <a href="charlie.html" class="author-badge">
+            <i data-lucide="zap" style="width: 1rem; height: 1rem; color: var(--boosted);"></i>
+            Escrito por Charlie
+          </a>
+        </div>
+      </header>
+
+      <!-- ── CUERPO DEL ARTÍCULO ── -->
+      <section class="article-body">
+        <div class="article-ambient-glow glow-top-left"></div>
+        <div class="article-ambient-glow glow-bottom-right"></div>
+
+        <div class="container article-grid">
+
+          <div class="article-content" style="position: relative; z-index: 10;">
+            <p class="reveal"><span class="drop-cap">E</span>n el mundo empresarial, solemos vigilar con lupa los gastos
+              hormiga, renegociamos con proveedores y auditamos presupuestos de marketing. Sin embargo, existe una “fuga
+              de capital” silenciosa que la mayoría de los gerentes ignora hasta que es demasiado tarde: el costo de las
+              tareas manuales repetitivas.</p>
+
+            <p class="reveal">La automatización de procesos empresariales ha dejado de ser una ventaja tecnológica
+              reservada para grandes corporaciones. Hoy, es una cuestión de higiene financiera. Si tu equipo talentoso
+              dedica horas a mover datos de un Excel a otro, no solo estás perdiendo tiempo; estás quemando dinero.</p>
+
+            <h2 id="mito" class="reveal">El mito de “solo son 15 minutos al día”</h2>
+            <p class="reveal">La trampa más común en la gestión de operaciones es pensar que una tarea manual pequeña no
+              merece ser automatizada. “Solo me toma 15 minutos enviar esos reportes” o “Solo tardo 10 minutos en cargar
+              las facturas”.</p>
+
+            <p class="reveal">Hagamos la matemática del costo real. Si una tarea administrativa consume 30 minutos
+              diarios a un ejecutivo junior, eso suma 10 horas al mes. En un equipo de 5 personas, tu empresa está
+              pagando 50 horas mensuales de sueldos profesionales para realizar trabajo que un software podría hacer en
+              segundos.</p>
+
+            <div class="article-quote reveal">
+              El problema real no es solo el salario pagado, sino el costo de oportunidad: ¿Cuánto dinero dejó de
+              ingresar tu empresa porque ese ejecutivo estaba copiando y pegando datos en lugar de cerrar una venta?
+            </div>
+
+            <h2 id="costos" class="reveal">Los 3 costos invisibles del trabajo manual</h2>
+            <p class="reveal">Más allá del tiempo, existen tres factores que erosionan la rentabilidad cuando pospones
+              la implementación de la automatización de procesos empresariales:</p>
+
+            <h3 class="reveal">1. El Costo Directo (Horas Hombre)</h3>
+            <p class="reveal">Es el más evidente. Estás pagando tarifas de especialista por tareas de operario. Cuando
+              contratas a un líder de marketing, lo haces por su capacidad estratégica, no para que pase horas
+              descargando leads de Facebook y subiéndolos manualmente al CRM.</p>
+
+            <h3 class="reveal">2. El Costo del Error Humano</h3>
+            <p class="reveal">Somos humanos, nos cansamos y nos distraemos. Un error de dedo al digitar un RUT o un cero
+              de más en una factura pueden costar multas y reprocesos. Los robots de software no se cansan y ejecutan la
+              tarea con un 100% de precisión, siempre.</p>
+
+            <h3 class="reveal">3. El Costo de Rotación (Burnout)</h3>
+            <p class="reveal">El talento joven busca desafíos, no repetición. Obligar a empleados cualificados a
+              realizar tareas “robotizadas” genera frustración. La tecnología libera a tu equipo de la carga tediosa,
+              permitiéndoles enfocarse en trabajo creativo y de alto valor.</p>
+
+            <div class="article-image reveal">
+              <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800"
+                alt="Automatización de procesos empresariales">
+              <div class="article-image-caption">Implementar automatización libera a tu equipo para tareas de alto
+                impacto estratégico.</div>
+            </div>
+
+            <h2 id="escalabilidad" class="reveal">Automatización vs. Delegación: ¿Qué escala mejor?</h2>
+            <p class="reveal">Históricamente, cuando una empresa crecía, la solución era contratar más asistentes. Hoy,
+              esa estrategia es obsoleta. Delegar en humanos tiene un límite de escalabilidad. La automatización de
+              procesos empresariales, en cambio, es infinitamente escalable.</p>
+
+            <p class="reveal">Un flujo automatizado puede procesar 10 pedidos o 10.000 pedidos diarios con la misma
+              eficiencia y sin aumentar tus costos fijos. Crear un ecosistema digital inteligente significa construir
+              una empresa que pueda crecer en ventas sin necesidad de crecer proporcionalmente en gastos operativos.</p>
+
+            <h2 id="que-automatizar" class="reveal">¿Qué procesos deberías automatizar primero?</h2>
+            <p class="reveal">No se trata de automatizar el caos. Recomendamos empezar por procesos que cumplan estas
+              tres características:</p>
+
+            <ul class="reveal">
+              <li><strong>Son repetitivos:</strong> Ocurren diaria o semanalmente de la misma forma.</li>
+              <li><strong>Basados en reglas:</strong> No requieren criterio creativo, sino lógica (ej: “Si pasa A,
+                entonces haz B”).</li>
+              <li><strong>Propensos al error:</strong> Donde un fallo manual genera problemas graves.</li>
+            </ul>
+
+            <p class="reveal">Ejemplos clásicos de alto retorno de inversión incluyen la sincronización de leads entre
+              marketing y ventas, la generación automática de contratos y la conciliación de pagos.</p>
+
+            <h2 id="accion" class="reveal">¿Listo para recuperar esas horas perdidas?</h2>
+            <p class="reveal">Seguir operando manualmente en la era digital es una decisión costosa. La tecnología
+              existe para liberar a tu empresa, no para complicarla. Si sientes que tu equipo está atrapado en la
+              operatividad, es momento de actuar.</p>
+
+            <div class="tags-container reveal">
+              <a href="blog.html" class="tag-pill">Automatización</a>
+              <a href="blog.html" class="tag-pill">Eficiencia</a>
+              <a href="blog.html" class="tag-pill">ROI</a>
+              <a href="blog.html" class="tag-pill">Operaciones</a>
+            </div>
+
+            <div class="reveal"
+              style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
+                target="_blank" rel="noopener noreferrer" class="btn-primary"
+                style="font-size: 1.1rem; padding: 1.25rem 3rem;">AGENDAR UNA REUNIÓN DE DIAGNÓSTICO</a>
+            </div>
+
+          </div>
+
+          <aside class="article-sidebar" style="position: relative; z-index: 10;">
+            <div class="sticky-sidebar">
+              <!-- TOC Widget -->
+              <div class="sidebar-widget reveal">
+                <h4 class="widget-title"><i data-lucide="list" style="color:var(--boosted);"></i> Índice</h4>
+                <ul class="toc-list">
+                  <li><a href="#mito" class="toc-link">El mito de los 15 minutos</a></li>
+                  <li><a href="#costos" class="toc-link">Los 3 costos invisibles</a></li>
+                  <li><a href="#escalabilidad" class="toc-link">¿Qué escala mejor?</a></li>
+                  <li><a href="#que-automatizar" class="toc-link">¿Qué automatizar primero?</a></li>
+                  <li><a href="#accion" class="toc-link">Recupera tus horas</a></li>
+                </ul>
+              </div>
+
+              <!-- Author Widget -->
+              <div class="sidebar-widget reveal" style="transition-delay: 0.1s;">
+                <h4 class="widget-title"><i data-lucide="user" style="color:var(--boosted);"></i> Autor</h4>
+                <div class="author-info">
+                  <div class="author-avatar">
+                    <i data-lucide="zap" style="width: 1.5rem; height: 1.5rem;"></i>
+                  </div>
+                  <div>
+                    <div class="author-name">Charlie</div>
+                    <div class="author-role">Inteligencia Operativa</div>
+                  </div>
+                </div>
+                <p class="author-bio">Charlie es el motor de inteligencia de Boosted, especializado en analizar datos,
+                  automatizar procesos y optimizar arquitecturas digitales para maximizar la conversión B2B.</p>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- ── ARTÍCULOS RELACIONADOS ── -->
+        <div class="related-section container">
+          <h3 class="related-title reveal">Siguiente lectura</h3>
+
+          <div class="related-links-grid">
+
+            <a href="blog-ecosistema-digital-inteligente.html" class="related-item reveal">
+              <span class="related-item-tag">Estrategia</span>
+              <h4 class="related-item-title">Ecosistema Digital Inteligente: 7 pasos para diseñarlo</h4>
+              <div class="related-item-more">
+                Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
+              </div>
+            </a>
+
+            <a href="blog-beneficios-automatizacion-pymes.html" class="related-item reveal"
+              style="transition-delay: 0.1s;">
+              <span class="related-item-tag">Estrategia</span>
+              <h4 class="related-item-title">Beneficios de la Automatización para Pymes en Chile</h4>
+              <div class="related-item-more">
+                Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+            conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
+              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
+                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+              Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+              Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+
+    // Reveal elements on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('readingProgress').style.width = scrolled + '%';
+    });
+
+    // TOC Scrollspy
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = document.querySelectorAll('.article-content h2[id]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

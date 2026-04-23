@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tu logo no es tu marca: Branding Estratégico | Blog Boosted</title>
+  <meta name="description"
+    content="Descubre cómo el branding estratégico para empresas te permite dejar de competir por precio y empezar a cobrar lo que realmente vales." />
+  <meta name="keywords"
+    content="branding para empresas, identidad visual, valor percibido, estrategia de marca, marketing b2b chile" />
+  <meta name="author" content="Boosted" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
+    rel="stylesheet" />
+
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Estilos base (Sincronizados con el sitio) -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <style>
+    :root {
+      --font-display: 'Outfit', sans-serif;
+      --font-body: 'Poppins', sans-serif;
+      --font-mono: 'JetBrains+Mono', monospace;
+      --boosted: #26ccca;
+      --accent: #26ccca;
+      --zinc-900: #09090b;
+      --zinc-800: #18181b;
+      --zinc-700: #27272a;
+      --zinc-500: #71717a;
+      --zinc-400: #a1a1aa;
+    }
+
+    body {
+      background-color: var(--zinc-900);
+      color: var(--zinc-400);
+      font-family: var(--font-body);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Reading Progress Bar */
+    .reading-progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.05);
+      z-index: 2000;
+    }
+
+    .reading-progress-bar {
+      height: 100%;
+      background: var(--boosted);
+      width: 0%;
+      transition: width 0.1s ease;
+      box-shadow: 0 0 10px var(--boosted);
+    }
+
+    /* Article Header */
+    .article-header {
+      position: relative;
+      padding-top: 10rem;
+      padding-bottom: 6rem;
+      overflow: hidden;
+      background: linear-gradient(to bottom, #0c0c0e, #09090b);
+    }
+
+    .article-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.15;
+      filter: grayscale(100%) brightness(0.5);
+      background-size: cover;
+      background-position: center;
+      z-index: 0;
+    }
+
+    .article-header-content {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .article-category {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 1.5rem;
+      display: inline-block;
+      padding: 0.4rem 1rem;
+      background: rgba(38, 204, 202, 0.05);
+      border: 1px solid rgba(38, 204, 202, 0.1);
+      border-radius: 999px;
+    }
+
+    .article-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6vw, 4rem);
+      font-weight: 800;
+      color: #fff;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .article-meta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      color: var(--zinc-500);
+      font-family: var(--font-mono);
+      font-size: 0.9rem;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .author-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      padding: 0.5rem 1.25rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .author-badge:hover {
+      border-color: var(--boosted);
+      transform: translateY(-2px);
+    }
+
+    /* Article Layout */
+    .article-grid {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 4rem;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 1.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .article-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-sidebar {
+        display: none;
+      }
+    }
+
+    /* Content Styling */
+    .article-content {
+      font-size: 1.15rem;
+      color: var(--zinc-400);
+    }
+
+    .article-content p {
+      margin-bottom: 2rem;
+    }
+
+    .article-content h2 {
+      font-family: var(--font-display);
+      font-size: 2.25rem;
+      color: #fff;
+      margin-top: 4rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-content h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      color: #fff;
+      margin-top: 3rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .article-content ul,
+    .article-content ol {
+      margin-bottom: 2rem;
+      padding-left: 1.5rem;
+    }
+
+    .article-content li {
+      margin-bottom: 1rem;
+    }
+
+    .article-content strong {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .drop-cap {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 4.5rem;
+      line-height: 1;
+      font-weight: 800;
+      color: var(--boosted);
+      margin-right: 0.75rem;
+      margin-top: 0.25rem;
+    }
+
+    .article-quote {
+      position: relative;
+      margin: 4rem 0;
+      padding: 3rem;
+      background: rgba(255, 255, 255, 0.02);
+      border-left: 4px solid var(--boosted);
+      font-style: italic;
+      font-size: 1.4rem;
+      color: #fff;
+      border-radius: 0 1rem 1rem 0;
+    }
+
+    .article-image {
+      margin: 4rem 0;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .article-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .article-image-caption {
+      padding: 1rem;
+      background: var(--zinc-800);
+      color: var(--zinc-500);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    /* Tags */
+    .tags-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .tag-pill {
+      padding: 0.4rem 1.2rem;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 999px;
+      color: var(--zinc-500);
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .tag-pill:hover {
+      background: rgba(38, 204, 202, 0.1);
+      border-color: var(--boosted);
+      color: var(--boosted);
+    }
+
+    /* Sidebar TOC */
+    .sidebar-block {
+      position: sticky;
+      top: 8rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1.5rem;
+      padding: 2rem;
+    }
+
+    .sidebar-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .toc-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .toc-item {
+      margin-bottom: 0.75rem;
+    }
+
+    .toc-link {
+      color: var(--zinc-500);
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: all 0.3s ease;
+      display: block;
+      padding: 0.25rem 0;
+    }
+
+    .toc-link:hover,
+    .toc-link.active {
+      color: var(--boosted);
+      transform: translateX(5px);
+    }
+
+    /* Minimalist Related Section */
+    .related-section {
+      margin-top: 6rem;
+      padding-top: 4rem;
+      padding-bottom: 6rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .related-title {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: var(--zinc-400);
+      margin-bottom: 2.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .related-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .related-item {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      padding: 1.5rem;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .related-item:hover {
+      background: rgba(38, 204, 202, 0.05);
+      border-color: rgba(38, 204, 202, 0.2);
+      transform: translateX(5px);
+    }
+
+    .related-item-tag {
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+    }
+
+    .related-item-title {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      color: #fff;
+      line-height: 1.4;
+    }
+
+    .related-item-more {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--zinc-500);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+    }
+
+    .related-item:hover .related-item-more {
+      color: var(--boosted);
+    }
+
+    /* Ambient Glows */
+    .article-ambient-glow {
+      position: absolute;
+      width: 50vw;
+      height: 50vw;
+      background: radial-gradient(circle, rgba(38, 204, 202, 0.03) 0%, transparent 70%);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .glow-top-left {
+      top: -5%;
+      left: -20%;
+    }
+
+    .glow-bottom-right {
+      bottom: 10%;
+      right: -20%;
+      background: radial-gradient(circle, rgba(232, 121, 249, 0.03) 0%, transparent 70%);
+    }
+  </style>
+
+  <!-- Favicon y Open Graph -->
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <meta property="og:title" content="Tu logo no es tu marca: Branding Estratégico | Boosted" />
+  <meta property="og:description"
+    content="Descubre por qué el branding estratégico es la herramienta más potente para dejar de competir por precio." />
+  <meta property="og:image"
+    content="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200" />
+  <meta property="og:url" content="https://boosted.cl/blog-branding-estrategico.html" />
+  <meta property="og:type" content="article" />
+</head>
+
+<body>
+  <div class="reading-progress-container">
+    <div class="reading-progress-bar" id="readingProgress"></div>
+  </div>
+
+  <!-- ── HEADER ── -->
+  <header role="banner">
+    <nav class="container main-nav" aria-label="Navegación principal">
+      <a href="index.html" class="logo">Boosted<span>.</span></a>
+      <nav class="nav-links" id="navLinks">
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li>
+            <a href="charlie.html" class="charlie-link">
+              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+            </a>
+          </li>
+          <li class="dropdown">
+            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+                sociales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+            </div>
+          </li>
+          <li class="dropdown">
+            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+            <div class="dropdown-content">
+              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+            </div>
+          </li>
+          <li><a href="blog.html" style="color:var(--accent);">Blog</a></li>
+        </ul>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
+          target="_blank" rel="noopener noreferrer" class="btn-contact">Contactar</a>
+        <button class="btn-menu" id="menuBtn" aria-label="Menú">
+          <i data-lucide="menu" id="menuIcon"></i>
+        </button>
+      </nav>
+      <nav class="mobile-nav" id="mobileNav">
+        <ul>
+          <li><a href="index.html" class="mobile-link">Inicio</a></li>
+          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
+          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
+          <li>
+            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="automatizacion.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+              <li><a href="desarrollo-a-medida.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a medida</a></li>
+              <li><a href="transformacion-digital.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Sitios web y experiencia digital</a></li>
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes sociales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y Estética</a>
+              </li>
+              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Construcción e Inmobiliaria</a></li>
+              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Educación</a></li>
+              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+                  Hospitalidad – HORECA</a></li>
+              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+              </li>
+              <li><a href="servicios-profesionales.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
+                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+            <ul class="mobile-dropdown">
+              <li><a href="branding-y-contenido.html" class="mobile-link"
+                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
+                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Branding</a></li>
+              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
+                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Web</a></li>
+            </ul>
+          </li>
+          <li><a href="blog.html" class="mobile-link" style="color:var(--accent);">Blog</a></li>
+        </ul>
+      </nav>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ── HEADER DEL ARTÍCULO ── -->
+    <article>
+      <header class="article-header">
+        <div class="article-bg"
+          style="background-image: url('https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=1200');">
+        </div>
+        <div class="container article-header-content anim-fadeup">
+          <span class="article-category">Branding</span>
+          <h1 class="article-title">Tu logo no es tu marca: Cómo el Branding te permite cobrar lo que vales</h1>
+
+          <div class="article-meta">
+            <div class="meta-item">
+              <i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
+              20 de Diciembre, 2025
+            </div>
+            <div class="meta-item">
+              <i data-lucide="clock" style="width: 1rem; height: 1rem;"></i>
+              6 min lectura
+            </div>
+          </div>
+
+          <a href="charlie.html" class="author-badge">
+            <i data-lucide="zap" style="width: 1rem; height: 1rem; color: var(--boosted);"></i>
+            Escrito por Charlie
+          </a>
+        </div>
+      </header>
+
+      <!-- ── CUERPO DEL ARTÍCULO ── -->
+      <section class="article-body">
+        <div class="article-ambient-glow glow-top-left"></div>
+        <div class="article-ambient-glow glow-bottom-right"></div>
+
+        <div class="container article-grid">
+
+          <div class="article-content" style="position: relative; z-index: 10;">
+            <p class="reveal"><span class="drop-cap">E</span>l branding para empresas es la herramienta financiera más
+              potente que existe para dejar de competir por precio y empezar a cobrar por valor.</p>
+
+            <p class="reveal">Hagamos un ejercicio rápido de honestidad financiera para entenderlo. Si vas a una
+              cafetería de paso en el centro de Santiago, probablemente pagues unos $2.000 CLP por un café cortado. Sin
+              embargo, miles de chilenos hacen fila cada mañana en Starbucks para pagar más de $4.500 CLP por un Latte
+              del mismo tamaño.</p>
+
+            <p class="reveal">El producto base es esencialmente el mismo. Entonces, ¿por qué un cliente paga felizmente
+              más del doble en un lugar y se queja en el otro? La respuesta es el <strong>branding</strong>.</p>
+
+            <h2 id="confusion" class="reveal">La gran confusión: Logotipo vs. Marca</h2>
+            <p class="reveal">El error más común al hablar de branding para empresas es pensar que “tener marca” es
+              simplemente tener un logo bonito.</p>
+
+            <ul class="reveal">
+              <li><strong>Un logotipo</strong> es solo un símbolo gráfico (la manzana de Apple, la pipa de Nike).</li>
+              <li><strong>Una marca</strong> es lo que la gente piensa, siente y dice de ti cuando no estás en la
+                habitación.</li>
+            </ul>
+
+            <div class="article-quote reveal">
+              Puedes comprar un logo por pocos dólares en internet, pero eso no te dará una marca. El branding es el
+              proceso deliberado de gestionar percepciones.
+            </div>
+
+            <h2 id="costo-invisible" class="reveal">El costo invisible de una imagen amateur</h2>
+            <p class="reveal">En el mundo B2B y de servicios profesionales, la confianza es la moneda de cambio más
+              valiosa. Si tu identidad visual parece hecha de forma improvisada, estás enviando un mensaje peligroso:
+              “Soy novato” o, peor aún, “Soy la opción barata”.</p>
+
+            <p class="reveal">Una imagen descuidada tiene dos costos ocultos:</p>
+            <ul class="reveal">
+              <li><strong>Desconfianza Inmediata:</strong> El cliente ya te juzgó por tu web antes de leer tu propuesta.
+              </li>
+              <li><strong>Commoditización:</strong> Sin diferenciación, el cliente solo tiene una variable para decidir:
+                el precio más bajo.</li>
+            </ul>
+
+            <div class="reveal"
+              style="text-align: center; margin: 4rem 0; padding: 3rem; background: rgba(38, 204, 202, 0.05); border-radius: 1.5rem; border: 1px dashed var(--boosted);">
+              <h3 style="margin-top:0; color: var(--boosted);">¿Buscas un diseño de nivel mundial?</h3>
+              <p>Revisa cómo hemos transformado la imagen de otras empresas.</p>
+              <a href="branding-y-contenido.html" class="btn-primary" style="margin-top: 1.5rem;">VER PORTAFOLIO DE
+                PROYECTOS</a>
+            </div>
+
+            <h2 id="aumento-facturacion" class="reveal">Cómo el Branding Estratégico aumenta tu facturación</h2>
+            <p class="reveal">Invertir en branding no es un gasto estético, es una estrategia financiera para proteger y
+              aumentar tus márgenes.</p>
+
+            <h3 class="reveal">1. Valida tus precios altos</h3>
+            <p class="reveal">El diseño premium actúa como un “filtro de calidad”. Una identidad visual coherente
+              predispone al cliente a pagar tarifas premium porque percibe que está contratando a un líder.</p>
+
+            <h3 class="reveal">2. Atrae al cliente correcto</h3>
+            <p class="reveal">Un buen branding repele a quienes solo buscan “lo barato” y atrae magnéticamente a quienes
+              valoran la calidad, la seguridad y el prestigio.</p>
+
+            <h3 class="reveal">3. Fidelización y Lealtad</h3>
+            <p class="reveal">Las personas conectan emocionalmente con marcas que tienen personalidad y valores claros.
+              El branding convierte compradores en embajadores.</p>
+
+            <div class="article-image reveal">
+              <img src="https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=800"
+                alt="Branding estratégico y valor de marca">
+              <div class="article-image-caption">Tu imagen es el traje con el que tu empresa se presenta al mercado.
+              </div>
+            </div>
+
+            <p class="reveal">Puedes seguir vistiendo como un principiante y pelear por las migajas del mercado, o
+              puedes invertir en branding para empresas, vestirte como el líder que eres y empezar a cobrar lo que
+              realmente vales.</p>
+
+            <div class="tags-container reveal">
+              <a href="blog.html" class="tag-pill">Branding</a>
+              <a href="blog.html" class="tag-pill">Estrategia</a>
+              <a href="blog.html" class="tag-pill">Diseño</a>
+              <a href="blog.html" class="tag-pill">Negocios</a>
+            </div>
+
+            <div class="reveal"
+              style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
+              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
+                target="_blank" rel="noopener noreferrer" class="btn-primary"
+                style="font-size: 1.1rem; padding: 1.25rem 3rem;">INVIERTE EN TU MARCA HOY</a>
+            </div>
+
+          </div>
+
+          <!-- Sidebar TOC -->
+          <aside class="article-sidebar" style="position: relative; z-index: 10;">
+            <div class="sidebar-block">
+              <h3 class="sidebar-title">
+                <i data-lucide="list" style="width: 1.25rem; height: 1.25rem; color: var(--boosted);"></i>
+                En este artículo
+              </h3>
+              <ul class="toc-list">
+                <li class="toc-item"><a href="#confusion" class="toc-link">Logo vs. Marca</a></li>
+                <li class="toc-item"><a href="#costo-invisible" class="toc-link">El costo de lo amateur</a></li>
+                <li class="toc-item"><a href="#aumento-facturacion" class="toc-link">Aumentar facturación</a></li>
+              </ul>
+
+              <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                  <div
+                    style="width: 50px; height: 50px; border-radius: 50%; background: var(--boosted); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #000; font-size: 1.2rem;">
+                    C</div>
+                  <div>
+                    <div style="color: #fff; font-weight: 600; font-size: 0.9rem;">Charlie AI</div>
+                    <div style="color: var(--boosted); font-size: 0.75rem; font-family: var(--font-mono);">Inteligencia
+                      Operativa</div>
+                  </div>
+                </div>
+                <p style="font-size: 0.85rem; color: var(--zinc-500); line-height: 1.5;">Charlie ayuda a las marcas a
+                  proyectar su máximo potencial de valor.</p>
+              </div>
+            </div>
+          </aside>
+
+        </div>
+
+        <!-- ── ARTÍCULOS RELACIONADOS ── -->
+        <div class="related-section container">
+          <h3 class="related-title reveal">Siguiente lectura</h3>
+
+          <div class="related-links-grid">
+
+            <a href="blog-diseno-web-estrategico.html" class="related-item reveal">
+              <span class="related-item-tag">Diseño Web</span>
+              <h4 class="related-item-title">Diseño Web Estratégico: ¿Tu sitio web vende o solo informa?</h4>
+              <div class="related-item-more">
+                Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
+              </div>
+            </a>
+
+            <a href="blog-estrategia-email-marketing.html" class="related-item reveal"
+              style="transition-delay: 0.1s;">
+              <span class="related-item-tag">Marketing Digital</span>
+              <h4 class="related-item-title">Estrategia de Email Marketing: ¿Por qué vende más que las RRSS?</h4>
+              <div class="related-item-more">
+                Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
+              </div>
+            </a>
+
+          </div>
+        </div>
+      </section>
+    </article>
+  </main>
+
+  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Columna 1: Marca y Redes -->
+        <div>
+          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+            conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <div class="footer-social">
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
+              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Columna 2: Servicios -->
+        <div class="footer-col">
+          <h4>Servicios</h4>
+          <ul>
+            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
+            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
+            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Soluciones por Sector -->
+        <div class="footer-col">
+          <h4>Soluciones por Sector</h4>
+          <ul>
+            <li><a href="belleza.html">Belleza y Estética</a></li>
+            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+            <li><a href="educacion.html">Educación</a></li>
+            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+            <li><a href="retail.html">Retail</a></li>
+            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Empresa y Contacto -->
+        <div class="footer-col">
+          <h4>Empresa & Contacto</h4>
+          <ul>
+            <li><a href="nosotros.html">Quiénes Somos</a></li>
+            <li><a href="blog.html">Nuestro Blog</a></li>
+            <li><a href="charlie.html">Conoce a Charlie</a></li>
+            <li><a href="faq.html">Preguntas Frecuentes</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+            <li><a href="sitios-web.html">Portafolio Web</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
+                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
+          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+              Privacidad</a>
+            <span style="color: rgba(255,255,255,0.1);">|</span>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+              Condiciones</a>
+          </div>
+        </div>
+        <div class="footer-status">
+          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      lucide.createIcons();
+    });
+
+    // Reveal elements on scroll
+    const reveals = document.querySelectorAll('.reveal');
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    reveals.forEach(el => revealObserver.observe(el));
+
+    // Reading Progress Bar
+    window.addEventListener('scroll', () => {
+      const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrolled = (winScroll / height) * 100;
+      document.getElementById('readingProgress').style.width = scrolled + '%';
+    });
+
+    // TOC Scrollspy
+    const tocLinks = document.querySelectorAll('.toc-link');
+    const sections = document.querySelectorAll('.article-content h2[id]');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        if (window.scrollY >= (sectionTop - 150)) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      tocLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>
