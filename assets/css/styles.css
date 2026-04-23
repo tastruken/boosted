@@ -17,7 +17,7 @@
   --border: rgba(255, 255, 255, 0.08);
   --zinc-300: #d4d4d8;
   --zinc-400: #a1a1aa;
-  --zinc-500: #71717a;
+  --zinc-500: #a1a1aa;
   --zinc-600: #52525b;
   --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif;
   --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
@@ -267,13 +267,13 @@ nav.main-nav {
 }
 
 .nav-links {
-  display: none;
+  display: flex;
   gap: 2rem;
   align-items: center;
 }
 
 .nav-links ul {
-  display: flex;
+  display: none;
   gap: 2rem;
   font-size: 0.875rem;
   font-weight: 500;
@@ -402,8 +402,16 @@ nav.main-nav {
 /* ─── MOBILE MENU ─── */
 .mobile-nav {
   display: none;
-  padding-block: 1.5rem;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: rgba(3, 3, 3, 0.98);
+  backdrop-filter: blur(12px);
+  padding: 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  z-index: 40;
 }
 
 .mobile-nav.open {
@@ -1681,7 +1689,7 @@ footer {
 }
 
 .footer-desc {
-  color: var(--zinc-500);
+  color: var(--zinc-400);
   font-size: 0.875rem;
   max-width: 18rem;
   margin-bottom: 2rem;
@@ -1729,7 +1737,7 @@ footer {
 }
 
 .footer-col a {
-  color: var(--zinc-500);
+  color: var(--zinc-400);
   font-size: 0.875rem;
   font-weight: 300;
   transition: color 0.2s;

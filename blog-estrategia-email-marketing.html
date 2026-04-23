@@ -1,31 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Estrategia de Email Marketing vs Redes Sociales | Blog Boosted</title>
-  <meta name="description"
-    content="Descubre por qué el email marketing vende más que las redes sociales y cómo construir un activo propio para tu empresa." />
-  <meta name="keywords"
-    content="email marketing chile, estrategia digital, rentabilidad email marketing, base de datos propia, automatización de ventas" />
-  <meta name="author" content="Boosted" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
-    rel="stylesheet" />
-
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-  <!-- Estilos base (Sincronizados con el sitio) -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Estrategia de Email Marketing vs Redes Sociales | Blog Boosted</title>
+<meta content="Descubre por qué el email marketing vende más que las redes sociales y cómo construir un activo propio para tu empresa." name="description"/>
+<meta content="email marketing chile, estrategia digital, rentabilidad email marketing, base de datos propia, automatización de ventas" name="keywords"/>
+<meta content="Boosted" name="author"/>
+<meta content="index, follow" name="robots"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Poppins:wght@300;400;500;600&amp;family=Outfit:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<!-- Estilos base (Sincronizados con el sitio) -->
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<style>
     :root {
       --font-display: 'Outfit', sans-serif;
       --font-body: 'Poppins', sans-serif;
@@ -421,396 +413,387 @@
       right: -20%;
       background: radial-gradient(circle, rgba(232, 121, 249, 0.03) 0%, transparent 70%);
     }
+  
+    /* Mobile Polish */
+    @media (max-width: 768px) {
+      .article-header {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+      }
+      .article-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+      }
+      .article-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .article-grid {
+        padding: 2rem 1.25rem;
+        gap: 2rem;
+      }
+      .drop-cap {
+        font-size: 3.5rem;
+        margin-right: 0.5rem;
+        margin-top: 0.1rem;
+      }
+      .article-quote {
+        padding: 1.5rem;
+        font-size: 1.15rem;
+        margin: 2.5rem 0;
+      }
+      .article-content h2 {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+      }
+      .article-content h3 {
+        font-size: 1.5rem;
+      }
+      .related-section {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        margin-top: 3rem;
+      }
+    }
+
+  
+    /* Mobile TOC Fix */
+    @media (max-width: 1024px) {
+      .article-grid {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      .article-sidebar {
+        display: block !important;
+        order: -1 !important;
+        margin-bottom: 1rem;
+      }
+      .sidebar-block {
+        position: static !important;
+        padding: 1.5rem !important;
+      }
+      .sidebar-title {
+        font-size: 1.1rem !important;
+      }
+    }
+
   </style>
-
-  <!-- Favicon y Open Graph -->
-  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
-  <meta property="og:title" content="Estrategia de Email Marketing vs Redes Sociales | Boosted" />
-  <meta property="og:description"
-    content="Descubre por qué el email marketing sigue siendo el canal más rentable y cómo construir tu propia base de datos." />
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200" />
-  <meta property="og:url" content="https://boosted.cl/blog-estrategia-email-marketing.html" />
-  <meta property="og:type" content="article" />
+<!-- Favicon y Open Graph -->
+<link href="assets/img/boosted-logo.webp" rel="icon" type="image/png"/>
+<meta content="Estrategia de Email Marketing vs Redes Sociales | Boosted" property="og:title"/>
+<meta content="Descubre por qué el email marketing sigue siendo el canal más rentable y cómo construir tu propia base de datos." property="og:description"/>
+<meta content="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" property="og:image"/>
+<meta content="https://boosted.cl/blog-estrategia-email-marketing.html" property="og:url"/>
+<meta content="article" property="og:type"/>
 </head>
-
 <body>
-  <div class="reading-progress-container">
-    <div class="reading-progress-bar" id="readingProgress"></div>
-  </div>
-
-  <!-- ── HEADER ── -->
-  <header role="banner">
-    <nav class="container main-nav" aria-label="Navegación principal">
-      <a href="index.html" class="logo">Boosted<span>.</span></a>
-      <nav class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li>
-            <a href="charlie.html" class="charlie-link">
-              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+<div class="reading-progress-container">
+<div class="reading-progress-bar" id="readingProgress"></div>
+</div>
+<!-- ── HEADER ── -->
+<header role="banner">
+<nav aria-label="Navegación principal" class="container main-nav">
+<a class="logo" href="index.html">Boosted<span>.</span></a>
+<nav class="nav-links" id="navLinks">
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li>
+<a class="charlie-link" href="charlie.html">
+<i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
             </a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
-              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
-              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
-              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
-              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+</li>
+<li class="dropdown">
+<a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+<a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+<a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+<a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+<a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
                 sociales</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
-              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
-              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
-              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
-              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
-              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
-              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
-            </div>
-          </li>
-          <li><a href="blog.html" style="color:var(--accent);">Blog</a></li>
-        </ul>
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
-          target="_blank" rel="noopener noreferrer" class="btn-contact">Contactar</a>
-        <button class="btn-menu" id="menuBtn" aria-label="Menú">
-          <i data-lucide="menu" id="menuIcon"></i>
-        </button>
-      </nav>
-      <nav class="mobile-nav" id="mobileNav">
-        <ul>
-          <li><a href="index.html" class="mobile-link">Inicio</a></li>
-          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
-          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
-          <li>
-            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="automatizacion.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
-              <li><a href="desarrollo-a-medida.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a medida</a></li>
-              <li><a href="transformacion-digital.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
-              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+</div>
+</li>
+<li class="dropdown">
+<a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+<a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+<a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+<a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+<a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+<a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+<a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+</div>
+</li>
+<li><a href="blog.html" style="color:var(--accent);">Blog</a></li>
+</ul>
+<a class="btn-contact" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" rel="noopener noreferrer" target="_blank">Contactar</a>
+<button aria-label="Menú" class="btn-menu" id="menuBtn">
+<i data-lucide="menu" id="menuIcon"></i>
+</button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+<ul>
+<li><a class="mobile-link" href="index.html">Inicio</a></li>
+<li><a class="mobile-link" href="nosotros.html">Nosotros</a></li>
+<li><a class="mobile-link charlie-mobile" href="charlie.html">CHARLIE</a></li>
+<li>
+<a class="mobile-link" href="#">Servicios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="automatizacion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+<li><a class="mobile-link" href="desarrollo-a-medida.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a medida</a></li>
+<li><a class="mobile-link" href="transformacion-digital.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+<li><a class="mobile-link" href="sitios-web.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Sitios web y experiencia digital</a></li>
-              <li><a href="branding-y-contenido.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes sociales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y Estética</a>
-              </li>
-              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="branding-y-contenido.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes sociales</a></li>
+</ul>
+</li>
+<li>
+<a class="mobile-link" href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="belleza.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y Estética</a>
+</li>
+<li><a class="mobile-link" href="construccion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Construcción e Inmobiliaria</a></li>
-              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="educacion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Educación</a></li>
-              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="hospitalidad.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Hospitalidad – HORECA</a></li>
-              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
-              </li>
-              <li><a href="servicios-profesionales.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="branding-y-contenido.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Branding</a></li>
-              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Web</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html" class="mobile-link" style="color:var(--accent);">Blog</a></li>
-        </ul>
-      </nav>
-    </nav>
-  </header>
-
-  <main>
-    <!-- ── HEADER DEL ARTÍCULO ── -->
-    <article>
-      <header class="article-header">
-        <div class="article-bg"
-          style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=1200');">
-        </div>
-        <div class="container article-header-content anim-fadeup">
-          <span class="article-category">Marketing Digital</span>
-          <h1 class="article-title">Estrategia de Email Marketing: Por qué vende más que las Redes Sociales</h1>
-
-          <div class="article-meta">
-            <div class="meta-item">
-              <i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
+<li><a class="mobile-link" href="retail.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+</li>
+<li><a class="mobile-link" href="servicios-profesionales.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+</ul>
+</li>
+<li>
+<a class="mobile-link" href="#">Portafolios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="branding-y-contenido.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Branding</a></li>
+<li><a class="mobile-link" href="sitios-web.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Web</a></li>
+</ul>
+</li>
+<li><a class="mobile-link" href="blog.html" style="color:var(--accent);">Blog</a></li>
+</ul>
+</nav>
+</nav>
+</header>
+<main>
+<!-- ── HEADER DEL ARTÍCULO ── -->
+<article>
+<header class="article-header">
+<div class="article-bg" style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;q=80&amp;w=1200');">
+</div>
+<div class="container article-header-content anim-fadeup">
+<span class="article-category">Marketing Digital</span>
+<h1 class="article-title">Estrategia de Email Marketing: Por qué vende más que las Redes Sociales</h1>
+<div class="article-meta">
+<div class="meta-item">
+<i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
               27 de Diciembre, 2025
             </div>
-            <div class="meta-item">
-              <i data-lucide="clock" style="width: 1rem; height: 1rem;"></i>
+<div class="meta-item">
+<i data-lucide="clock" style="width: 1rem; height: 1rem;"></i>
               7 min lectura
             </div>
-          </div>
-
-          <a href="charlie.html" class="author-badge">
-            <i data-lucide="zap" style="width: 1rem; height: 1rem; color: var(--boosted);"></i>
+</div>
+<a class="author-badge" href="charlie.html">
+<i data-lucide="zap" style="width: 1rem; height: 1rem; color: var(--boosted);"></i>
             Escrito por Charlie
           </a>
-        </div>
-      </header>
-
-      <!-- ── CUERPO DEL ARTÍCULO ── -->
-      <section class="article-body">
-        <div class="article-ambient-glow glow-top-left"></div>
-        <div class="article-ambient-glow glow-bottom-right"></div>
-
-        <div class="container article-grid">
-
-          <div class="article-content" style="position: relative; z-index: 10;">
-            <p class="reveal"><span class="drop-cap">¿</span>Tus seguidores son realmente tuyos? Imagina el siguiente
+</div>
+</header>
+<!-- ── CUERPO DEL ARTÍCULO ── -->
+<section class="article-body">
+<div class="article-ambient-glow glow-top-left"></div>
+<div class="article-ambient-glow glow-bottom-right"></div>
+<div class="container article-grid">
+<div class="article-content" style="position: relative; z-index: 10;">
+<p class="reveal"><span class="drop-cap">¿</span>Tus seguidores son realmente tuyos? Imagina el siguiente
               escenario: Mañana por la mañana, Instagram o LinkedIn deciden cambiar su algoritmo drásticamente o, peor
               aún, tu cuenta es bloqueada por error.</p>
-
-            <p class="reveal">¿Qué pasa con tu negocio? ¿Pierdes el contacto con tus clientes? Si la respuesta es “sí”,
+<p class="reveal">¿Qué pasa con tu negocio? ¿Pierdes el contacto con tus clientes? Si la respuesta es “sí”,
               tienes un problema grave de vulnerabilidad. En Chile, muchas empresas cometen el error de construir su
               “casa digital” en un terreno arrendado.</p>
-
-            <h2 id="ilusion-vs-realidad" class="reveal">La ilusión de las redes sociales vs. La realidad de los Datos
+<h2 class="reveal" id="ilusion-vs-realidad">La ilusión de las redes sociales vs. La realidad de los Datos
             </h2>
-            <p class="reveal">Es fácil dejarse llevar por la vanidad de las métricas en redes sociales. Sin embargo, los
+<p class="reveal">Es fácil dejarse llevar por la vanidad de las métricas en redes sociales. Sin embargo, los
               números del mercado chileno cuentan una historia muy diferente sobre dónde está el dinero real. Mientras
               que el alcance orgánico ha caído por debajo del 5%, el correo electrónico sigue siendo el canal más
               directo.</p>
-
-            <div class="article-quote reveal">
+<div class="article-quote reveal">
               Por cada $1 peso invertido en email marketing, las empresas generan un retorno promedio de $40 pesos.
             </div>
-
-            <p class="reveal">Según estudios recientes en Chile (2024-2025):</p>
-            <ul class="reveal">
-              <li><strong>ROI Imbatible:</strong> El canal publicitario con mayor margen de eficiencia.</li>
-              <li><strong>Preferencia del Usuario:</strong> El 73% prefiere comunicaciones comerciales por correo.</li>
-              <li><strong>Hábito de Consumo:</strong> El 58% revisa su correo antes de entrar a cualquier red social por
+<p class="reveal">Según estudios recientes en Chile (2024-2025):</p>
+<ul class="reveal">
+<li><strong>ROI Imbatible:</strong> El canal publicitario con mayor margen de eficiencia.</li>
+<li><strong>Preferencia del Usuario:</strong> El 73% prefiere comunicaciones comerciales por correo.</li>
+<li><strong>Hábito de Consumo:</strong> El 58% revisa su correo antes de entrar a cualquier red social por
                 la mañana.</li>
-            </ul>
-
-            <h2 id="porque-activo" class="reveal">¿Por qué es tu mejor activo?</h2>
-            <p class="reveal">Implementar una estrategia de email marketing no se trata de enviar spam, sino de
+</ul>
+<h2 class="reveal" id="porque-activo">¿Por qué es tu mejor activo?</h2>
+<p class="reveal">Implementar una estrategia de email marketing no se trata de enviar spam, sino de
               construir un activo propio: tu base de datos.</p>
-
-            <h3 class="reveal">1. Propiedad de la Audiencia</h3>
-            <p class="reveal">Tu lista de correos es tuya. Nadie te la puede quitar y no tienes que pagar publicidad
+<h3 class="reveal">1. Propiedad de la Audiencia</h3>
+<p class="reveal">Tu lista de correos es tuya. Nadie te la puede quitar y no tienes que pagar publicidad
               cada vez que quieres hablar con tus clientes.</p>
-
-            <h3 class="reveal">2. Segmentación Láser</h3>
-            <p class="reveal">Con el email puedes ser un francotirador. Envía mensajes específicos según el
+<h3 class="reveal">2. Segmentación Láser</h3>
+<p class="reveal">Con el email puedes ser un francotirador. Envía mensajes específicos según el
               comportamiento de compra o interés de cada contacto.</p>
-
-            <h3 class="reveal">3. Automatización: Vender mientras duermes</h3>
-            <p class="reveal">Aquí es donde la tecnología de Boosted entra en juego. Utilizamos automatizaciones
+<h3 class="reveal">3. Automatización: Vender mientras duermes</h3>
+<p class="reveal">Aquí es donde la tecnología de Boosted entra en juego. Utilizamos automatizaciones
               inteligentes para:</p>
-            <ul class="reveal">
-              <li><strong>Secuencias de Bienvenida:</strong> Educación automática sobre tu marca.</li>
-              <li><strong>Recuperación de Carrito:</strong> Recordatorios persuasivos automáticos.</li>
-              <li><strong>Fidelización:</strong> Saludos y ofertas exclusivas personalizadas.</li>
-            </ul>
-
-            <div class="article-image reveal">
-              <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800"
-                alt="Estrategia de Email Marketing rentable">
-              <div class="article-image-caption">El email marketing es la herramienta para cerrar la venta y fidelizar.
+<ul class="reveal">
+<li><strong>Secuencias de Bienvenida:</strong> Educación automática sobre tu marca.</li>
+<li><strong>Recuperación de Carrito:</strong> Recordatorios persuasivos automáticos.</li>
+<li><strong>Fidelización:</strong> Saludos y ofertas exclusivas personalizadas.</li>
+</ul>
+<div class="article-image reveal">
+<img alt="Estrategia de Email Marketing rentable" src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&amp;fit=crop&amp;q=70&amp;w=800&amp;fm=webp"/>
+<div class="article-image-caption">El email marketing es la herramienta para cerrar la venta y fidelizar.
               </div>
-            </div>
-
-            <p class="reveal">Las redes sociales son excelentes para hacer ruido y atraer atención (Discovery), pero el
-              email marketing es la herramienta para cerrar la venta y fidelizar (Conversion & Retention).</p>
-
-            <div class="tags-container reveal">
-              <a href="blog.html" class="tag-pill">Email Marketing</a>
-              <a href="blog.html" class="tag-pill">Estrategia</a>
-              <a href="blog.html" class="tag-pill">ROI</a>
-              <a href="blog.html" class="tag-pill">Ventas</a>
-            </div>
-
-            <div class="reveal"
-              style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
-                target="_blank" rel="noopener noreferrer" class="btn-primary"
-                style="font-size: 1.1rem; padding: 1.25rem 3rem;">PROFESIONALIZA TU COMUNICACIÓN</a>
-            </div>
-
-          </div>
-
-          <!-- Sidebar TOC -->
-          <aside class="article-sidebar" style="position: relative; z-index: 10;">
-            <div class="sidebar-block">
-              <h3 class="sidebar-title">
-                <i data-lucide="list" style="width: 1.25rem; height: 1.25rem; color: var(--boosted);"></i>
+</div>
+<p class="reveal">Las redes sociales son excelentes para hacer ruido y atraer atención (Discovery), pero el
+              email marketing es la herramienta para cerrar la venta y fidelizar (Conversion &amp; Retention).</p>
+<div class="tags-container reveal">
+<a class="tag-pill" href="blog.html">Email Marketing</a>
+<a class="tag-pill" href="blog.html">Estrategia</a>
+<a class="tag-pill" href="blog.html">ROI</a>
+<a class="tag-pill" href="blog.html">Ventas</a>
+</div>
+<div class="reveal" style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
+<a class="btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 1.25rem 3rem;" target="_blank">PROFESIONALIZA TU COMUNICACIÓN</a>
+</div>
+</div>
+<!-- Sidebar TOC -->
+<aside class="article-sidebar" style="position: relative; z-index: 10;">
+<div class="sidebar-block">
+<h3 class="sidebar-title">
+<i data-lucide="list" style="width: 1.25rem; height: 1.25rem; color: var(--boosted);"></i>
                 En este artículo
               </h3>
-              <ul class="toc-list">
-                <li class="toc-item"><a href="#ilusion-vs-realidad" class="toc-link">Ilusión vs. Realidad</a></li>
-                <li class="toc-item"><a href="#porque-activo" class="toc-link">Tu mejor activo</a></li>
-              </ul>
-
-              <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
-                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
-                  <div
-                    style="width: 50px; height: 50px; border-radius: 50%; background: var(--boosted); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #000; font-size: 1.2rem;">
+<ul class="toc-list">
+<li class="toc-item"><a class="toc-link" href="#ilusion-vs-realidad">Ilusión vs. Realidad</a></li>
+<li class="toc-item"><a class="toc-link" href="#porque-activo">Tu mejor activo</a></li>
+</ul>
+<div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.05);">
+<div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+<div style="width: 50px; height: 50px; border-radius: 50%; background: var(--boosted); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-weight: 800; color: #000; font-size: 1.2rem;">
                     C</div>
-                  <div>
-                    <div style="color: #fff; font-weight: 600; font-size: 0.9rem;">Charlie AI</div>
-                    <div style="color: var(--boosted); font-size: 0.75rem; font-family: var(--font-mono);">Inteligencia
+<div>
+<div style="color: #fff; font-weight: 600; font-size: 0.9rem;">Charlie AI</div>
+<div style="color: var(--boosted); font-size: 0.75rem; font-family: var(--font-mono);">Inteligencia
                       Operativa</div>
-                  </div>
-                </div>
-                <p style="font-size: 0.85rem; color: var(--zinc-500); line-height: 1.5;">Charlie ayuda a las empresas a
+</div>
+</div>
+<p style="font-size: 0.85rem; color: var(--zinc-500); line-height: 1.5;">Charlie ayuda a las empresas a
                   poseer sus propios canales de venta.</p>
-              </div>
-            </div>
-          </aside>
-
-        </div>
-
-        <!-- ── ARTÍCULOS RELACIONADOS ── -->
-        <div class="related-section container">
-          <h3 class="related-title reveal">Siguiente lectura</h3>
-
-          <div class="related-links-grid">
-
-            <a href="blog-branding-estrategico.html" class="related-item reveal">
-              <span class="related-item-tag">Branding</span>
-              <h4 class="related-item-title">Tu logo no es tu marca: Branding y Valor de Marca</h4>
-              <div class="related-item-more">
+</div>
+</div>
+</aside>
+</div>
+<!-- ── ARTÍCULOS RELACIONADOS ── -->
+<div class="related-section container">
+<h3 class="related-title reveal">Siguiente lectura</h3>
+<div class="related-links-grid">
+<a class="related-item reveal" href="blog-branding-estrategico.html">
+<span class="related-item-tag">Branding</span>
+<h4 class="related-item-title">Tu logo no es tu marca: Branding y Valor de Marca</h4>
+<div class="related-item-more">
                 Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
-              </div>
-            </a>
-
-            <a href="blog-ecosistema-digital-inteligente.html" class="related-item reveal"
-              style="transition-delay: 0.1s;">
-              <span class="related-item-tag">Estrategia</span>
-              <h4 class="related-item-title">Ecosistema Digital Inteligente: 7 pasos para diseñarlo</h4>
-              <div class="related-item-more">
+</div>
+</a>
+<a class="related-item reveal" href="blog-ecosistema-digital-inteligente.html" style="transition-delay: 0.1s;">
+<span class="related-item-tag">Estrategia</span>
+<h4 class="related-item-title">Ecosistema Digital Inteligente: 7 pasos para diseñarlo</h4>
+<div class="related-item-more">
                 Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </section>
-    </article>
-  </main>
-
-  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Columna 1: Marca y Redes -->
-        <div>
-          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
-          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+</div>
+</a>
+</div>
+</div>
+</section>
+</article>
+</main>
+<!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<!-- Columna 1: Marca y Redes -->
+<div>
+<a class="footer-logo" href="index.html">BOOSTED<span>.</span></a>
+<p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
             conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
-              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
-            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
-              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
-          </div>
-        </div>
-
-        <!-- Columna 2: Servicios -->
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
-            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
-            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
-            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
-            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 3: Soluciones por Sector -->
-        <div class="footer-col">
-          <h4>Soluciones por Sector</h4>
-          <ul>
-            <li><a href="belleza.html">Belleza y Estética</a></li>
-            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
-            <li><a href="educacion.html">Educación</a></li>
-            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
-            <li><a href="retail.html">Retail</a></li>
-            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 4: Empresa y Contacto -->
-        <div class="footer-col">
-          <h4>Empresa & Contacto</h4>
-          <ul>
-            <li><a href="nosotros.html">Quiénes Somos</a></li>
-            <li><a href="blog.html">Nuestro Blog</a></li>
-            <li><a href="charlie.html">Conoce a Charlie</a></li>
-            <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
-            </li>
-            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
-            <li><a href="sitios-web.html">Portafolio Web</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
-            </li>
-            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
-                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
-          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
-          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
-            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+<div class="footer-social">
+<a aria-label="LinkedIn" class="social-btn" href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" rel="noopener noreferrer" target="_blank"><i data-lucide="linkedin"></i></a>
+<a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/boosted_design/" rel="noopener noreferrer" target="_blank"><i data-lucide="instagram"></i></a>
+</div>
+</div>
+<!-- Columna 2: Servicios -->
+<div class="footer-col">
+<h4>Servicios</h4>
+<ul>
+<li><a href="automatizacion.html">Automatización de Procesos</a></li>
+<li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+<li><a href="transformacion-digital.html">Transformación Digital</a></li>
+<li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+<li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+</ul>
+</div>
+<!-- Columna 3: Soluciones por Sector -->
+<div class="footer-col">
+<h4>Soluciones por Sector</h4>
+<ul>
+<li><a href="belleza.html">Belleza y Estética</a></li>
+<li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+<li><a href="educacion.html">Educación</a></li>
+<li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+<li><a href="retail.html">Retail</a></li>
+<li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+</ul>
+</div>
+<!-- Columna 4: Empresa y Contacto -->
+<div class="footer-col">
+<h4>Empresa &amp; Contacto</h4>
+<ul>
+<li><a href="nosotros.html">Quiénes Somos</a></li>
+<li><a href="blog.html">Nuestro Blog</a></li>
+<li><a href="charlie.html">Conoce a Charlie</a></li>
+<li><a href="faq.html">Preguntas Frecuentes</a></li>
+<li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+</li>
+<li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+<li><a href="sitios-web.html">Portafolio Web</a></li>
+<li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+</li>
+<li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+<p>© 2025 Boosted. Todos los derechos reservados.</p>
+<div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+<a href="privacidad.html" onmouseout="this.style.color='var(--zinc-500)'" onmouseover="this.style.color='#fff'" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;">Políticas de
               Privacidad</a>
-            <span style="color: rgba(255,255,255,0.1);">|</span>
-            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+<span style="color: rgba(255,255,255,0.1);">|</span>
+<a href="terminos.html" onmouseout="this.style.color='var(--zinc-500)'" onmouseover="this.style.color='#fff'" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;">Términos y
               Condiciones</a>
-          </div>
+</div>
+</div>
+<div class="footer-status">
+<span class="animate-pulse">●</span> Sistemas en línea y operando normal
         </div>
-        <div class="footer-status">
-          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
-  <script>
+</div>
+</div>
+</footer>
+<script src="assets/js/script.js"></script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
     });
@@ -863,5 +846,4 @@
     });
   </script>
 </body>
-
 </html>

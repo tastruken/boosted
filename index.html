@@ -1,694 +1,519 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Boosted | Agencia de Automatización y Marketing Digital</title>
-  <meta name="description"
-    content="Diseñamos ecosistemas digitales conectados con IA para marketing, ventas y operaciones. Automatización de procesos, branding y desarrollo a medida." />
-  <meta name="keywords"
-    content="automatización, inteligencia artificial, marketing digital, branding, ecosistema digital, Charlie IA, desarrollo web" />
-  <meta name="author" content="Boosted" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
-    rel="stylesheet" />
-
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-  <!-- Estilos -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <!-- Favicon y Open Graph -->
-  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
-  <meta property="og:title" content="Boosted | Agencia de Automatización y Marketing Digital" />
-  <meta property="og:description"
-    content="Diseñamos ecosistemas digitales conectados con IA para marketing, ventas y operaciones. Automatización de procesos, branding y desarrollo a medida." />
-  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
-  <meta property="og:url" content="https://boosted.cl/" />
-  <meta property="og:type" content="website" />
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Boosted | Agencia de Automatización y Marketing Digital</title>
+<meta content="Diseñamos ecosistemas digitales conectados con IA para marketing, ventas y operaciones. Automatización de procesos, branding y desarrollo a medida." name="description"/>
+<meta content="automatización, inteligencia artificial, marketing digital, branding, ecosistema digital, Charlie IA, desarrollo web" name="keywords"/>
+<meta content="Boosted" name="author"/>
+<meta content="index, follow" name="robots"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Poppins:wght@300;400;500;600&amp;family=Outfit:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<!-- Estilos -->
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<!-- Preload Hero LCP Image -->
+<link as="image" href="assets/img/hero/hero-1.webp" rel="preload"/>
+<!-- Favicon y Open Graph -->
+<link href="assets/img/boosted-logo.webp" rel="icon" type="image/png"/>
+<meta content="Boosted | Agencia de Automatización y Marketing Digital" property="og:title"/>
+<meta content="Diseñamos ecosistemas digitales conectados con IA para marketing, ventas y operaciones. Automatización de procesos, branding y desarrollo a medida." property="og:description"/>
+<meta content="https://boosted.cl/assets/img/boosted-logo.webp" property="og:image"/>
+<meta content="https://boosted.cl/" property="og:url"/>
+<meta content="website" property="og:type"/>
 </head>
-
 <body> <!-- ── HEADER ── -->
-  <header role="banner">
-    <nav class="container main-nav" aria-label="Navegación principal">
-      <a href="index.html" class="logo">Boosted<span>.</span></a>
-      <nav class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="index.html" style="color:var(--accent);">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li>
-            <a href="charlie.html" class="charlie-link">
-              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+<header role="banner">
+<nav aria-label="Navegación principal" class="container main-nav">
+<a class="logo" href="index.html">Boosted<span>.</span></a>
+<nav class="nav-links" id="navLinks">
+<ul>
+<li><a href="index.html" style="color:var(--accent);">Inicio</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li>
+<a class="charlie-link" href="charlie.html">
+<i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
             </a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
-              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
-              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
-              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
-              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+</li>
+<li class="dropdown">
+<a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+<a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+<a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+<a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+<a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
                 sociales</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
-              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
-              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
-              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
-              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
-              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
-              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
-            </div>
-          </li>
-          <li><a href="blog.html">Blog</a></li>
-        </ul>
-        <a href="index.html#contacto" class="btn-contact">Contactar</a>
-        <button class="btn-menu" id="menuBtn" aria-label="Menú">
-          <i data-lucide="menu" id="menuIcon"></i>
-        </button>
-      </nav>
-      <nav class="mobile-nav" id="mobileNav">
-        <ul>
-          <li><a href="index.html" class="mobile-link" style="color:var(--accent);">Inicio</a></li>
-          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
-          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
-          <li>
-            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="automatizacion.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
-              <li><a href="desarrollo-a-medida.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
+</div>
+</li>
+<li class="dropdown">
+<a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+<a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+<a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+<a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+<a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+<a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+<a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+</div>
+</li>
+<li><a href="blog.html">Blog</a></li>
+</ul>
+<a class="btn-contact" href="index.html#contacto">Contactar</a>
+<button aria-label="Menú" class="btn-menu" id="menuBtn">
+<i data-lucide="menu" id="menuIcon"></i>
+</button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+<ul>
+<li><a class="mobile-link" href="index.html" style="color:var(--accent);">Inicio</a></li>
+<li><a class="mobile-link" href="nosotros.html">Nosotros</a></li>
+<li><a class="mobile-link charlie-mobile" href="charlie.html">CHARLIE</a></li>
+<li>
+<a class="mobile-link" href="#">Servicios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="automatizacion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+<li><a class="mobile-link" href="desarrollo-a-medida.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a
                   medida</a></li>
-              <li><a href="transformacion-digital.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
-              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="transformacion-digital.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+<li><a class="mobile-link" href="sitios-web.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Sitios web y experiencia digital</a></li>
-              <li><a href="branding-y-contenido.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+<li><a class="mobile-link" href="branding-y-contenido.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
                   sociales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+</ul>
+</li>
+<li>
+<a class="mobile-link" href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="belleza.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
                   Estética</a></li>
-              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
+<li><a class="mobile-link" href="construccion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Construcción
                   e
                   Inmobiliaria</a></li>
-              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="educacion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Educación</a></li>
-              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
+<li><a class="mobile-link" href="hospitalidad.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Hospitalidad –
                   HORECA</a></li>
-              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
-              </li>
-              <li><a href="servicios-profesionales.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="branding-y-contenido.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
-              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
+<li><a class="mobile-link" href="retail.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+</li>
+<li><a class="mobile-link" href="servicios-profesionales.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+</ul>
+</li>
+<li>
+<a class="mobile-link" href="#">Portafolios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="branding-y-contenido.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, Contenido y Redes</a></li>
+<li><a class="mobile-link" href="sitios-web.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Sitios Web y
                   Experiencias Digitales</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html" class="mobile-link">Blog</a></li>
-          <li><a href="index.html#contacto" class="mobile-link">Contacto</a></li>
-        </ul>
-      </nav>
-    </nav>
-  </header>
-
-  <main>
-
-    <!-- HERO -->
-    <section id="inicio">
-
-      <!-- Flechas laterales hero -->
-      <button class="hero-arrow" id="heroPrev" aria-label="Anterior">
-        <i data-lucide="chevron-left"></i>
-      </button>
-      <button class="hero-arrow" id="heroNext" aria-label="Siguiente">
-        <i data-lucide="chevron-right"></i>
-      </button>
-
-      <!-- Fondo Dinámico Carrusel (Antes columna derecha) -->
-      <div class="hero-bg-slider" id="heroImgSlider">
-        <div class="hero-img-slide active">
-          <img src="assets/img/hero/hero-1.png" alt="Ecosistemas B2B" />
-        </div>
-        <div class="hero-img-slide">
-          <img src="assets/img/hero/hero-2.png" alt="Automatización" />
-        </div>
-        <div class="hero-img-slide">
-          <img src="assets/img/hero/hero-3.png" alt="Diseño Web UX" />
-        </div>
-        <div class="hero-img-slide">
-          <img src="assets/img/hero/hero-4.png" alt="Estrategia y Contenido" />
-        </div>
-        <!-- Overlays para oscuridad, gradiente y difuminado -->
-        <div class="hero-bg-overlay blur-overlay"></div>
-        <div class="hero-bg-overlay gradient-overlay"></div>
-      </div>
-
-      <div class="bg-grid"></div>
-
-      <div class="container hero-grid">
-        <!-- Text column -->
-        <div class="hero-text-col anim-fadeup">
-
-          <div class="hero-slider" id="heroSlider">
-            <!-- Slide 1 -->
-            <div class="hero-slide active">
-              <div class="hero-badge">
-                <span class="animate-pulse"></span> ECOSISTEMAS B2B
+</ul>
+</li>
+<li><a class="mobile-link" href="blog.html">Blog</a></li>
+<li><a class="mobile-link" href="index.html#contacto">Contacto</a></li>
+</ul>
+</nav>
+</nav>
+</header>
+<main>
+<!-- HERO -->
+<section id="inicio">
+<!-- Flechas laterales hero -->
+<button aria-label="Anterior" class="hero-arrow" id="heroPrev">
+<i data-lucide="chevron-left"></i>
+</button>
+<button aria-label="Siguiente" class="hero-arrow" id="heroNext">
+<i data-lucide="chevron-right"></i>
+</button>
+<!-- Fondo Dinámico Carrusel (Antes columna derecha) -->
+<div class="hero-bg-slider" id="heroImgSlider">
+<div class="hero-img-slide active">
+<img alt="Ecosistemas B2B" src="assets/img/hero/hero-1.webp"/>
+</div>
+<div class="hero-img-slide">
+<img alt="Automatización" src="assets/img/hero/hero-2.webp"/>
+</div>
+<div class="hero-img-slide">
+<img alt="Diseño Web UX" loading="lazy" src="assets/img/hero/hero-3.webp"/>
+</div>
+<div class="hero-img-slide">
+<img alt="Estrategia y Contenido" loading="lazy" src="assets/img/hero/hero-4.webp"/>
+</div>
+<!-- Overlays para oscuridad, gradiente y difuminado -->
+<div class="hero-bg-overlay blur-overlay"></div>
+<div class="hero-bg-overlay gradient-overlay"></div>
+</div>
+<div class="bg-grid"></div>
+<div class="container hero-grid">
+<!-- Text column -->
+<div class="hero-text-col anim-fadeup">
+<div class="hero-slider" id="heroSlider">
+<!-- Slide 1 -->
+<div class="hero-slide active">
+<div class="hero-badge">
+<span class="animate-pulse"></span> ECOSISTEMAS B2B
               </div>
-              <h1 class="hero-title">
+<h1 class="hero-title">
                 Ecosistemas Integrados que <span class="text-gradient">Automatizan tu Negocio</span>
-              </h1>
-              <p class="hero-desc">
+</h1>
+<p class="hero-desc">
                 Combinamos diseño web, automatización y transformación digital. Conectamos sistemas, eliminamos silos
                 y
                 preparamos tu empresa para crecer.
               </p>
-              <div class="hero-checks">
-                <div><i data-lucide="network"></i> Sistemas Conectados</div>
-                <div><i data-lucide="trending-up"></i> Crecimiento Escalable</div>
+<div class="hero-checks">
+<div><i data-lucide="network"></i> Sistemas Conectados</div>
+<div><i data-lucide="trending-up"></i> Crecimiento Escalable</div>
+</div>
+</div>
+<!-- Slide 2 -->
+<div class="hero-slide">
+<div class="hero-badge">
+<span class="animate-pulse"></span> AUTOMATIZACIÓN + IA
               </div>
-            </div>
-
-            <!-- Slide 2 -->
-            <div class="hero-slide">
-              <div class="hero-badge">
-                <span class="animate-pulse"></span> AUTOMATIZACIÓN + IA
-              </div>
-              <h1 class="hero-title">
+<div class="hero-title">
                 Automatización B2B: <span class="text-gradient">Ahorra 15-20 Horas Semanales</span>
-              </h1>
-              <p class="hero-desc">
+</div>
+<p class="hero-desc">
                 Orquestamos flujos de marketing, ventas y operación. Aumenta tu capacidad sin sumar carga operativa
                 (ROI
                 en 60 días, Setup 2-4 semanas).
               </p>
-              <div class="hero-checks">
-                <div><i data-lucide="clock"></i> ROI en 60 días</div>
-                <div><i data-lucide="refresh-cw"></i> Mejora Continua</div>
+<div class="hero-checks">
+<div><i data-lucide="clock"></i> ROI en 60 días</div>
+<div><i data-lucide="refresh-cw"></i> Mejora Continua</div>
+</div>
+</div>
+<!-- Slide 3 -->
+<div class="hero-slide">
+<div class="hero-badge">
+<span class="animate-pulse"></span> DESARROLLO WEB UX
               </div>
-            </div>
-
-            <!-- Slide 3 -->
-            <div class="hero-slide">
-              <div class="hero-badge">
-                <span class="animate-pulse"></span> DESARROLLO WEB UX
-              </div>
-              <h1 class="hero-title">
+<div class="hero-title">
                 Sitios Web que Venden: <span class="text-gradient">Diseño UX Integrado</span>
-              </h1>
-              <p class="hero-desc">
+</div>
+<p class="hero-desc">
                 No hacemos webs que solo informan; creamos plataformas estratégicas conectadas a tu CRM para captar
                 leads que conviertan en automático.
               </p>
-              <div class="hero-checks">
-                <div><i data-lucide="database"></i> Integración con CRM</div>
-                <div><i data-lucide="gauge"></i> Core Web Vitals</div>
+<div class="hero-checks">
+<div><i data-lucide="database"></i> Integración con CRM</div>
+<div><i data-lucide="gauge"></i> Core Web Vitals</div>
+</div>
+</div>
+<!-- Slide 4 -->
+<div class="hero-slide">
+<div class="hero-badge">
+<span class="animate-pulse"></span> MARKETING &amp; CONTENIDO
               </div>
-            </div>
-
-            <!-- Slide 4 -->
-            <div class="hero-slide">
-              <div class="hero-badge">
-                <span class="animate-pulse"></span> MARKETING & CONTENIDO
-              </div>
-              <h1 class="hero-title">
+<div class="hero-title">
                 Estrategia: <span class="text-gradient">Redes y Contenidos que Venden</span>
-              </h1>
-              <p class="hero-desc">
+</div>
+<p class="hero-desc">
                 Construimos identidades visuales fuertes y administramos contenidos estratégicos que atraen, educan y
                 convierten prospectos en clientes leales.
               </p>
-              <div class="hero-checks">
-                <div><i data-lucide="pen-tool"></i> Branding Profesional</div>
-                <div><i data-lucide="users"></i> Community Management</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-slider-controls">
-            <div class="slider-nav" id="heroSliderNav">
-              <button class="slider-dot active" aria-label="Slide 1"></button>
-              <button class="slider-dot" aria-label="Slide 2"></button>
-              <button class="slider-dot" aria-label="Slide 3"></button>
-              <button class="slider-dot" aria-label="Slide 4"></button>
-            </div>
-          </div>
-
-          <div class="hero-ctas static-ctas">
-            <a href="#contacto" class="btn-primary">Agenda un diagnóstico gratuito</a>
-            <a href="#charlie" class="btn-ghost glass-card">
+<div class="hero-checks">
+<div><i data-lucide="pen-tool"></i> Branding Profesional</div>
+<div><i data-lucide="users"></i> Community Management</div>
+</div>
+</div>
+</div>
+<div class="hero-slider-controls">
+<div class="slider-nav" id="heroSliderNav">
+<button aria-label="Slide 1" class="slider-dot active"></button>
+<button aria-label="Slide 2" class="slider-dot"></button>
+<button aria-label="Slide 3" class="slider-dot"></button>
+<button aria-label="Slide 4" class="slider-dot"></button>
+</div>
+</div>
+<div class="hero-ctas static-ctas">
+<a class="btn-primary" href="#contacto">Agenda un diagnóstico gratuito</a>
+<a class="btn-ghost glass-card" href="#charlie">
               Conoce a Charlie <i data-lucide="play-circle"></i>
-            </a>
-          </div>
-
-        </div>
-
-        <!-- Right column (now only floating badge) -->
-        <div class="hero-visual-wrapper anim-fadescale desktop-only-badge">
-          <!-- Floating badge -->
-          <div class="hero-float-badge glass-card float-card" id="heroFloatBadge">
-            <div class="hero-float-icon">
-              <i data-lucide="zap"></i>
+</a>
+</div>
+</div>
+<!-- Right column (now only floating badge) -->
+<div class="hero-visual-wrapper anim-fadescale desktop-only-badge">
+<!-- Floating badge -->
+<div class="hero-float-badge glass-card float-card" id="heroFloatBadge">
+<div class="hero-float-icon">
+<i data-lucide="zap"></i>
+</div>
+<div>
+<div class="hero-float-label">Proceso Automático</div>
+<div class="hero-float-value">Lead Capturado</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- ── STATS BAR ── -->
+<section id="stats-bar" style="background: rgba(255,255,255,0.02); border-block: 1px solid rgba(255,255,255,0.06); padding-block: 2.5rem;">
+<div class="container">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+<div class="reveal">
+<div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">+10
             </div>
-            <div>
-              <div class="hero-float-label">Proceso Automático</div>
-              <div class="hero-float-value">Lead Capturado</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ── STATS BAR ── -->
-    <section id="stats-bar"
-      style="background: rgba(255,255,255,0.02); border-block: 1px solid rgba(255,255,255,0.06); padding-block: 2.5rem;">
-      <div class="container">
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; text-align: center;">
-          <div class="reveal">
-            <div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">+10
-            </div>
-            <div
-              style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
+<div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
               Años de trayectoria</div>
-          </div>
-          <div class="reveal" style="transition-delay: 0.1s;">
-            <div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">+80
+</div>
+<div class="reveal" style="transition-delay: 0.1s;">
+<div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">+80
             </div>
-            <div
-              style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
+<div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
               Proyectos ejecutados</div>
-          </div>
-          <div class="reveal" style="transition-delay: 0.2s;">
-            <div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">6
+</div>
+<div class="reveal" style="transition-delay: 0.2s;">
+<div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">6
             </div>
-            <div
-              style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
+<div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
               Sectores industriales</div>
-          </div>
-          <div class="reveal" style="transition-delay: 0.3s;">
-            <div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">60d
+</div>
+<div class="reveal" style="transition-delay: 0.3s;">
+<div style="font-family: var(--font-bebas); font-size: 3.5rem; color: var(--boosted); line-height: 1;">60d
             </div>
-            <div
-              style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
+<div style="font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--zinc-400); margin-top: 0.25rem;">
               ROI promedio medible</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── SERVICIOS ── -->
-    <section id="servicios" style="padding-block: 7rem;">
-      <div class="container">
-        <div class="reveal" style="margin-bottom: 4rem;">
-          <p class="section-label">Ecosistema Digital</p>
-          <div
-            style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
-            <h2 class="section-title" style="max-width: 600px;">Todo lo que necesitas para crecer conectado</h2>
-            <a href="#servicios"
-              style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--boosted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;">Ver
+</div>
+</div>
+</div>
+</section>
+<!-- ── SERVICIOS ── -->
+<section id="servicios" style="padding-block: 7rem;">
+<div class="container">
+<div class="reveal" style="margin-bottom: 4rem;">
+<p class="section-label">Ecosistema Digital</p>
+<div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 1.5rem;">
+<h2 class="section-title" style="max-width: 600px;">Todo lo que necesitas para crecer conectado</h2>
+<a href="#servicios" style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--boosted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;">Ver
               todos los servicios →</a>
-          </div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-
-          <!-- Automatización -->
-          <a href="automatizacion.html" class="glass-card reveal"
-            style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; position: relative; overflow: hidden;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
-              <i data-lucide="bot" style="width: 1.5rem; height: 1.5rem;"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+</div>
+</div>
+<div class="cards-grid-services">
+<!-- Automatización -->
+<a class="glass-card reveal" href="automatizacion.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; position: relative; overflow: hidden;">
+<div style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
+<i data-lucide="bot" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
               Automatización de Procesos</h3>
-            <p
-              style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
               Flujos inteligentes que eliminan tareas repetitivas. ROI medible en 60 días, setup en 2-4 semanas.</p>
-            <span
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Explorar
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: auto;">Explorar
               →</span>
-          </a>
-
-          <!-- Desarrollo -->
-          <a href="desarrollo-a-medida.html" class="glass-card reveal"
-            style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';"
-            style="transition-delay:0.1s;">
-            <div
-              style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
-              <i data-lucide="code" style="width: 1.5rem; height: 1.5rem;"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+</a>
+<!-- Desarrollo -->
+<a class="glass-card reveal" href="desarrollo-a-medida.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s; position: relative; overflow: hidden;">
+<div style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
+<i data-lucide="code" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
               Desarrollo a Medida</h3>
-            <p
-              style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
               Herramientas y sistemas 100% personalizados que se adaptan a tu operación y escalan contigo.</p>
-            <span
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Explorar
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: auto;">Explorar
               →</span>
-          </a>
-
-          <!-- Transformación Digital -->
-          <a href="transformacion-digital.html" class="glass-card reveal"
-            style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.2s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
-              <i data-lucide="rocket" style="width: 1.5rem; height: 1.5rem;"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+</a>
+<!-- Transformación Digital -->
+<a class="glass-card reveal" href="transformacion-digital.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.2s;">
+<div style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
+<i data-lucide="rocket" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
               Transformación Digital</h3>
-            <p
-              style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
               Rediseñamos tu operación desde adentro: procesos, sistemas, cultura digital y adopción tecnológica.</p>
-            <span
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Explorar
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: auto;">Explorar
               →</span>
-          </a>
-
-          <!-- Sitios Web -->
-          <a href="sitios-web.html" class="glass-card reveal"
-            style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
-              <i data-lucide="monitor-smartphone" style="width: 1.5rem; height: 1.5rem;"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+</a>
+<!-- Sitios Web -->
+<a class="glass-card reveal" href="sitios-web.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;">
+<div style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
+<i data-lucide="monitor-smartphone" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
               Sitios Web y UX Digital</h3>
-            <p
-              style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
               Plataformas estratégicas integradas a tu CRM: diseño, velocidad, y conversión desde el primer clic.</p>
-            <span
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Explorar
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: auto;">Explorar
               →</span>
-          </a>
-
-          <!-- Branding -->
-          <a href="branding-y-contenido.html" class="glass-card reveal"
-            style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
-              <i data-lucide="pen-tool" style="width: 1.5rem; height: 1.5rem;"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+</a>
+<!-- Branding -->
+<a class="glass-card reveal" href="branding-y-contenido.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s;">
+<div style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.1); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
+<i data-lucide="pen-tool" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
               Branding y Redes Sociales</h3>
-            <p
-              style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
               Identidades visuales potentes y contenidos estratégicos que atraen, educan y convierten audiencias.</p>
-            <span
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Explorar
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-top: auto;">Explorar
               →</span>
-          </a>
-
-          <!-- Charlie Card -->
-          <a href="charlie.html" class="reveal"
-            style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: block; border: 1px solid rgba(38,204,202,0.2); background: radial-gradient(circle at top right, rgba(38,204,202,0.12), transparent 60%); transition: all 0.3s; transition-delay: 0.2s; position: relative;"
-            onmouseover="this.style.transform='translateY(-4px)';" onmouseout="this.style.transform='translateY(0)';">
-            <div
-              style="position: absolute; top: 1rem; right: 1rem; font-family: var(--font-mono); font-size: 0.65rem; background: var(--boosted); color: #000; padding: 0.2rem 0.5rem; border-radius: 99px; font-weight: 700;">
+</a>
+<!-- Charlie Card -->
+<a class="glass-card reveal" href="charlie.html" onmouseout="this.style.borderColor='rgba(38,204,202,0.2)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.5)'; this.style.transform='translateY(-4px)';" style="padding: 2rem; border-radius: 1.5rem; text-decoration: none; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(38,204,202,0.2); background: radial-gradient(circle at top right, rgba(38,204,202,0.12), transparent 60%); transition: all 0.3s; transition-delay: 0.2s; position: relative; overflow: hidden;">
+<div style="position: absolute; top: 1rem; right: 1rem; font-family: var(--font-mono); font-size: 0.65rem; background: var(--boosted); color: #000; padding: 0.2rem 0.5rem; border-radius: 99px; font-weight: 700;">
               IA</div>
-            <div
-              style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
-              <i data-lucide="zap" style="width: 1.5rem; height: 1.5rem;"></i>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+<div style="width: 3rem; height: 3rem; background: rgba(38,204,202,0.2); border-radius: 0.75rem; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; color: var(--boosted);">
+<i data-lucide="zap" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
               Charlie, tu Agente IA 24/7</h3>
-            <p
-              style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.6; font-weight: 300; margin-bottom: 1.5rem;">
               Conecta marketing, ventas y operación en un solo flujo inteligente que nunca duerme ni olvida.</p>
-            <span
-              style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Conocer
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Conocer
               a Charlie →</span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-
-    <!-- ── SOLUCIONES POR SECTOR ── -->
-    <section id="soluciones"
-      style="padding-block: 7rem; background: rgba(255,255,255,0.01); border-block: 1px solid rgba(255,255,255,0.05);">
-      <div class="container">
-        <div class="reveal" style="margin-bottom: 4rem; text-align: center;">
-          <p class="section-label">Soluciones por Industria</p>
-          <h2 class="section-title">Tu sector, tu ecosistema</h2>
-          <p class="section-desc" style="max-width: 600px; margin: 1rem auto 0;">Llevamos nuestra metodología digital a
+</a>
+</div>
+</div>
+</section>
+<!-- ── SOLUCIONES POR SECTOR ── -->
+<section id="soluciones" style="padding-block: 7rem; background: rgba(255,255,255,0.01); border-block: 1px solid rgba(255,255,255,0.05);">
+<div class="container">
+<div class="reveal" style="margin-bottom: 4rem; text-align: center;">
+<p class="section-label">Soluciones por Industria</p>
+<h2 class="section-title">Tu sector, tu ecosistema</h2>
+<p class="section-desc" style="max-width: 600px; margin: 1rem auto 0;">Llevamos nuestra metodología digital a
             6 industrias clave en Chile. Cada sector tiene sus propios desafíos y nosotros conocemos sus soluciones.</p>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem;">
-
-          <a href="belleza.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,100,150,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';">
-            <img src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&q=80&w=600"
-              alt="Belleza y Estética"
-              style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;">
-            <div
-              style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
+<a class="reveal" href="belleza.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,100,150,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+<img alt="Belleza y Estética" loading="lazy" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
                 Belleza y Estética</h3>
-            </div>
-          </a>
-
-          <a href="construccion.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(100,150,255,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=600"
-              alt="Construcción"
-              style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;">
-            <div
-              style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
+</div>
+</a>
+<a class="reveal" href="construccion.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(100,150,255,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+<img alt="Construcción" loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
                 Construcción e Inmobiliaria</h3>
-            </div>
-          </a>
-
-          <a href="educacion.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,200,50,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';">
-            <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&q=80&w=600"
-              alt="Educación" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;">
-            <div
-              style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
+</div>
+</a>
+<a class="reveal" href="educacion.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,200,50,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+<img alt="Educación" loading="lazy" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
                 Educación</h3>
-            </div>
-          </a>
-
-          <a href="hospitalidad.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,150,50,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';">
-            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&q=80&w=600"
-              alt="HORECA" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;">
-            <div
-              style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
+</div>
+</a>
+<a class="reveal" href="hospitalidad.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,150,50,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+<img alt="HORECA" loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
                 Hospitalidad – HORECA</h3>
-            </div>
-          </a>
-
-          <a href="retail.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(50,200,100,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';">
-            <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=600"
-              alt="Retail" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;">
-            <div
-              style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
+</div>
+</a>
+<a class="reveal" href="retail.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(50,200,100,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
+<img alt="Retail" loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
                 Retail</h3>
-            </div>
-          </a>
-
-          <a href="servicios-profesionales.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(38,204,202,0.15), rgba(0,0,0,0.8)); border: 1px solid rgba(38,204,202,0.2); transition: all 0.3s;"
-            onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.5)';"
-            onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(38,204,202,0.2)';">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=600"
-              alt="Servicios Profesionales"
-              style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;">
-            <div
-              style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-              <span
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
+</div>
+</a>
+<a class="reveal" href="servicios-profesionales.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(38,204,202,0.2)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.5)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(38,204,202,0.15), rgba(0,0,0,0.8)); border: 1px solid rgba(38,204,202,0.2); transition: all 0.3s;">
+<img alt="Servicios Profesionales" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
+<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
+<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
+<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
                 Servicios Profesionales</h3>
-            </div>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── METODOLOGÍA ── -->
-    <section id="metodologia" style="padding-block: 7rem;">
-      <div class="container">
-        <div class="metod-header reveal" style="margin-bottom: 4rem;">
-          <p class="section-label">Framework</p>
-          <h2 class="section-title">De Diagnóstico a Impacto Real</h2>
-          <p class="section-desc">Nuestra metodología estructurada para garantizar el éxito de tu transformación
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- ── METODOLOGÍA ── -->
+<section id="metodologia" style="padding-block: 7rem;">
+<div class="container">
+<div class="metod-header reveal" style="margin-bottom: 4rem;">
+<p class="section-label">Framework</p>
+<h2 class="section-title">De Diagnóstico a Impacto Real</h2>
+<p class="section-desc">Nuestra metodología estructurada para garantizar el éxito de tu transformación
             digital.</p>
-        </div>
-
-        <div class="steps-grid">
-          <div class="steps-connector"></div>
-
-          <div class="step-item reveal" style="transition-delay:0s">
-            <div class="step-circle"><span>01</span></div>
-            <h3 class="step-name">DIAGNÓSTICO</h3>
-            <p class="step-desc">Evaluamos tu operación actual, identificamos cuellos de botella, sistemas desintegrados
+</div>
+<div class="steps-grid">
+<div class="steps-connector"></div>
+<div class="step-item reveal" style="transition-delay:0s">
+<div class="step-circle"><span>01</span></div>
+<h3 class="step-name">DIAGNÓSTICO</h3>
+<p class="step-desc">Evaluamos tu operación actual, identificamos cuellos de botella, sistemas desintegrados
               y oportunidades reales de automatización.</p>
-          </div>
-
-          <div class="step-item reveal" style="transition-delay:0.2s">
-            <div class="step-circle"><span>02</span></div>
-            <h3 class="step-name">DISEÑO DEL ECOSISTEMA</h3>
-            <p class="step-desc">Rediseñamos flujos de trabajo, integramos tus sistemas existentes y planificamos la
+</div>
+<div class="step-item reveal" style="transition-delay:0.2s">
+<div class="step-circle"><span>02</span></div>
+<h3 class="step-name">DISEÑO DEL ECOSISTEMA</h3>
+<p class="step-desc">Rediseñamos flujos de trabajo, integramos tus sistemas existentes y planificamos la
               implementación paso a paso.</p>
-          </div>
-
-          <div class="step-item reveal" style="transition-delay:0.4s">
-            <div class="step-circle"><span>03</span></div>
-            <h3 class="step-name">IMPLEMENTACIÓN</h3>
-            <p class="step-desc">Implementamos la solución, capacitamos a tu equipo y acompañamos la adopción
+</div>
+<div class="step-item reveal" style="transition-delay:0.4s">
+<div class="step-circle"><span>03</span></div>
+<h3 class="step-name">IMPLEMENTACIÓN</h3>
+<p class="step-desc">Implementamos la solución, capacitamos a tu equipo y acompañamos la adopción
               post-implementación con mejora continua.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CHARLIE ── -->
+<section id="charlie" style="padding-block: 7rem; background: rgba(255,255,255,0.01); border-block: 1px solid rgba(255,255,255,0.05);">
+<div class="glow-blob glow-boosted charlie-glow"></div>
+<div class="container charlie-grid">
+<div class="charlie-text reveal-scale">
+<div class="charlie-badge glass-card">
+<i data-lucide="zap"></i> POWERED BY AI
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CHARLIE ── -->
-    <section id="charlie"
-      style="padding-block: 7rem; background: rgba(255,255,255,0.01); border-block: 1px solid rgba(255,255,255,0.05);">
-      <div class="glow-blob glow-boosted charlie-glow"></div>
-      <div class="container charlie-grid">
-        <div class="charlie-text reveal-scale">
-          <div class="charlie-badge glass-card">
-            <i data-lucide="zap"></i> POWERED BY AI
-          </div>
-          <h2 class="charlie-title">Conoce a Charlie</h2>
-          <p class="charlie-subtitle">El único colaborador que trabaja 24/7</p>
-          <p class="charlie-desc">
+<h2 class="charlie-title">Conoce a Charlie</h2>
+<p class="charlie-subtitle">El único colaborador que trabaja 24/7</p>
+<p class="charlie-desc">
             Diseñamos y automatizamos procesos digitales con Charlie™, nuestra tecnología de IA que conecta marketing,
             ventas y operación en un solo flujo inteligente. Clasifica intención de compra, responde consultas y
             alimenta tu CRM en tiempo real.
           </p>
-          <a href="charlie.html" class="btn-border">
+<a class="btn-border" href="charlie.html">
             Ver a Charlie en acción <i data-lucide="play-circle"></i>
-          </a>
-        </div>
-        <div class="charlie-image reveal-scale" style="transition-delay:0.2s">
-          <img src="assets/img/charlie.png" alt="Charlie, el asistente de IA" />
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PORTAFOLIOS PREVIEW ── -->
-    <section id="portafolios" style="padding-block: 7rem;">
-      <div class="container">
-        <div class="reveal"
-          style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
-          <div>
-            <p class="section-label">Casos de Éxito</p>
-            <h2 class="section-title">Proyectos que hablan por sí solos</h2>
-          </div>
-          <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-            <a href="branding-y-contenido.html"
-              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--zinc-400); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; transition: color 0.2s;"
-              onmouseover="this.style.color='var(--boosted)';"
-              onmouseout="this.style.color='var(--zinc-400)';">Portafolio Branding →</a>
-            <a href="sitios-web.html"
-              style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;">Portafolio
+</a>
+</div>
+<div class="charlie-image reveal-scale" style="transition-delay:0.2s">
+<img alt="Charlie, el asistente de IA" loading="lazy" src="assets/img/charlie.webp"/>
+</div>
+</div>
+</section>
+<!-- ── PORTAFOLIOS PREVIEW ── -->
+<section id="portafolios" style="padding-block: 7rem;">
+<div class="container">
+<div class="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
+<div>
+<p class="section-label">Casos de Éxito</p>
+<h2 class="section-title">Proyectos que hablan por sí solos</h2>
+</div>
+<div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+<a href="branding-y-contenido.html" onmouseout="this.style.color='var(--zinc-400)';" onmouseover="this.style.color='var(--boosted)';" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--zinc-400); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; transition: color 0.2s;">Portafolio Branding →</a>
+<a href="sitios-web.html" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;">Portafolio
               Web →</a>
-          </div>
-        </div>
-
-        <style>
+</div>
+</div>
+<style>
           .portfolio-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 1.5rem;
           }
 
@@ -745,483 +570,392 @@
             }
           }
         </style>
-
-        <div class="portfolio-grid">
-
-          <!-- Featured: Ulloa y Cía (Horizontal) -->
-          <a href="portfolio-ulloa.html" class="featured-card reveal">
-            <div class="featured-image-box">
-              <img src="assets/img/projects/project-ulloa.png"
-                alt="Ulloa y Cía" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-              <div
-                style="position: absolute; top: 1.25rem; left: 1.25rem; background: var(--boosted); color: #000; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 99px; text-transform: uppercase; z-index: 10;">
+<div class="portfolio-grid">
+<!-- Featured: Ulloa y Cía (Horizontal) -->
+<a class="featured-card reveal" href="portfolio-ulloa.html">
+<div class="featured-image-box">
+<img alt="Ulloa y Cía" loading="lazy" onmouseout="this.style.transform='scale(1)';" onmouseover="this.style.transform='scale(1.05)';" src="assets/img/projects/project-ulloa.webp" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+<div style="position: absolute; top: 1.25rem; left: 1.25rem; background: var(--boosted); color: #000; font-family: var(--font-mono); font-size: 0.7rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 99px; text-transform: uppercase; z-index: 10;">
                 Caso Destacado</div>
-            </div>
-            <div class="featured-content">
-              <div
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.75rem;">
+</div>
+<div class="featured-content">
+<div style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.75rem;">
                 Branding · Estrategia Digital · Contabilidad</div>
-              <h3
-                style="font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; line-height: 1.2;">
+<h3 style="font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: #fff; margin-bottom: 1.25rem; line-height: 1.2;">
                 Ulloa y Cía: Rebranding y Estrategia Digital Integral</h3>
-              <p
-                style="color: var(--zinc-400); font-size: 1rem; line-height: 1.6; font-weight: 300; margin-bottom: 2rem; max-width: 600px;">
+<p style="color: var(--zinc-400); font-size: 1rem; line-height: 1.6; font-weight: 300; margin-bottom: 2rem; max-width: 600px;">
                 Modernizamos la imagen de una firma de auditoría líder, proyectando solidez contemporánea sin perder la
                 solemnidad. Un ecosistema digital diseñado para la confianza y la autoridad.
               </p>
-              <div style="margin-top: auto;">
-                <span
-                  style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Ver
+<div style="margin-top: auto;">
+<span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em;">Ver
                   caso completo →</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Card 2: ELD -->
-          <a href="portfolio-eld.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.5rem; overflow: hidden; display: flex; flex-direction: column; position: relative; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.3s, transform 0.3s; transition-delay: 0.1s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.transform='translateY(0)';">
-            <div style="aspect-ratio: 16/9; overflow: hidden;">
-              <img src="assets/img/projects/project-eld.png"
-                alt="ELD Ingeniería" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-            </div>
-            <div style="padding: 1.75rem; flex-grow: 1; display: flex; flex-direction: column;">
-              <div
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+</div>
+</div>
+</a>
+<!-- Card 2: ELD -->
+<a class="reveal" href="portfolio-eld.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.5rem; overflow: hidden; display: flex; flex-direction: column; position: relative; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.3s, transform 0.3s; transition-delay: 0.1s;">
+<div style="aspect-ratio: 16/9; overflow: hidden;">
+<img alt="ELD Ingeniería" loading="lazy" onmouseout="this.style.transform='scale(1)';" onmouseover="this.style.transform='scale(1.05)';" src="assets/img/projects/project-eld.webp" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+</div>
+<div style="padding: 1.75rem; flex-grow: 1; display: flex; flex-direction: column;">
+<div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
                 Branding · Ingeniería</div>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+<h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
                 ELD: Ingeniería de Autoridad Branding B2B</h3>
-              <p
-                style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.5; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.5; font-weight: 300; margin-bottom: 1.5rem;">
                 Estrategia de marca y posicionamiento digital para consultora de iluminación técnica B2B.
               </p>
-              <span
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
                 más →</span>
-            </div>
-          </a>
-
-          <!-- Card 3: Auditor Condominio Branding -->
-          <a href="portfolio-auditor-branding.html" class="reveal"
-            style="text-decoration: none; border-radius: 1.5rem; overflow: hidden; display: flex; flex-direction: column; position: relative; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.3s, transform 0.3s; transition-delay: 0.2s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.transform='translateY(0)';">
-            <div style="aspect-ratio: 16/9; overflow: hidden;">
-              <img src="assets/img/projects/project-auditor.png"
-                alt="Auditor Condominio" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"
-                onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
-            </div>
-            <div style="padding: 1.75rem; flex-grow: 1; display: flex; flex-direction: column;">
-              <div
-                style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
+</div>
+</a>
+<!-- Card 3: Auditor Condominio Branding -->
+<a class="reveal" href="portfolio-auditor-branding.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.5rem; overflow: hidden; display: flex; flex-direction: column; position: relative; background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.07); transition: border-color 0.3s, transform 0.3s; transition-delay: 0.2s;">
+<div style="aspect-ratio: 16/9; overflow: hidden;">
+<img alt="Auditor Condominio" loading="lazy" onmouseout="this.style.transform='scale(1)';" onmouseover="this.style.transform='scale(1.05)';" src="assets/img/projects/project-auditor.webp" style="width:100%;height:100%;object-fit:cover;transition:transform 0.5s;"/>
+</div>
+<div style="padding: 1.75rem; flex-grow: 1; display: flex; flex-direction: column;">
+<div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.5rem;">
                 Branding · Lanzamiento</div>
-              <h3
-                style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
+<h3 style="font-family: var(--font-display); font-size: 1.25rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.3;">
                 Auditor Condominio: Lanzamiento Full-Service de Marca</h3>
-              <p
-                style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.5; font-weight: 300; margin-bottom: 1.5rem;">
+<p style="color: var(--zinc-400); font-size: 0.9rem; line-height: 1.5; font-weight: 300; margin-bottom: 1.5rem;">
                 Lanzamiento integral de marca, diseño de plataforma y contenidos para software SaaS.
               </p>
-              <span
-                style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
+<span style="font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
                 más →</span>
-            </div>
-          </a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- ── BLOG PREVIEW ── -->
-    <section id="blog-preview"
-      style="padding-block: 7rem; background: rgba(255,255,255,0.01); border-block: 1px solid rgba(255,255,255,0.05);">
-      <div class="container">
-        <div class="reveal"
-          style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
-          <div>
-            <p class="section-label">Estrategia y Tecnología</p>
-            <h2 class="section-title">Lo último de nuestro blog</h2>
-          </div>
-          <a href="blog.html"
-            style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;">Ver
+</div>
+</a>
+</div>
+</div>
+</section>
+<!-- ── BLOG PREVIEW ── -->
+<section id="blog-preview" style="padding-block: 7rem; background: rgba(255,255,255,0.01); border-block: 1px solid rgba(255,255,255,0.05);">
+<div class="container">
+<div class="reveal" style="display: flex; justify-content: space-between; align-items: flex-end; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 3rem;">
+<div>
+<p class="section-label">Estrategia y Tecnología</p>
+<h2 class="section-title">Lo último de nuestro blog</h2>
+</div>
+<a href="blog.html" style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-decoration: none; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap;">Ver
             todos los artículos →</a>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem;">
-
-          <a href="blog.html" class="glass-card reveal"
-            style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: flex; gap: 0.5rem;">
-              <span>Diseño Web</span>
-            </div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+<a class="glass-card reveal" href="blog.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;">
+<div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: flex; gap: 0.5rem;">
+<span>Diseño Web</span>
+</div>
+<h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
               Diseño Web Estratégico: ¿Tu sitio vende o solo informa?</h3>
-            <p style="color: var(--zinc-400); font-size: 0.875rem; line-height: 1.6; font-weight: 300;">Un sitio que
+<p style="color: var(--zinc-400); font-size: 0.875rem; line-height: 1.6; font-weight: 300;">Un sitio que
               informa te pone en el ranking. Un sitio que vende te da clientes. La diferencia está en la estrategia, no
               en el diseño.</p>
-            <span
-              style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted);">Leer
+<span style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
               artículo →</span>
-          </a>
-
-          <a href="blog.html" class="glass-card reveal"
-            style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
+</a>
+<a class="glass-card reveal" href="blog.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s;">
+<div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
               Automatización</div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
+<h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
               ¿Cuánto pierde tu empresa por no automatizar?</h3>
-            <p style="color: var(--zinc-400); font-size: 0.875rem; line-height: 1.6; font-weight: 300;">Los procesos
+<p style="color: var(--zinc-400); font-size: 0.875rem; line-height: 1.6; font-weight: 300;">Los procesos
               manuales cuestan caro: tiempo, errores humanos y energía de tu equipo. Calculamos el impacto real.</p>
-            <span
-              style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted);">Leer
+<span style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
               artículo →</span>
-          </a>
-
-          <a href="blog.html" class="glass-card reveal"
-            style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: block; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.2s;"
-            onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';"
-            onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';">
-            <div
-              style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
+</a>
+<a class="glass-card reveal" href="blog.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.2s;">
+<div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
               Pymes en Chile</div>
-            <h3
-              style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
+<h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
               Beneficios de la automatización para pymes en Chile</h3>
-            <p style="color: var(--zinc-400); font-size: 0.875rem; line-height: 1.6; font-weight: 300;">Automatizar no
+<p style="color: var(--zinc-400); font-size: 0.875rem; line-height: 1.6; font-weight: 300;">Automatizar no
               es solo para las grandes empresas. Descubre cómo las pymes chilenas están transformando su operación.</p>
-            <span
-              style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted);">Leer
+<span style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
               artículo →</span>
-          </a>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── TESTIMONIOS ── -->
-    <section id="testimonios" style="padding-block: 7rem;">
-      <div class="container">
-        <div class="reveal" style="text-align: center; margin-bottom: 3.5rem;">
-          <p class="section-label">Lo que dicen nuestros clientes</p>
-          <h2 class="section-title">La prueba está en los resultados</h2>
-        </div>
-        <div class="testimonial-slider-container">
-          <button class="test-arrow test-arrow-prev" id="testPrev" aria-label="Anterior">
-            <i data-lucide="chevron-left"></i>
-          </button>
-          <button class="test-arrow test-arrow-next" id="testNext" aria-label="Siguiente">
-            <i data-lucide="chevron-right"></i>
-          </button>
-          <div class="testimonial-slider" id="testimonialSlider">
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"De un simple buzón de voz a un Agente Inteligente 24/7. La IA clasifica la intención de
+</a>
+</div>
+</div>
+</section>
+<!-- ── TESTIMONIOS ── -->
+<section id="testimonios" style="padding-block: 7rem;">
+<div class="container">
+<div class="reveal" style="text-align: center; margin-bottom: 3.5rem;">
+<p class="section-label">Lo que dicen nuestros clientes</p>
+<h2 class="section-title">La prueba está en los resultados</h2>
+</div>
+<div class="testimonial-slider-container">
+<button aria-label="Anterior" class="test-arrow test-arrow-prev" id="testPrev">
+<i data-lucide="chevron-left"></i>
+</button>
+<button aria-label="Siguiente" class="test-arrow test-arrow-next" id="testNext">
+<i data-lucide="chevron-right"></i>
+</button>
+<div class="testimonial-slider" id="testimonialSlider">
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"De un simple buzón de voz a un Agente Inteligente 24/7. La IA clasifica la intención de
                 compra y nos garantiza leads calificados con el contexto completo de nuestra Base de Datos."
               </blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/juan/100/100" alt="Juan Eduardo Beltrán"
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">Juan Eduardo Beltrán</div>
-                    <div class="fig-role">Beltrán y Guzman Cia Ltda</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"Trabajé con el equipo de Boosted desde 2015 hasta 2023, y fueron fundamentales en la
+<figure>
+<figcaption><img alt="Juan Eduardo Beltrán" loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/juan/100/100"/>
+<div>
+<div class="fig-name">Juan Eduardo Beltrán</div>
+<div class="fig-role">Beltrán y Guzman Cia Ltda</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"Trabajé con el equipo de Boosted desde 2015 hasta 2023, y fueron fundamentales en la
                 construcción de la identidad de mi negocio. Desarrollaron mi imagen corporativa desde cero, diseñaron
                 una web funcional y atractiva, y gestionaron la creación y estrategia de mis redes sociales."
               </blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/maria/100/100" alt="María Florencia Pardo"
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">María Florencia Pardo</div>
-                    <div class="fig-role">Gerente Broccato Ltda.</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"Trabajar con Paula y su personal fue una excelente experiencia, con reuniones de
+<figure>
+<figcaption><img alt="María Florencia Pardo" loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/maria/100/100"/>
+<div>
+<div class="fig-name">María Florencia Pardo</div>
+<div class="fig-role">Gerente Broccato Ltda.</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"Trabajar con Paula y su personal fue una excelente experiencia, con reuniones de
                 coordinación muy profesionales y un servicio óptimo. El curso de e-learning fue muy exitoso y rompió
                 los esquemas de los funcionarios."</blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/javier/100/100" alt="Javier Antonio Salazar Cañas"
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">Javier Antonio Salazar Cañas</div>
-                    <div class="fig-role">Psicólogo, Recursos Humanos</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"Con mucho gusto puedo recomendar a Camilo para encargarse del marketing digital de tu
+<figure>
+<figcaption><img alt="Javier Antonio Salazar Cañas" loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/javier/100/100"/>
+<div>
+<div class="fig-name">Javier Antonio Salazar Cañas</div>
+<div class="fig-role">Psicólogo, Recursos Humanos</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"Con mucho gusto puedo recomendar a Camilo para encargarse del marketing digital de tu
                 empresa. El trabajo en la campaña de Halloween aumentó las ventas y visibilizó la tienda en forma
                 remota con éxito."</blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/soledad/100/100" alt="Soledad Moraga F."
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">Soledad Moraga F.</div>
-                    <div class="fig-role">Dueña – Baúl de Camila</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"Tuve el placer de trabajar con Paula en la creación y desarrollo de mi sitio web (Deck
+<figure>
+<figcaption><img alt="Soledad Moraga F." loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/soledad/100/100"/>
+<div>
+<div class="fig-name">Soledad Moraga F.</div>
+<div class="fig-role">Dueña – Baúl de Camila</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"Tuve el placer de trabajar con Paula en la creación y desarrollo de mi sitio web (Deck
                 Kingdom), y no puedo estar más satisfecho con los resultados. Demostró un nivel de profesionalismo y
                 dedicación que hizo que todo el proceso fuera fluido y agradable."</blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/camilo/100/100" alt="Camilo Monsalve A."
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">Camilo Monsalve A.</div>
-                    <div class="fig-role">CEO – Deck Kingdom</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"He trabajado con Boosted en varias oportunidades y siempre han respondido de forma
+<figure>
+<figcaption><img alt="Camilo Monsalve A." loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/camilo/100/100"/>
+<div>
+<div class="fig-name">Camilo Monsalve A.</div>
+<div class="fig-role">CEO – Deck Kingdom</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"He trabajado con Boosted en varias oportunidades y siempre han respondido de forma
                 profesional y con un trabajo de calidad, en los tiempos dispuestos. 100% recomendados."</blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/eduardo/100/100" alt="Eduardo Rocco S."
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">Eduardo Rocco S.</div>
-                    <div class="fig-role">Profesional de Mkt y Publicidad</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-            <aside class="testimonial-card">
-              <div class="testimonial-glow"></div>
-              <div class="quote-icon"><i data-lucide="quote"></i></div>
-              <blockquote>"Desde 2019, trabajo con el equipo de Boosted en la gestión de mi web y diseñaron la web de
+<figure>
+<figcaption><img alt="Eduardo Rocco S." loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/eduardo/100/100"/>
+<div>
+<div class="fig-name">Eduardo Rocco S.</div>
+<div class="fig-role">Profesional de Mkt y Publicidad</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+<aside class="testimonial-card">
+<div class="testimonial-glow"></div>
+<div class="quote-icon"><i data-lucide="quote"></i></div>
+<blockquote>"Desde 2019, trabajo con el equipo de Boosted en la gestión de mi web y diseñaron la web de
                 un proyecto personal, cumpliendo plazos sin complicaciones. Profesionales y económicamente
                 convenientes."</blockquote>
-              <figure>
-                <figcaption><img src="https://picsum.photos/seed/raul/100/100" alt="Raúl Cuevas L."
-                    referrerpolicy="no-referrer" />
-                  <div>
-                    <div class="fig-name">Raúl Cuevas L.</div>
-                    <div class="fig-role">CEO – ELD Lighting Design</div>
-                  </div>
-                </figcaption>
-              </figure>
-            </aside>
-          </div>
-          <div class="testimonial-nav" id="testNav">
-            <button class="slider-dot active" aria-label="Testimonio 1"></button>
-            <button class="slider-dot" aria-label="Testimonio 2"></button>
-            <button class="slider-dot" aria-label="Testimonio 3"></button>
-            <button class="slider-dot" aria-label="Testimonio 4"></button>
-            <button class="slider-dot" aria-label="Testimonio 5"></button>
-            <button class="slider-dot" aria-label="Testimonio 6"></button>
-            <button class="slider-dot" aria-label="Testimonio 7"></button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── CONTACTO / CTA ── -->
-    <section id="contacto" style="padding-block: 7rem 8rem;">
-      <div class="container cta-grid">
-
-        <div class="reveal">
-          <p class="cta-label">Comienza ahora</p>
-          <h2 class="cta-title">Conversemos sobre el ecosistema que necesitas</h2>
-          <p class="cta-desc">
+<figure>
+<figcaption><img alt="Raúl Cuevas L." loading="lazy" referrerpolicy="no-referrer" src="https://picsum.photos/seed/raul/100/100"/>
+<div>
+<div class="fig-name">Raúl Cuevas L.</div>
+<div class="fig-role">CEO – ELD Lighting Design</div>
+</div>
+</figcaption>
+</figure>
+</aside>
+</div>
+<div class="testimonial-nav" id="testNav">
+<button aria-label="Testimonio 1" class="slider-dot active"></button>
+<button aria-label="Testimonio 2" class="slider-dot"></button>
+<button aria-label="Testimonio 3" class="slider-dot"></button>
+<button aria-label="Testimonio 4" class="slider-dot"></button>
+<button aria-label="Testimonio 5" class="slider-dot"></button>
+<button aria-label="Testimonio 6" class="slider-dot"></button>
+<button aria-label="Testimonio 7" class="slider-dot"></button>
+</div>
+</div>
+</div>
+</section>
+<!-- ── CONTACTO / CTA ── -->
+<section id="contacto" style="padding-block: 7rem 8rem;">
+<div class="container cta-grid">
+<div class="reveal">
+<p class="cta-label">Comienza ahora</p>
+<h2 class="cta-title">Conversemos sobre el ecosistema que necesitas</h2>
+<p class="cta-desc">
             Agenda una reunión con Boosted y definamos juntos qué soluciones a medida, automatizaciones y cambios
             digitales pueden generar el mayor impacto en tu operación hoy.
           </p>
-
-          <div class="contact-methods" style="margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
-            <a href="tel:+56956173500"
-              style="display: flex; align-items: center; gap: 0.75rem; color: var(--zinc-300); font-family: var(--font-mono); font-size: 0.875rem; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-300)'">
-              <i data-lucide="phone" style="color: var(--boosted); width: 1.25rem; height: 1.25rem;"></i> +56 9 5617
+<div class="contact-methods" style="margin-bottom: 2rem; display: flex; flex-direction: column; gap: 1rem;">
+<a href="tel:+56956173500" onmouseout="this.style.color='var(--zinc-300)'" onmouseover="this.style.color='#fff'" style="display: flex; align-items: center; gap: 0.75rem; color: var(--zinc-300); font-family: var(--font-mono); font-size: 0.875rem; transition: color 0.2s;">
+<i data-lucide="phone" style="color: var(--boosted); width: 1.25rem; height: 1.25rem;"></i> +56 9 5617
               3500
             </a>
-            <a href="mailto:proyectos@boosted.cl"
-              style="display: flex; align-items: center; gap: 0.75rem; color: var(--zinc-300); font-family: var(--font-mono); font-size: 0.875rem; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-300)'">
-              <i data-lucide="mail" style="color: var(--boosted); width: 1.25rem; height: 1.25rem;"></i>
+<a href="mailto:proyectos@boosted.cl" onmouseout="this.style.color='var(--zinc-300)'" onmouseover="this.style.color='#fff'" style="display: flex; align-items: center; gap: 0.75rem; color: var(--zinc-300); font-family: var(--font-mono); font-size: 0.875rem; transition: color 0.2s;">
+<i data-lucide="mail" style="color: var(--boosted); width: 1.25rem; height: 1.25rem;"></i>
               proyectos@boosted.cl
             </a>
-          </div>
-
-          <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" target="_blank" rel="noopener noreferrer" class="btn-primary" style="box-shadow:0 0 20px rgba(38,204,202,0.2)">AGENDAR CONSULTORÍA GRATUITA
+</div>
+<a class="btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" rel="noopener noreferrer" style="box-shadow:0 0 20px rgba(38,204,202,0.2)" target="_blank">AGENDAR CONSULTORÍA GRATUITA
           </a>
-        </div>
-
-        <div class="form-card glass-card reveal" style="padding: 3.5rem;">
-          <h4>¿Hablamos de tu próximo paso?</h4>
-          <p>Cuéntanos brevemente qué necesitas y te contactaremos para una asesoría estratégica.</p>
-          <form id="contactForm" class="contact-form-grid" action="https://formspree.io/f/mlgalqqb" method="POST">
-            <!-- Honeypot Anti-Spam Field -->
-            <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
-
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Tu nombre" required />
-            </div>
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Tu correo corporativo" required />
-            </div>
-            <div class="form-group">
-              <input type="text" name="company" placeholder="Nombre de tu empresa" required />
-            </div>
-            <div class="form-group">
-              <input type="tel" name="phone" placeholder="Teléfono / WhatsApp" />
-            </div>
-            <div class="form-group">
-              <select name="service" required>
-                <option value="" disabled selected>Servicio de interés</option>
-                <option value="automatizacion">Automatización de Procesos</option>
-                <option value="web">Desarrollo Web / Experiencia Digital</option>
-                <option value="branding">Branding y Estrategia de Contenidos</option>
-                <option value="ia">Implementación de IA (Charlie)</option>
-                <option value="otro">Otro / Consultoría General</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <select name="budget">
-                <option value="" disabled selected>Inversión estimada</option>
-                <option value="menos-500">Menos de $500 USD </option>
-                <option value="500-1000">$500 - $1.000 USD</option>
-                <option value="1000-3000">$1.000 - $3.000 USD</option>
-                <option value="3000-5000">$3.000 - $5.000 USD</option>
-                <option value="mas-5000">Más de $5.000 USD</option>
-                <option value="por-definir">Presupuesto por definir</option>
-              </select>
-            </div>
-            <div class="form-group full-width">
-              <textarea name="message" placeholder="¿En qué te podemos ayudar?" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="btn-subscribe full-width" style="margin-top: 1rem;">
-              Enviar Mensaje <i data-lucide="send"
-                style="width: 1.2rem; height: 1.2rem; margin-left: 0.5rem; display: inline-block; vertical-align: middle;"></i>
-            </button>
-          </form>
-        </div>
-
-      </div>
-    </section>
-
-
-  </main>
-
-  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Columna 1: Marca y Redes -->
-        <div>
-          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
-          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+</div>
+<div class="form-card glass-card reveal" style="padding: 3.5rem;">
+<h3>¿Hablamos de tu próximo paso?</h3>
+<p>Cuéntanos brevemente qué necesitas y te contactaremos para una asesoría estratégica.</p>
+<form action="https://formspree.io/f/mlgalqqb" class="contact-form-grid" id="contactForm" method="POST">
+<!-- Honeypot Anti-Spam Field -->
+<input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
+<div class="form-group">
+<input aria-label="Tu nombre" name="name" placeholder="Tu nombre" required="" type="text"/>
+</div>
+<div class="form-group">
+<input aria-label="Tu correo corporativo" name="email" placeholder="Tu correo corporativo" required="" type="email"/>
+</div>
+<div class="form-group">
+<input aria-label="Nombre de tu empresa" name="company" placeholder="Nombre de tu empresa" required="" type="text"/>
+</div>
+<div class="form-group">
+<input aria-label="Teléfono / WhatsApp" name="phone" placeholder="Teléfono / WhatsApp" type="tel"/>
+</div>
+<div class="form-group">
+<select aria-label="Servicio de interés" name="service" required="">
+<option disabled="" selected="" value="">Servicio de interés</option>
+<option value="automatizacion">Automatización de Procesos</option>
+<option value="web">Desarrollo Web / Experiencia Digital</option>
+<option value="branding">Branding y Estrategia de Contenidos</option>
+<option value="ia">Implementación de IA (Charlie)</option>
+<option value="otro">Otro / Consultoría General</option>
+</select>
+</div>
+<div class="form-group">
+<select aria-label="Inversión estimada" name="budget">
+<option disabled="" selected="" value="">Inversión estimada</option>
+<option value="menos-500">Menos de $500 USD </option>
+<option value="500-1000">$500 - $1.000 USD</option>
+<option value="1000-3000">$1.000 - $3.000 USD</option>
+<option value="3000-5000">$3.000 - $5.000 USD</option>
+<option value="mas-5000">Más de $5.000 USD</option>
+<option value="por-definir">Presupuesto por definir</option>
+</select>
+</div>
+<div class="form-group full-width">
+<textarea aria-label="Mensaje" name="message" placeholder="¿En qué te podemos ayudar?" required="" rows="4"></textarea>
+</div>
+<button class="btn-subscribe full-width" style="margin-top: 1rem;" type="submit">
+              Enviar Mensaje <i data-lucide="send" style="width: 1.2rem; height: 1.2rem; margin-left: 0.5rem; display: inline-block; vertical-align: middle;"></i>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<!-- Columna 1: Marca y Redes -->
+<div>
+<a class="footer-logo" href="index.html">BOOSTED<span>.</span></a>
+<p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
             conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
-              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
-            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
-              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
-          </div>
-        </div>
-
-        <!-- Columna 2: Servicios -->
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
-            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
-            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
-            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
-            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 3: Soluciones por Sector -->
-        <div class="footer-col">
-          <h4>Soluciones por Sector</h4>
-          <ul>
-            <li><a href="belleza.html">Belleza y Estética</a></li>
-            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
-            <li><a href="educacion.html">Educación</a></li>
-            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
-            <li><a href="retail.html">Retail</a></li>
-            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 4: Empresa y Contacto -->
-        <div class="footer-col">
-          <h4>Empresa & Contacto</h4>
-          <ul>
-            <li><a href="nosotros.html">Quiénes Somos</a></li>
-            <li><a href="blog.html">Nuestro Blog</a></li>
-            <li><a href="charlie.html">Conoce a Charlie</a></li>
-            <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
-            </li>
-            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
-            <li><a href="sitios-web.html">Portafolio Web</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
-            </li>
-            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
-                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
-          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
-          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
-            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+<div class="footer-social">
+<a aria-label="LinkedIn" class="social-btn" href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" rel="noopener noreferrer" target="_blank"><i data-lucide="linkedin"></i></a>
+<a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/boosted_design/" rel="noopener noreferrer" target="_blank"><i data-lucide="instagram"></i></a>
+</div>
+</div>
+<!-- Columna 2: Servicios -->
+<div class="footer-col">
+<h3>Servicios</h3>
+<ul>
+<li><a href="automatizacion.html">Automatización de Procesos</a></li>
+<li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+<li><a href="transformacion-digital.html">Transformación Digital</a></li>
+<li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+<li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+</ul>
+</div>
+<!-- Columna 3: Soluciones por Sector -->
+<div class="footer-col">
+<h3>Soluciones por Sector</h3>
+<ul>
+<li><a href="belleza.html">Belleza y Estética</a></li>
+<li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+<li><a href="educacion.html">Educación</a></li>
+<li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+<li><a href="retail.html">Retail</a></li>
+<li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+</ul>
+</div>
+<!-- Columna 4: Empresa y Contacto -->
+<div class="footer-col">
+<h3>Empresa &amp; Contacto</h3>
+<ul>
+<li><a href="nosotros.html">Quiénes Somos</a></li>
+<li><a href="blog.html">Nuestro Blog</a></li>
+<li><a href="charlie.html">Conoce a Charlie</a></li>
+<li><a href="faq.html">Preguntas Frecuentes</a></li>
+<li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+</li>
+<li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+<li><a href="sitios-web.html">Portafolio Web</a></li>
+<li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+</li>
+<li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+<p>© 2025 Boosted. Todos los derechos reservados.</p>
+<div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+<a href="privacidad.html" onmouseout="this.style.color='var(--zinc-500)'" onmouseover="this.style.color='#fff'" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;">Políticas de
               Privacidad</a>
-            <span style="color: rgba(255,255,255,0.1);">|</span>
-            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+<span style="color: rgba(255,255,255,0.1);">|</span>
+<a href="terminos.html" onmouseout="this.style.color='var(--zinc-500)'" onmouseover="this.style.color='#fff'" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;">Términos y
               Condiciones</a>
-          </div>
+</div>
+</div>
+<div class="footer-status">
+<span class="animate-pulse">●</span> Sistemas en línea y operando normal
         </div>
-        <div class="footer-status">
-          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
-  <script>lucide.createIcons();</script>
+</div>
+</div>
+</footer>
+<script src="assets/js/script.js"></script>
+<script>lucide.createIcons();</script>
 </body>
-
 </html>

@@ -28,11 +28,11 @@ if (cssStartIndex !== -1 && cssEndIndex !== -1) {
   for (const file of targetFiles) {
     if (!fs.existsSync(file)) continue;
     let content = fs.readFileSync(file, 'utf8');
-    
+
     let tStart = content.indexOf('    /* Showcase Slider */');
     if (tStart === -1) tStart = content.indexOf('    #portfolio-showcase {');
     let tEnd = content.indexOf(cssEndMarker);
-    
+
     if (tStart !== -1 && tEnd !== -1) {
       tEnd = content.indexOf('\n', tEnd) + 1;
       content = content.substring(0, tStart) + extractedCSS + content.substring(tEnd);

@@ -1,29 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="es">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Diseño Web Estratégico: ¿Tu sitio web vende o solo informa? — Boosted Blog</title>
-  <meta name="description"
-    content="El diseño web estratégico es la diferencia entre tener un folleto digital y una máquina de ventas. Aprende cómo transformar tu web en el mejor vendedor." />
-  <meta name="author" content="Charlie - Boosted" />
-  <meta name="robots" content="index, follow" />
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@300;400;500;600&family=Outfit:wght@300;400;600;800;900&family=JetBrains+Mono:wght@400;600&display=swap"
-    rel="stylesheet" />
-
-  <!-- Lucide Icons CDN -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
-
-  <!-- Estilos compartidos -->
-  <link rel="stylesheet" href="assets/css/styles.css" />
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Diseño Web Estratégico: ¿Tu sitio web vende o solo informa? — Boosted Blog</title>
+<meta content="El diseño web estratégico es la diferencia entre tener un folleto digital y una máquina de ventas. Aprende cómo transformar tu web en el mejor vendedor." name="description"/>
+<meta content="Charlie - Boosted" name="author"/>
+<meta content="index, follow" name="robots"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Poppins:wght@300;400;500;600&amp;family=Outfit:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<!-- Lucide Icons CDN -->
+<script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+<!-- Estilos compartidos -->
+<link href="assets/css/styles.css" rel="stylesheet"/>
+<style>
     /* ── ARTICLE PAGE SPECIFIC ── */
     .article-header {
       position: relative;
@@ -542,444 +535,426 @@
     .related-item:hover .related-item-more {
       color: var(--boosted);
     }
+  
+    /* Mobile Polish */
+    @media (max-width: 768px) {
+      .article-header {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+      }
+      .article-title {
+        font-size: 2.2rem !important;
+        line-height: 1.2;
+      }
+      .article-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+      .article-grid {
+        padding: 2rem 1.25rem;
+        gap: 2rem;
+      }
+      .drop-cap {
+        font-size: 3.5rem;
+        margin-right: 0.5rem;
+        margin-top: 0.1rem;
+      }
+      .article-quote {
+        padding: 1.5rem;
+        font-size: 1.15rem;
+        margin: 2.5rem 0;
+      }
+      .article-content h2 {
+        font-size: 1.8rem;
+        margin-top: 3rem;
+      }
+      .article-content h3 {
+        font-size: 1.5rem;
+      }
+      .related-section {
+        padding-top: 2rem;
+        padding-bottom: 4rem;
+        margin-top: 3rem;
+      }
+    }
+
+  
+    /* Mobile TOC Fix */
+    @media (max-width: 1024px) {
+      .article-grid {
+        display: flex !important;
+        flex-direction: column !important;
+      }
+      .article-sidebar {
+        display: block !important;
+        order: -1 !important;
+        margin-bottom: 1rem;
+      }
+      .sidebar-block {
+        position: static !important;
+        padding: 1.5rem !important;
+      }
+      .sidebar-title {
+        font-size: 1.1rem !important;
+      }
+    }
+
   </style>
-
-  <!-- Favicon y Open Graph -->
-  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
-  <meta property="og:title" content="Diseño Web Estratégico: ¿Tu sitio web vende o solo informa?" />
-  <meta property="og:description"
-    content="Descubre por qué una web bonita no es suficiente y cómo el diseño web estratégico puede transformar tus visitas en clientes reales." />
-  <meta property="og:image"
-    content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200" />
-  <meta property="og:url" content="https://boosted.cl/blog-diseno-web-estrategico.html" />
-  <meta property="og:type" content="article" />
+<!-- Favicon y Open Graph -->
+<link href="assets/img/boosted-logo.webp" rel="icon" type="image/png"/>
+<meta content="Diseño Web Estratégico: ¿Tu sitio web vende o solo informa?" property="og:title"/>
+<meta content="Descubre por qué una web bonita no es suficiente y cómo el diseño web estratégico puede transformar tus visitas en clientes reales." property="og:description"/>
+<meta content="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" property="og:image"/>
+<meta content="https://boosted.cl/blog-diseno-web-estrategico.html" property="og:url"/>
+<meta content="article" property="og:type"/>
 </head>
-
 <body>
-  <div class="reading-progress" id="readingProgress"></div>
-
-  <!-- ── HEADER ── -->
-  <header role="banner">
-    <nav class="container main-nav" aria-label="Navegación principal">
-      <a href="index.html" class="logo">Boosted<span>.</span></a>
-      <nav class="nav-links" id="navLinks">
-        <ul>
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li>
-            <a href="charlie.html" class="charlie-link">
-              <i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
+<div class="reading-progress" id="readingProgress"></div>
+<!-- ── HEADER ── -->
+<header role="banner">
+<nav aria-label="Navegación principal" class="container main-nav">
+<a class="logo" href="index.html">Boosted<span>.</span></a>
+<nav class="nav-links" id="navLinks">
+<ul>
+<li><a href="index.html">Inicio</a></li>
+<li><a href="nosotros.html">Nosotros</a></li>
+<li>
+<a class="charlie-link" href="charlie.html">
+<i data-lucide="zap" style="width:0.75rem;height:0.75rem;"></i> CHARLIE
             </a>
-          </li>
-          <li class="dropdown">
-            <a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
-              <a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
-              <a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
-              <a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
-              <a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
+</li>
+<li class="dropdown">
+<a href="#">Servicios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="automatizacion.html"><i data-lucide="cpu"></i> Automatización</a>
+<a href="desarrollo-a-medida.html"><i data-lucide="code"></i> Desarrollo a medida</a>
+<a href="transformacion-digital.html"><i data-lucide="rocket"></i> Transformación Digital</a>
+<a href="sitios-web.html"><i data-lucide="monitor-smartphone"></i> Sitios web y experiencia digital</a>
+<a href="branding-y-contenido.html"><i data-lucide="pen-tool"></i> Branding, contenido y redes
                 sociales</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
-              <a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
-              <a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
-              <a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
-              <a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
-              <a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
-            </div>
-          </li>
-          <li class="dropdown">
-            <a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
-            <div class="dropdown-content">
-              <a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
-              <a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
-            </div>
-          </li>
-          <li><a href="blog.html" style="color:var(--accent);">Blog</a></li>
-        </ul>
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
-          target="_blank" rel="noopener noreferrer" class="btn-contact">Contactar</a>
-        <button class="btn-menu" id="menuBtn" aria-label="Menú">
-          <i data-lucide="menu" id="menuIcon"></i>
-        </button>
-      </nav>
-      <nav class="mobile-nav" id="mobileNav">
-        <ul>
-          <li><a href="index.html" class="mobile-link">Inicio</a></li>
-          <li><a href="nosotros.html" class="mobile-link">Nosotros</a></li>
-          <li><a href="charlie.html" class="mobile-link charlie-mobile">CHARLIE</a></li>
-          <li>
-            <a href="#" class="mobile-link">Servicios <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="automatizacion.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
-              <li><a href="desarrollo-a-medida.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a medida</a></li>
-              <li><a href="transformacion-digital.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
-              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+</div>
+</li>
+<li class="dropdown">
+<a href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="belleza.html"><i data-lucide="sparkles"></i> Belleza y Estética</a>
+<a href="construccion.html"><i data-lucide="building-2"></i> Construcción e Inmobiliaria</a>
+<a href="educacion.html"><i data-lucide="graduation-cap"></i> Educación</a>
+<a href="hospitalidad.html"><i data-lucide="utensils"></i> Hospitalidad – HORECA</a>
+<a href="retail.html"><i data-lucide="shopping-bag"></i> Retail</a>
+<a href="servicios-profesionales.html"><i data-lucide="briefcase"></i> Servicios Profesionales</a>
+</div>
+</li>
+<li class="dropdown">
+<a href="#">Portafolios <i data-lucide="chevron-down" style="width:1rem;height:1rem;"></i></a>
+<div class="dropdown-content">
+<a href="branding-y-contenido.html"><i data-lucide="image"></i> Portafolio Branding, Contenido y Redes</a>
+<a href="sitios-web.html"><i data-lucide="layout"></i> Portafolio Sitios Web y Experiencias Digitales</a>
+</div>
+</li>
+<li><a href="blog.html" style="color:var(--accent);">Blog</a></li>
+</ul>
+<a class="btn-contact" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" rel="noopener noreferrer" target="_blank">Contactar</a>
+<button aria-label="Menú" class="btn-menu" id="menuBtn">
+<i data-lucide="menu" id="menuIcon"></i>
+</button>
+</nav>
+<nav class="mobile-nav" id="mobileNav">
+<ul>
+<li><a class="mobile-link" href="index.html">Inicio</a></li>
+<li><a class="mobile-link" href="nosotros.html">Nosotros</a></li>
+<li><a class="mobile-link charlie-mobile" href="charlie.html">CHARLIE</a></li>
+<li>
+<a class="mobile-link" href="#">Servicios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="automatizacion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="cpu" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Automatización</a></li>
+<li><a class="mobile-link" href="desarrollo-a-medida.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="code" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Desarrollo a medida</a></li>
+<li><a class="mobile-link" href="transformacion-digital.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="rocket" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Transformación Digital</a></li>
+<li><a class="mobile-link" href="sitios-web.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="monitor-smartphone" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Sitios web y experiencia digital</a></li>
-              <li><a href="branding-y-contenido.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
+<li><a class="mobile-link" href="branding-y-contenido.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="pen-tool" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Branding, contenido y redes
                   sociales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="mobile-link">Soluciones por Sector <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="belleza.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
+</ul>
+</li>
+<li>
+<a class="mobile-link" href="#">Soluciones por Sector <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="belleza.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="sparkles" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Belleza y
                   Estética</a>
-              </li>
-              <li><a href="construccion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+</li>
+<li><a class="mobile-link" href="construccion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="building-2" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Construcción e Inmobiliaria</a></li>
-              <li><a href="educacion.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="educacion.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="graduation-cap" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Educación</a></li>
-              <li><a href="hospitalidad.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
+<li><a class="mobile-link" href="hospitalidad.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="utensils" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i>
                   Hospitalidad – HORECA</a></li>
-              <li><a href="retail.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
-              </li>
-              <li><a href="servicios-profesionales.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
-            </ul>
-          </li>
-          <li>
-            <a href="#" class="mobile-link">Portafolios <i data-lucide="chevron-down"
-                style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
-            <ul class="mobile-dropdown">
-              <li><a href="branding-y-contenido.html" class="mobile-link"
-                  style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image"
-                    style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Branding</a></li>
-              <li><a href="sitios-web.html" class="mobile-link" style="font-size: 0.8rem; color: var(--zinc-400);"><i
-                    data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio
+<li><a class="mobile-link" href="retail.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="shopping-bag" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Retail</a>
+</li>
+<li><a class="mobile-link" href="servicios-profesionales.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="briefcase" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Servicios Profesionales</a></li>
+</ul>
+</li>
+<li>
+<a class="mobile-link" href="#">Portafolios <i data-lucide="chevron-down" style="width:0.8rem;height:0.8rem;margin-left:0.25rem;"></i></a>
+<ul class="mobile-dropdown">
+<li><a class="mobile-link" href="branding-y-contenido.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="image" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio Branding</a></li>
+<li><a class="mobile-link" href="sitios-web.html" style="font-size: 0.8rem; color: var(--zinc-400);"><i data-lucide="layout" style="width:0.8rem;height:0.8rem;margin-right:0.25rem;"></i> Portafolio
                   Web</a></li>
-            </ul>
-          </li>
-          <li><a href="blog.html" class="mobile-link" style="color:var(--accent);">Blog</a></li>
-        </ul>
-      </nav>
-    </nav>
-  </header>
-
-  <main>
-    <!-- ── HEADER DEL ARTÍCULO ── -->
-    <article>
-      <header class="article-header">
-        <div class="article-bg"
-          style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200');">
-        </div>
-        <div class="container article-header-content anim-fadeup">
-          <span class="article-category">Diseño Web Estratégico</span>
-          <h1 class="article-title">¿Tu sitio web vende o solo informa?</h1>
-
-          <div class="article-meta">
-            <div class="meta-item">
-              <i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
+</ul>
+</li>
+<li><a class="mobile-link" href="blog.html" style="color:var(--accent);">Blog</a></li>
+</ul>
+</nav>
+</nav>
+</header>
+<main>
+<!-- ── HEADER DEL ARTÍCULO ── -->
+<article>
+<header class="article-header">
+<div class="article-bg" style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&amp;fit=crop&amp;q=80&amp;w=1200');">
+</div>
+<div class="container article-header-content anim-fadeup">
+<span class="article-category">Diseño Web Estratégico</span>
+<h1 class="article-title">¿Tu sitio web vende o solo informa?</h1>
+<div class="article-meta">
+<div class="meta-item">
+<i data-lucide="calendar" style="width: 1rem; height: 1rem;"></i>
               27 de Diciembre de 2025
             </div>
-            <div class="meta-item">
-              <i data-lucide="clock" style="width: 1rem; height: 1rem;"></i>
+<div class="meta-item">
+<i data-lucide="clock" style="width: 1rem; height: 1rem;"></i>
               8 min lectura
             </div>
-          </div>
-
-          <a href="charlie.html" class="author-badge">
-            <i data-lucide="zap" style="width: 1rem; height: 1rem; color: var(--boosted);"></i>
+</div>
+<a class="author-badge" href="charlie.html">
+<i data-lucide="zap" style="width: 1rem; height: 1rem; color: var(--boosted);"></i>
             Escrito por Charlie
           </a>
-        </div>
-      </header>
-
-      <!-- ── CUERPO DEL ARTÍCULO ── -->
-      <section class="article-body">
-        <div class="article-ambient-glow glow-top-left"></div>
-        <div class="article-ambient-glow glow-bottom-right"></div>
-
-        <div class="container article-grid">
-
-          <div class="article-content" style="position: relative; z-index: 10;">
-            <p class="reveal"><span class="drop-cap">E</span>l diseño web estratégico es la diferencia fundamental entre
+</div>
+</header>
+<!-- ── CUERPO DEL ARTÍCULO ── -->
+<section class="article-body">
+<div class="article-ambient-glow glow-top-left"></div>
+<div class="article-ambient-glow glow-bottom-right"></div>
+<div class="container article-grid">
+<div class="article-content" style="position: relative; z-index: 10;">
+<p class="reveal"><span class="drop-cap">E</span>l diseño web estratégico es la diferencia fundamental entre
               tener un “folleto digital” bonito que nadie lee y tener una verdadera máquina de ventas online que trabaja
               por ti.</p>
-
-            <p class="reveal">Cuando preguntas a un gerente comercial cuál es el mejor vendedor de su empresa, rara vez
+<p class="reveal">Cuando preguntas a un gerente comercial cuál es el mejor vendedor de su empresa, rara vez
               señala a su sitio web. Generalmente apunta a una persona del equipo de ventas. Esto es un error conceptual
               que te está costando dinero cada día.</p>
-
-            <p class="reveal">Tu sitio web debería ser, sin lugar a dudas, <strong>tu mejor activo comercial</strong>.
+<p class="reveal">Tu sitio web debería ser, sin lugar a dudas, <strong>tu mejor activo comercial</strong>.
               Es el único “empleado” que trabaja 24 horas al día, los 7 días de la semana, nunca pide vacaciones, no se
               enferma, no exige aumento de sueldo y tiene la capacidad de atender a mil clientes simultáneamente sin
               perder la paciencia.</p>
-
-            <p class="reveal">Sin embargo, muchas empresas siguen cayendo en la trampa de la estética vacía. Contratan
+<p class="reveal">Sin embargo, muchas empresas siguen cayendo en la trampa de la estética vacía. Contratan
               webs basándose en colores y animaciones, olvidando la función principal: la conversión. Aquí te explicamos
               en profundidad por qué necesitas aplicar diseño web estratégico si quieres dejar de perder oportunidades
               de negocio.</p>
-
-            <h2 id="peligro" class="reveal">El peligro de la “Web Bonita”</h2>
-            <p class="reveal">Existe un mito peligroso en el mundo digital: <em>“si se ve bien, venderá”</em>. Falso.
+<h2 class="reveal" id="peligro">El peligro de la “Web Bonita”</h2>
+<p class="reveal">Existe un mito peligroso en el mundo digital: <em>“si se ve bien, venderá”</em>. Falso.
               Hemos auditado sitios web visualmente espectaculares, ganadores de premios de diseño gráfico, que tienen
               tasas de conversión cercanas a cero.</p>
-
-            <div class="article-quote reveal">
+<div class="article-quote reveal">
               Una web bonita sin estrategia es como un Ferrari sin motor: impresionante por fuera, pero incapaz de
               llevarte a ningún lado.
             </div>
-
-            <p class="reveal">Una web puede tener animaciones complejas, videos en 4K y fotos de alta resolución, pero
+<p class="reveal">Una web puede tener animaciones complejas, videos en 4K y fotos de alta resolución, pero
               si el usuario no entiende qué haces en los primeros 3 segundos, o no encuentra el botón para contactarte,
               se irá a la competencia. En los negocios B2B, la claridad supera a la estética.</p>
-
-            <p class="reveal">El diseño web estratégico no se preocupa por los “likes” o los comentarios sobre lo
+<p class="reveal">El diseño web estratégico no se preocupa por los “likes” o los comentarios sobre lo
               bonitos que son los colores; se preocupa por métricas reales: <strong>leads capturados, ventas cerradas y
                 tiempo de permanencia</strong>.</p>
-
-            <div class="article-image reveal">
-              <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800"
-                alt="Análisis de conversión y diseño web">
-              <div class="article-image-caption">Boosted analizando la estructura y conversión de un diseño web
+<div class="article-image reveal">
+<img alt="Análisis de conversión y diseño web" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;q=70&amp;w=800&amp;fm=webp"/>
+<div class="article-image-caption">Boosted analizando la estructura y conversión de un diseño web
                 estratégico</div>
-            </div>
-
-            <h2 id="que-es" class="reveal">¿Qué es el diseño web estratégico?</h2>
-            <p class="reveal">A diferencia del diseño tradicional, que a menudo se basa en los gustos personales del
+</div>
+<h2 class="reveal" id="que-es">¿Qué es el diseño web estratégico?</h2>
+<p class="reveal">A diferencia del diseño tradicional, que a menudo se basa en los gustos personales del
               dueño de la empresa (“pon el logo más grande”, “usa mi color favorito”), el diseño web estratégico es una
               metodología científica basada en datos, psicología del consumidor y objetivos de negocio.</p>
-
-            <p class="reveal">Para que una web funcione, debe sostenerse sobre estos tres pilares:</p>
-
-            <h3 class="reveal">1. Arquitectura de la Persuasión</h3>
-            <p class="reveal">No se trata de soltar información al azar. Diseñamos un <em>“Customer Journey”</em> (viaje
+<p class="reveal">Para que una web funcione, debe sostenerse sobre estos tres pilares:</p>
+<h3 class="reveal">1. Arquitectura de la Persuasión</h3>
+<p class="reveal">No se trata de soltar información al azar. Diseñamos un <em>“Customer Journey”</em> (viaje
               del cliente). Guiamos el ojo del usuario mediante una jerarquía visual lógica. Empezamos con una promesa
               de valor clara, seguimos con la validación de autoridad y terminamos con una llamada a la acción
               irresistible. El objetivo es llevar al usuario de “curioso” a “cliente” sin fricción.</p>
-
-            <h3 class="reveal">2. Velocidad y Rendimiento</h3>
-            <p class="reveal">En el entorno móvil actual, nadie espera. Según Google, si tu sitio tarda más de 3
+<h3 class="reveal">2. Velocidad y Rendimiento</h3>
+<p class="reveal">En el entorno móvil actual, nadie espera. Según Google, si tu sitio tarda más de 3
               segundos en cargar, perderás más del 50% de tus visitas antes de que siquiera vean tu logo. Parte del
               diseño web estratégico es asegurar un código limpio y una carga inmediata. Esto no solo mejora la
               experiencia del usuario, sino que es vital para posicionarte en Google (SEO).</p>
-
-            <h3 class="reveal">3. Confianza Instantánea y Autoridad</h3>
-            <p class="reveal">Antes de leer una sola palabra, el cerebro reptiliano de tu cliente ya juzgó tu empresa
+<h3 class="reveal">3. Confianza Instantánea y Autoridad</h3>
+<p class="reveal">Antes de leer una sola palabra, el cerebro reptiliano de tu cliente ya juzgó tu empresa
               por el aspecto de tu web. Si tu web se ve amateur, desordenada o antigua, el cliente asumirá que tu
               servicio también lo es. Un diseño profesional valida tus precios altos; un diseño pobre hace que el
               cliente pida descuentos.</p>
-
-            <h2 id="costo" class="reveal">¿Cuánto te cuesta no tener una web estratégica?</h2>
-            <p class="reveal">Hagamos un cálculo rápido. Imagina que tu sitio actual recibe 1.000 visitas al mes.</p>
-
-            <ul class="reveal">
-              <li><strong>Web “Folleto”:</strong> Convierte al 0.5%. Obtienes 5 prospectos al mes.</li>
-              <li><strong>Web Estratégica:</strong> Convierte al 2%. Obtienes 20 prospectos al mes.</li>
-            </ul>
-
-            <p class="reveal">Con el mismo tráfico (y la misma inversión en publicidad), una web optimizada cuadruplica
+<h2 class="reveal" id="costo">¿Cuánto te cuesta no tener una web estratégica?</h2>
+<p class="reveal">Hagamos un cálculo rápido. Imagina que tu sitio actual recibe 1.000 visitas al mes.</p>
+<ul class="reveal">
+<li><strong>Web “Folleto”:</strong> Convierte al 0.5%. Obtienes 5 prospectos al mes.</li>
+<li><strong>Web Estratégica:</strong> Convierte al 2%. Obtienes 20 prospectos al mes.</li>
+</ul>
+<p class="reveal">Con el mismo tráfico (y la misma inversión en publicidad), una web optimizada cuadruplica
               tus resultados. La diferencia no está en el marketing, está en el diseño de la experiencia.</p>
-
-            <h2 id="senales" class="reveal">3 señales de que necesitas diseño web estratégico</h2>
-            <p class="reveal">Si tu presencia digital actual presenta estos síntomas, es hora de intervenir:</p>
-
-            <ul class="reveal">
-              <li><strong>Alta Tasa de Rebote:</strong> Las analíticas muestran que los usuarios entran y salen en menos
+<h2 class="reveal" id="senales">3 señales de que necesitas diseño web estratégico</h2>
+<p class="reveal">Si tu presencia digital actual presenta estos síntomas, es hora de intervenir:</p>
+<ul class="reveal">
+<li><strong>Alta Tasa de Rebote:</strong> Las analíticas muestran que los usuarios entran y salen en menos
                 de 10 segundos. Significa que tu propuesta de valor no se entiende.</li>
-              <li><strong>Formularios Vacíos:</strong> Tienes visitas, la gente navega, pero nadie cotiza. Tu web
+<li><strong>Formularios Vacíos:</strong> Tienes visitas, la gente navega, pero nadie cotiza. Tu web
                 informa, pero no convence ni genera deseo.</li>
-              <li><strong>No es “Mobile First”:</strong> Más del 60% de las decisiones de compra B2B comienzan hoy en un
+<li><strong>No es “Mobile First”:</strong> Más del 60% de las decisiones de compra B2B comienzan hoy en un
                 celular. Si tu web se ve pequeña o rota en móviles, estás ignorando a más de la mitad de tu mercado.
               </li>
-            </ul>
-
-            <h2 id="lista" class="reveal">¿Tu web está lista para vender?</h2>
-            <p class="reveal">Deja de ver tu sitio web como un gasto operativo (“algo que hay que tener”) y empieza a
+</ul>
+<h2 class="reveal" id="lista">¿Tu web está lista para vender?</h2>
+<p class="reveal">Deja de ver tu sitio web como un gasto operativo (“algo que hay que tener”) y empieza a
               verlo como una herramienta de inversión financiera.</p>
-
-            <p class="reveal">Una página bonita acumula polvo digital. El diseño web estratégico convierte visitas
+<p class="reveal">Una página bonita acumula polvo digital. El diseño web estratégico convierte visitas
               anónimas en clientes fieles y recurrentes.</p>
-
-            <p class="reveal" style="margin-bottom: 2rem;">No dejes que tu competencia se lleve a tus clientes por tener
+<p class="reveal" style="margin-bottom: 2rem;">No dejes que tu competencia se lleve a tus clientes por tener
               una mejor presencia digital. Solicita una auditoría de sitio web con Boosted y transformemos tu página en
               el mejor vendedor de tu equipo.</p>
-
-            <div class="tags-container reveal">
-              <a href="blog.html" class="tag-pill">Diseño Web</a>
-              <a href="blog.html" class="tag-pill">Conversión</a>
-              <a href="blog.html" class="tag-pill">Estrategia Digital</a>
-              <a href="blog.html" class="tag-pill">Ventas B2B</a>
-            </div>
-
-            <div class="reveal"
-              style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
-              <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
-                target="_blank" rel="noopener noreferrer" class="btn-primary"
-                style="font-size: 1.1rem; padding: 1.25rem 3rem;">AGENDAR UNA REUNIÓN</a>
-            </div>
-
-          </div>
-
-          <aside class="article-sidebar" style="position: relative; z-index: 10;">
-            <div class="sticky-sidebar">
-              <!-- TOC Widget -->
-              <div class="sidebar-widget reveal">
-                <h4 class="widget-title"><i data-lucide="list" style="color:var(--boosted);"></i> Índice</h4>
-                <ul class="toc-list">
-                  <li><a href="#peligro" class="toc-link">El peligro de la “Web Bonita”</a></li>
-                  <li><a href="#que-es" class="toc-link">¿Qué es el diseño web estratégico?</a></li>
-                  <li><a href="#costo" class="toc-link">¿Cuánto te cuesta no tenerla?</a></li>
-                  <li><a href="#senales" class="toc-link">3 señales de que la necesitas</a></li>
-                  <li><a href="#lista" class="toc-link">¿Tu web está lista para vender?</a></li>
-                </ul>
-              </div>
-
-              <!-- Author Widget -->
-              <div class="sidebar-widget reveal" style="transition-delay: 0.1s;">
-                <h4 class="widget-title"><i data-lucide="user" style="color:var(--boosted);"></i> Autor</h4>
-                <div class="author-info">
-                  <div class="author-avatar">
-                    <i data-lucide="zap" style="width: 1.5rem; height: 1.5rem;"></i>
-                  </div>
-                  <div>
-                    <div class="author-name">Charlie</div>
-                    <div class="author-role">Inteligencia Operativa</div>
-                  </div>
-                </div>
-                <p class="author-bio">Charlie es el motor de inteligencia de Boosted, especializado en analizar datos,
+<div class="tags-container reveal">
+<a class="tag-pill" href="blog.html">Diseño Web</a>
+<a class="tag-pill" href="blog.html">Conversión</a>
+<a class="tag-pill" href="blog.html">Estrategia Digital</a>
+<a class="tag-pill" href="blog.html">Ventas B2B</a>
+</div>
+<div class="reveal" style="text-align: center; margin-top: 4rem; padding-top: 3rem; border-top: 1px solid rgba(255,255,255,0.05);">
+<a class="btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" rel="noopener noreferrer" style="font-size: 1.1rem; padding: 1.25rem 3rem;" target="_blank">AGENDAR UNA REUNIÓN</a>
+</div>
+</div>
+<aside class="article-sidebar" style="position: relative; z-index: 10;">
+<div class="sticky-sidebar">
+<!-- TOC Widget -->
+<div class="sidebar-widget reveal">
+<h4 class="widget-title"><i data-lucide="list" style="color:var(--boosted);"></i> Índice</h4>
+<ul class="toc-list">
+<li><a class="toc-link" href="#peligro">El peligro de la “Web Bonita”</a></li>
+<li><a class="toc-link" href="#que-es">¿Qué es el diseño web estratégico?</a></li>
+<li><a class="toc-link" href="#costo">¿Cuánto te cuesta no tenerla?</a></li>
+<li><a class="toc-link" href="#senales">3 señales de que la necesitas</a></li>
+<li><a class="toc-link" href="#lista">¿Tu web está lista para vender?</a></li>
+</ul>
+</div>
+<!-- Author Widget -->
+<div class="sidebar-widget reveal" style="transition-delay: 0.1s;">
+<h4 class="widget-title"><i data-lucide="user" style="color:var(--boosted);"></i> Autor</h4>
+<div class="author-info">
+<div class="author-avatar">
+<i data-lucide="zap" style="width: 1.5rem; height: 1.5rem;"></i>
+</div>
+<div>
+<div class="author-name">Charlie</div>
+<div class="author-role">Inteligencia Operativa</div>
+</div>
+</div>
+<p class="author-bio">Charlie es el motor de inteligencia de Boosted, especializado en analizar datos,
                   automatizar procesos y optimizar arquitecturas digitales para maximizar la conversión B2B.</p>
-              </div>
-            </div>
-          </aside>
-
-        </div>
-
-        <!-- ── ARTÍCULOS RELACIONADOS ── -->
-        <div class="related-section container">
-          <h3 class="related-title reveal">Siguiente lectura</h3>
-
-          <div class="related-links-grid">
-
-            <a href="blog-ecosistema-digital-inteligente.html" class="related-item reveal">
-              <span class="related-item-tag">Estrategia</span>
-              <h4 class="related-item-title">Ecosistema Digital Inteligente: 7 pasos para diseñarlo</h4>
-              <div class="related-item-more">
+</div>
+</div>
+</aside>
+</div>
+<!-- ── ARTÍCULOS RELACIONADOS ── -->
+<div class="related-section container">
+<h3 class="related-title reveal">Siguiente lectura</h3>
+<div class="related-links-grid">
+<a class="related-item reveal" href="blog-ecosistema-digital-inteligente.html">
+<span class="related-item-tag">Estrategia</span>
+<h4 class="related-item-title">Ecosistema Digital Inteligente: 7 pasos para diseñarlo</h4>
+<div class="related-item-more">
                 Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
-              </div>
-            </a>
-
-            <a href="blog-branding-estrategico.html" class="related-item reveal" style="transition-delay: 0.1s;">
-              <span class="related-item-tag">Branding</span>
-              <h4 class="related-item-title">Tu logo no es tu marca: Branding y Valor de Marca</h4>
-              <div class="related-item-more">
+</div>
+</a>
+<a class="related-item reveal" href="blog-branding-estrategico.html" style="transition-delay: 0.1s;">
+<span class="related-item-tag">Branding</span>
+<h4 class="related-item-title">Tu logo no es tu marca: Branding y Valor de Marca</h4>
+<div class="related-item-more">
                 Leer artículo <i data-lucide="arrow-right" style="width:1rem;height:1rem;"></i>
-              </div>
-            </a>
-
-          </div>
-        </div>
-      </section>
-    </article>
-  </main>
-
-  <!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <!-- Columna 1: Marca y Redes -->
-        <div>
-          <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
-          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+</div>
+</a>
+</div>
+</div>
+</section>
+</article>
+</main>
+<!-- ═══════════════════ FOOTER COMPLETO ═══════════════════ -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<!-- Columna 1: Marca y Redes -->
+<div>
+<a class="footer-logo" href="index.html">BOOSTED<span>.</span></a>
+<p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
             conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
-          <div class="footer-social">
-            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
-              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
-            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
-              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
-          </div>
-        </div>
-
-        <!-- Columna 2: Servicios -->
-        <div class="footer-col">
-          <h4>Servicios</h4>
-          <ul>
-            <li><a href="automatizacion.html">Automatización de Procesos</a></li>
-            <li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
-            <li><a href="transformacion-digital.html">Transformación Digital</a></li>
-            <li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
-            <li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 3: Soluciones por Sector -->
-        <div class="footer-col">
-          <h4>Soluciones por Sector</h4>
-          <ul>
-            <li><a href="belleza.html">Belleza y Estética</a></li>
-            <li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
-            <li><a href="educacion.html">Educación</a></li>
-            <li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
-            <li><a href="retail.html">Retail</a></li>
-            <li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
-          </ul>
-        </div>
-
-        <!-- Columna 4: Empresa y Contacto -->
-        <div class="footer-col">
-          <h4>Empresa & Contacto</h4>
-          <ul>
-            <li><a href="nosotros.html">Quiénes Somos</a></li>
-            <li><a href="blog.html">Nuestro Blog</a></li>
-            <li><a href="charlie.html">Conoce a Charlie</a></li>
-            <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
-            </li>
-            <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
-            <li><a href="sitios-web.html">Portafolio Web</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
-            </li>
-            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
-                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
-          <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
-          <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
-            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+<div class="footer-social">
+<a aria-label="LinkedIn" class="social-btn" href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" rel="noopener noreferrer" target="_blank"><i data-lucide="linkedin"></i></a>
+<a aria-label="Instagram" class="social-btn" href="https://www.instagram.com/boosted_design/" rel="noopener noreferrer" target="_blank"><i data-lucide="instagram"></i></a>
+</div>
+</div>
+<!-- Columna 2: Servicios -->
+<div class="footer-col">
+<h4>Servicios</h4>
+<ul>
+<li><a href="automatizacion.html">Automatización de Procesos</a></li>
+<li><a href="desarrollo-a-medida.html">Desarrollo a Medida</a></li>
+<li><a href="transformacion-digital.html">Transformación Digital</a></li>
+<li><a href="sitios-web.html">Sitios Web y Experiencias</a></li>
+<li><a href="branding-y-contenido.html">Branding, Contenido y Redes</a></li>
+</ul>
+</div>
+<!-- Columna 3: Soluciones por Sector -->
+<div class="footer-col">
+<h4>Soluciones por Sector</h4>
+<ul>
+<li><a href="belleza.html">Belleza y Estética</a></li>
+<li><a href="construccion.html">Construcción e Inmobiliaria</a></li>
+<li><a href="educacion.html">Educación</a></li>
+<li><a href="hospitalidad.html">Hospitalidad – HORECA</a></li>
+<li><a href="retail.html">Retail</a></li>
+<li><a href="servicios-profesionales.html">Servicios Profesionales</a></li>
+</ul>
+</div>
+<!-- Columna 4: Empresa y Contacto -->
+<div class="footer-col">
+<h4>Empresa &amp; Contacto</h4>
+<ul>
+<li><a href="nosotros.html">Quiénes Somos</a></li>
+<li><a href="blog.html">Nuestro Blog</a></li>
+<li><a href="charlie.html">Conoce a Charlie</a></li>
+<li><a href="faq.html">Preguntas Frecuentes</a></li>
+<li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+</li>
+<li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
+<li><a href="sitios-web.html">Portafolio Web</a></li>
+<li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+</li>
+<li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
+<p>© 2025 Boosted. Todos los derechos reservados.</p>
+<div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
+<a href="privacidad.html" onmouseout="this.style.color='var(--zinc-500)'" onmouseover="this.style.color='#fff'" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;">Políticas de
               Privacidad</a>
-            <span style="color: rgba(255,255,255,0.1);">|</span>
-            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
-              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+<span style="color: rgba(255,255,255,0.1);">|</span>
+<a href="terminos.html" onmouseout="this.style.color='var(--zinc-500)'" onmouseover="this.style.color='#fff'" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;">Términos y
               Condiciones</a>
-          </div>
+</div>
+</div>
+<div class="footer-status">
+<span class="animate-pulse">●</span> Sistemas en línea y operando normal
         </div>
-        <div class="footer-status">
-          <span class="animate-pulse">●</span> Sistemas en línea y operando normal
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <script src="assets/js/script.js"></script>
-  <script>
+</div>
+</div>
+</footer>
+<script src="assets/js/script.js"></script>
+<script>
     document.addEventListener('DOMContentLoaded', () => {
       lucide.createIcons();
     });
@@ -1027,5 +1002,4 @@
     });
   </script>
 </body>
-
 </html>

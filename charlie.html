@@ -227,7 +227,7 @@
 
     .ch-stats-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 1.25rem;
       margin-bottom: 1.75rem;
     }
@@ -283,7 +283,7 @@
 
     @media (min-width: 900px) {
       .prob-layout {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     }
 
@@ -532,7 +532,7 @@
 
     @media (min-width: 640px) {
       .caps-panel.active {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       }
     }
 
@@ -754,10 +754,10 @@
   </style>
 
   <!-- Favicon y Open Graph -->
-  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.webp" />
   <meta property="og:title" content="Charlie IA | Agente de Automatización 24/7 — Boosted" />
   <meta property="og:description" content="Charlie es el agente de IA de Boosted que califica leads, automatiza seguimientos y opera 24/7. Conecta CRM, ERP y Email en un solo flujo. Conversión 2–3x en 90 días." />
-  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.webp" />
   <meta property="og:url" content="https://boosted.cl/charlie.html" />
   <meta property="og:type" content="website" />
 </head>

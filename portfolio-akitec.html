@@ -139,8 +139,8 @@
       margin-bottom: 2.5rem;
       border-radius: 1.5rem;
       overflow: hidden;
-      box-shadow: 0 30px 60px rgba(0,0,0,0.6);
-      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.6);
+      border: 1px solid rgba(255, 255, 255, 0.1);
       transition: transform 0.4s;
     }
 
@@ -155,37 +155,169 @@
     }
 
     /* Solution Timeline/Grid */
-    #portfolio-solution { padding-block: 6rem; background: rgba(255, 255, 255, 0.01); border-block: 1px solid rgba(255, 255, 255, 0.05); }
-    .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-    @media (max-width: 1024px) { .solution-grid { grid-template-columns: 1fr; } }
-    .solution-card { background: rgba(255, 255, 255, 0.02); border-radius: 1.5rem; padding: 2.5rem; border: 1px solid transparent; transition: all 0.3s; }
-    .solution-card:hover { background: rgba(38, 204, 202, 0.02); border-color: rgba(38, 204, 202, 0.2); }
-    .solution-num { width: 3rem; height: 3rem; border-radius: 50%; background: rgba(38, 204, 202, 0.1); color: var(--boosted); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; }
-    .solution-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.3; }
-    .solution-card p { color: var(--zinc-400); line-height: 1.7; margin-bottom: 1rem; font-weight: 300; }
+    #portfolio-solution {
+      padding-block: 6rem;
+      background: rgba(255, 255, 255, 0.01);
+      border-block: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .solution-card {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .solution-card:hover {
+      background: rgba(38, 204, 202, 0.02);
+      border-color: rgba(38, 204, 202, 0.2);
+    }
+
+    .solution-num {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: rgba(38, 204, 202, 0.1);
+      color: var(--boosted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+
+    .solution-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .solution-card p {
+      color: var(--zinc-400);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
 
     /* Impact */
-    #portfolio-impact { padding-block: 6rem; position: relative; }
-    .impact-box { background: radial-gradient(circle at center, rgba(38, 204, 202, 0.1) 0%, transparent 80%); border: 1px solid rgba(38, 204, 202, 0.2); border-radius: 2rem; padding: 5rem 3rem; text-align: center; max-width: 1000px; margin: 0 auto; }
-    .impact-box h3 { font-family: var(--font-bebas); font-size: clamp(3rem, 5vw, 4rem); color: var(--boosted); margin-bottom: 1.5rem; line-height: 1; letter-spacing: 0.05em; }
-    .impact-desc { font-size: 1.25rem; color: var(--zinc-300); max-width: 700px; margin: 0 auto; line-height: 1.6; }
-    .impact-list { display: flex; justify-content: center; gap: 3rem; margin-top: 4rem; flex-wrap: wrap; }
-    .impact-item { text-align: center; flex: 1; min-width: 250px; }
-    .impact-item-icon { width: 4rem; height: 4rem; border-radius: 50%; background: rgba(255, 255, 255, 0.05); color: #fff; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem auto; }
-    .impact-item h4 { color: #fff; font-size: 1.25rem; margin-bottom: 0.75rem; }
-    .impact-item p { color: var(--zinc-400); line-height: 1.6; font-weight: 300; }
+    #portfolio-impact {
+      padding-block: 6rem;
+      position: relative;
+    }
+
+    .impact-box {
+      background: radial-gradient(circle at center, rgba(38, 204, 202, 0.1) 0%, transparent 80%);
+      border: 1px solid rgba(38, 204, 202, 0.2);
+      border-radius: 2rem;
+      padding: 5rem 3rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .impact-box h3 {
+      font-family: var(--font-bebas);
+      font-size: clamp(3rem, 5vw, 4rem);
+      color: var(--boosted);
+      margin-bottom: 1.5rem;
+      line-height: 1;
+      letter-spacing: 0.05em;
+    }
+
+    .impact-desc {
+      font-size: 1.25rem;
+      color: var(--zinc-300);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .impact-list {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 4rem;
+      flex-wrap: wrap;
+    }
+
+    .impact-item {
+      text-align: center;
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .impact-item-icon {
+      width: 4rem;
+      height: 4rem;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.05);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem auto;
+    }
+
+    .impact-item h4 {
+      color: #fff;
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .impact-item p {
+      color: var(--zinc-400);
+      line-height: 1.6;
+      font-weight: 300;
+    }
 
     /* Section Headers */
-    .section-header { margin-bottom: 3rem; }
-    .section-header-label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; display: block; }
-    .section-header-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-header-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-header-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
   </style>
 
   <!-- Favicon y Open Graph -->
-  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.webp" />
   <meta property="og:title" content="Akitec: Estrategia B2B y Portafolio Técnico — Portafolio Boosted" />
-  <meta property="og:description" content="Cómo estructuramos la inmensa capacidad técnica de Akitec en una estrategia de contenido B2B segmentada por verticales de alto valor." />
-  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:description"
+    content="Cómo estructuramos la inmensa capacidad técnica de Akitec en una estrategia de contenido B2B segmentada por verticales de alto valor." />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.webp" />
   <meta property="og:url" content="https://boosted.cl/portfolio-akitec.html" />
   <meta property="og:type" content="website" />
 </head>
@@ -316,13 +448,16 @@
   <main>
     <!-- ── 1. HERO PORTFOLIO ── -->
     <section id="portfolio-hero">
-      <div class="hero-bg" aria-hidden="true" style="position: absolute; inset: 0; background-image: url('assets/img/portafolio/branding/akitec/hero.png'); background-size: cover; background-position: center; opacity: 0.15; filter: brightness(0.4);"></div>
+      <div class="hero-bg" aria-hidden="true"
+        style="position: absolute; inset: 0; background-image: url('assets/img/portafolio/branding/akitec/hero.webp'); background-size: cover; background-position: center; opacity: 0.15; filter: brightness(0.4);">
+      </div>
       <div class="bg-grid"></div>
       <div class="container anim-fadeup">
         <span class="portfolio-badge">Estrategia B2B & Portafolio Técnico</span>
         <h1 class="portfolio-hero-title">Akitec: Unificar Tres Mundos Complejos</h1>
         <p class="portfolio-hero-subtitle">
-          Estructuramos 18 años de trayectoria y +1000 proyectos en una narrativa de autoridad que valida servicios desde Domótica Residencial hasta Infraestructura Hospitalaria.
+          Estructuramos 18 años de trayectoria y +1000 proyectos en una narrativa de autoridad que valida servicios
+          desde Domótica Residencial hasta Infraestructura Hospitalaria.
         </p>
       </div>
     </section>
@@ -332,10 +467,13 @@
       <div class="container intro-grid">
         <div class="intro-text reveal">
           <p>
-            Akitec enfrentaba un problema de identidad comercial. Su capacidad técnica era inmensa, abarcando desde el cine de lujo hasta pabellones quirúrgicos, pero sus credenciales no reflejaban esta magnitud transversal.
+            Akitec enfrentaba un problema de identidad comercial. Su capacidad técnica era inmensa, abarcando desde el
+            cine de lujo hasta pabellones quirúrgicos, pero sus credenciales no reflejaban esta magnitud transversal.
           </p>
           <p>
-            El reto de Boosted fue estructurar una Estrategia de Contenido B2B capaz de dialogar con interlocutores opuestos: desde gerentes de banco hasta arquitectos de interiores. Traducimos especificaciones abstractas en un relato de solvencia técnica y confianza absoluta.
+            El reto de Boosted fue estructurar una Estrategia de Contenido B2B capaz de dialogar con interlocutores
+            opuestos: desde gerentes de banco hasta arquitectos de interiores. Traducimos especificaciones abstractas en
+            un relato de solvencia técnica y confianza absoluta.
           </p>
         </div>
         <div class="intro-meta reveal" style="transition-delay: 0.2s;">
@@ -362,13 +500,17 @@
       <div class="container reveal">
         <div class="brochure-card">
           <div class="brochure-image-wrapper">
-            <img src="assets/img/portafolio/branding/akitec/akitec1.jpg" alt="Portada Portafolio Técnico Akitec">
+            <img src="assets/img/portafolio/branding/akitec/akitec1.webp" alt="Portada Portafolio Técnico Akitec">
           </div>
-          <h3 style="font-family: var(--font-display); color: #fff; font-size: 2rem; margin-bottom: 1.5rem;">Credenciales Técnicas 2025</h3>
-          <p style="color: var(--zinc-400); margin-bottom: 2.5rem; font-size: 1.1rem; max-width: 600px; margin-inline: auto;">
-            Explora nuestro portafolio detallado con soluciones de ingeniería, automatización e infraestructura crítica para los sectores corporativo, salud y residencial.
+          <h3 style="font-family: var(--font-display); color: #fff; font-size: 2rem; margin-bottom: 1.5rem;">
+            Credenciales Técnicas 2025</h3>
+          <p
+            style="color: var(--zinc-400); margin-bottom: 2.5rem; font-size: 1.1rem; max-width: 600px; margin-inline: auto;">
+            Explora nuestro portafolio detallado con soluciones de ingeniería, automatización e infraestructura crítica
+            para los sectores corporativo, salud y residencial.
           </p>
-          <a href="assets/img/portafolio/branding/akitec/AKITEC.pdf" target="_blank" class="btn-primary" style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.25rem 2.5rem; font-size: 1.1rem;">
+          <a href="assets/img/portafolio/branding/akitec/AKITEC.pdf" target="_blank" class="btn-primary"
+            style="display: inline-flex; align-items: center; gap: 0.75rem; padding: 1.25rem 2.5rem; font-size: 1.1rem;">
             <i data-lucide="file-text"></i> VER PORTAFOLIO COMPLETO (PDF)
           </a>
         </div>
@@ -387,17 +529,20 @@
           <div class="solution-card reveal">
             <div class="solution-num">1</div>
             <h3>Segmentación por Verticales</h3>
-            <p>Estructuramos el contenido en tres pilares: Corporativo (Productividad), Salud (Fiabilidad) y Residencial (Confort), permitiendo al equipo comercial adaptar su discurso a cada nicho específico.</p>
+            <p>Estructuramos el contenido en tres pilares: Corporativo (Productividad), Salud (Fiabilidad) y Residencial
+              (Confort), permitiendo al equipo comercial adaptar su discurso a cada nicho específico.</p>
           </div>
           <div class="solution-card reveal" style="transition-delay: 0.1s;">
             <div class="solution-num">2</div>
             <h3>Alianzas Estratégicas</h3>
-            <p>Dedicamos secciones exclusivas a partners globales como Vantage, KEF y Schneider, posicionando a Akitec como un integrador certificado con garantías internacionales.</p>
+            <p>Dedicamos secciones exclusivas a partners globales como Vantage, KEF y Schneider, posicionando a Akitec
+              como un integrador certificado con garantías internacionales.</p>
           </div>
           <div class="solution-card reveal" style="transition-delay: 0.2s;">
             <div class="solution-num">3</div>
             <h3>Visualización de lo Invisible</h3>
-            <p>Mediante fotografía de arquitectura real, tangibilizamos conceptos complejos como el Roaming WiFi y Video sobre IP, mostrando el impacto de la tecnología en espacios de alto valor.</p>
+            <p>Mediante fotografía de arquitectura real, tangibilizamos conceptos complejos como el Roaming WiFi y Video
+              sobre IP, mostrando el impacto de la tecnología en espacios de alto valor.</p>
           </div>
         </div>
       </div>
@@ -408,7 +553,8 @@
       <div class="container reveal-scale">
         <div class="impact-box">
           <h3>Ingeniería que Inspira</h3>
-          <p class="impact-desc">Akitec consolidó su imagen de líder integrador, creando una carta de presentación sólida para licitaciones millonarias en todos sus sectores.</p>
+          <p class="impact-desc">Akitec consolidó su imagen de líder integrador, creando una carta de presentación
+            sólida para licitaciones millonarias en todos sus sectores.</p>
 
           <div class="impact-list">
             <div class="impact-item">
@@ -430,8 +576,11 @@
     <section class="cta-section"
       style="padding-block: 5rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
       <div class="container reveal">
-        <h2 style="font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2rem;">¿Listo para unificar la narrativa técnica de tu empresa?</h2>
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">AGENDAR UNA ASESORÍA GRATUITA</a>
+        <h2 style="font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2rem;">¿Listo para
+          unificar la narrativa técnica de tu empresa?</h2>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
+          target="_blank" rel="noopener noreferrer" class="btn-primary"
+          style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">AGENDAR UNA ASESORÍA GRATUITA</a>
       </div>
     </section>
   </main>
@@ -443,11 +592,14 @@
         <!-- Columna 1: Marca y Redes -->
         <div>
           <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
-          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+            conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
-            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
-            </div>
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
+              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+          </div>
         </div>
 
         <!-- Columna 2: Servicios -->
@@ -483,22 +635,29 @@
             <li><a href="blog.html">Nuestro Blog</a></li>
             <li><a href="charlie.html">Conoce a Charlie</a></li>
             <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
             <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
             <li><a href="sitios-web.html">Portafolio Web</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
-            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
+                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
           <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
           <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
-            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+              Privacidad</a>
             <span style="color: rgba(255,255,255,0.1);">|</span>
-            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+              Condiciones</a>
           </div>
         </div>
         <div class="footer-status">
@@ -510,10 +669,10 @@
 
   <script src="assets/js/script.js"></script>
   <script>
-    (function() {
+    (function () {
       try {
         if (typeof lucide !== 'undefined') lucide.createIcons();
-      } catch(e) {}
+      } catch (e) { }
 
       const obs = new IntersectionObserver((es) => {
         es.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
@@ -524,4 +683,3 @@
 </body>
 
 </html>
-

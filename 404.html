@@ -139,7 +139,7 @@
     .footer-bottom { border-top: 1px solid rgba(255,255,255,0.05); padding-top: 2rem; text-align: center; color: var(--zinc-600); font-size: 0.85rem; }
 
     @media (max-width: 992px) {
-      .footer-grid { grid-template-columns: 1fr 1fr; }
+      .footer-grid { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
     }
     @media (max-width: 640px) {
       .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -147,10 +147,10 @@
   </style>
 
   <!-- Favicon y Open Graph -->
-  <link rel="icon" type="image/png" href="assets/img/boosted-logo.png" />
+  <link rel="icon" type="image/png" href="assets/img/boosted-logo.webp" />
   <meta property="og:title" content="Página No Encontrada | Boosted" />
   <meta property="og:description" content="Parece que te has perdido en el ecosistema. Vuelve al inicio para seguir escalando tu negocio." />
-  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.png" />
+  <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.webp" />
   <meta property="og:url" content="https://boosted.cl/404.html" />
   <meta property="og:type" content="website" />
 </head>
