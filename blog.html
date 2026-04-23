@@ -22,6 +22,7 @@
 
   <!-- Estilos compartidos -->
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preload" as="image" href="assets/img/blog/BlogHero.webp" />
 
   <style>
     /* ── BLOG PAGE SPECIFIC ── */
@@ -54,7 +55,7 @@
     /* Hero Blog */
     #blog-hero {
       position: relative;
-      min-height: 70vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       padding-top: 12rem;
@@ -105,7 +106,7 @@
 
     .blog-hero-title {
       font-family: var(--font-bebas);
-      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-size: clamp(2.8rem, 7vw, 5rem);
       color: #fff;
       line-height: 0.9;
       margin-bottom: 2.5rem;
@@ -537,8 +538,7 @@
 
     <!-- ── 1. HERO BLOG ── -->
     <section id="blog-hero">
-      <div class="hero-bg"
-        style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=1200');">
+      <div class="hero-bg" style="background-image: url('assets/img/blog/BlogHero.webp');">
       </div>
       <div class="bg-grid"></div>
       <div class="container blog-hero-content anim-fadeup">
@@ -563,7 +563,7 @@
           <div class="featured-grid reveal">
             <article class="featured-card">
               <div class="featured-image"
-                style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200');">
+                style="background-image: url('assets/img/blog/DisenoWeb/DisenoWebHero.webp');">
               </div>
               <div class="featured-content">
                 <div class="blog-card-meta">
@@ -590,7 +590,7 @@
           <!-- Post 2 -->
           <article class="blog-card reveal" style="transition-delay: 0.1s;">
             <div class="blog-card-thumb"
-              style="background-image: url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800');">
+              style="background-image: url('assets/img/blog/automatizacion_procesos/Hero.webp');">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -599,10 +599,12 @@
               </div>
               <h2 class="blog-card-title">Automatización de Procesos: ¿Cuánto dinero pierdes por no automatizar?</h2>
               <p class="blog-card-desc" style="line-clamp: 3;">
-                Las tareas manuales son una fuga de capital silenciosa. Descubre por qué la automatización ha dejado de ser un lujo para ser una higiene financiera.
+                Las tareas manuales son una fuga de capital silenciosa. Descubre por qué la automatización ha dejado de
+                ser un lujo para ser una higiene financiera.
               </p>
               <div class="blog-card-footer">
-                <a href="blog-automatizacion-procesos.html" class="blog-card-link">Leer más <i data-lucide="arrow-right"></i></a>
+                <a href="blog-automatizacion-procesos.html" class="blog-card-link">Leer más <i
+                    data-lucide="arrow-right"></i></a>
                 <span class="read-time"><i data-lucide="clock" style="width:0.9rem;height:0.9rem;"></i> 6 min</span>
               </div>
             </div>
@@ -611,7 +613,7 @@
           <!-- Post 3 -->
           <article class="blog-card reveal" style="transition-delay: 0.2s;">
             <div class="blog-card-thumb"
-              style="background-image: url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800');">
+              style="background-image: url('assets/img/blog/BeneficioAutomatizacion/Hero.webp');">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -620,10 +622,12 @@
               </div>
               <h2 class="blog-card-title">Beneficios de la Automatización para Pymes y Empresas en Chile</h2>
               <p class="blog-card-desc" style="line-clamp: 3;">
-                La automatización digital es el nuevo estándar para operar con orden y resultados. Descubre cómo avanzar en piloto automático.
+                La automatización digital es el nuevo estándar para operar con orden y resultados. Descubre cómo avanzar
+                en piloto automático.
               </p>
               <div class="blog-card-footer">
-                <a href="blog-beneficios-automatizacion-pymes.html" class="blog-card-link">Leer más <i data-lucide="arrow-right"></i></a>
+                <a href="blog-beneficios-automatizacion-pymes.html" class="blog-card-link">Leer más <i
+                    data-lucide="arrow-right"></i></a>
                 <span class="read-time"><i data-lucide="clock" style="width:0.9rem;height:0.9rem;"></i> 7 min</span>
               </div>
             </div>
@@ -632,7 +636,7 @@
           <!-- Post 4 -->
           <article class="blog-card reveal">
             <div class="blog-card-thumb"
-              style="background-image: url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800');">
+              style="background-image: url('assets/img/blog/EcosistemaDigital/Hero.webp');">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -641,10 +645,12 @@
               </div>
               <h2 class="blog-card-title">Ecosistema Digital Inteligente: 7 pasos para diseñarlo</h2>
               <p class="blog-card-desc" style="line-clamp: 3;">
-                Conecta todo tu entorno digital para que las cosas importantes pasen solas. Aprende a diseñar un sistema que sostenga tu crecimiento.
+                Conecta todo tu entorno digital para que las cosas importantes pasen solas. Aprende a diseñar un sistema
+                que sostenga tu crecimiento.
               </p>
               <div class="blog-card-footer">
-                <a href="blog-ecosistema-digital-inteligente.html" class="blog-card-link">Leer más <i data-lucide="arrow-right"></i></a>
+                <a href="blog-ecosistema-digital-inteligente.html" class="blog-card-link">Leer más <i
+                    data-lucide="arrow-right"></i></a>
                 <span class="read-time"><i data-lucide="clock" style="width:0.9rem;height:0.9rem;"></i> 8 min</span>
               </div>
             </div>
@@ -653,7 +659,7 @@
           <!-- Post 5 -->
           <article class="blog-card reveal" style="transition-delay: 0.1s;">
             <div class="blog-card-thumb"
-              style="background-image: url('https://images.unsplash.com/photo-1557838923-2985c318be48?auto=format&fit=crop&q=80&w=800');">
+              style="background-image: url('assets/img/blog/TuLogo/Hero.webp');">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -662,10 +668,12 @@
               </div>
               <h2 class="blog-card-title">Tu logo no es tu marca: Branding y Valor</h2>
               <p class="blog-card-desc" style="line-clamp: 3;">
-                Descubre cómo el branding estratégico te permite dejar de competir por precio y empezar a cobrar lo que realmente vales.
+                Descubre cómo el branding estratégico te permite dejar de competir por precio y empezar a cobrar lo que
+                realmente vales.
               </p>
               <div class="blog-card-footer">
-                <a href="blog-branding-estrategico.html" class="blog-card-link">Leer más <i data-lucide="arrow-right"></i></a>
+                <a href="blog-branding-estrategico.html" class="blog-card-link">Leer más <i
+                    data-lucide="arrow-right"></i></a>
                 <span class="read-time"><i data-lucide="clock" style="width:0.9rem;height:0.9rem;"></i> 6 min</span>
               </div>
             </div>
@@ -674,7 +682,7 @@
           <!-- Post 6 -->
           <article class="blog-card reveal" style="transition-delay: 0.2s;">
             <div class="blog-card-thumb"
-              style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&q=80&w=800');">
+              style="background-image: url('assets/img/blog/EmailMarketing/Hero.webp');">
             </div>
             <div class="blog-card-body">
               <div class="blog-card-meta">
@@ -683,10 +691,12 @@
               </div>
               <h2 class="blog-card-title">Email Marketing vs Redes Sociales: ¿Dónde está el dinero?</h2>
               <p class="blog-card-desc" style="line-clamp: 3;">
-                Descubre por qué el correo electrónico sigue siendo el canal más rentable y cómo construir tu propia base de datos para no depender de algoritmos.
+                Descubre por qué el correo electrónico sigue siendo el canal más rentable y cómo construir tu propia
+                base de datos para no depender de algoritmos.
               </p>
               <div class="blog-card-footer">
-                <a href="blog-estrategia-email-marketing.html" class="blog-card-link">Leer más <i data-lucide="arrow-right"></i></a>
+                <a href="blog-estrategia-email-marketing.html" class="blog-card-link">Leer más <i
+                    data-lucide="arrow-right"></i></a>
                 <span class="read-time"><i data-lucide="clock" style="width:0.9rem;height:0.9rem;"></i> 7 min</span>
               </div>
             </div>

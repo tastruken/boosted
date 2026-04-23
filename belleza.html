@@ -20,7 +20,7 @@
 <!-- Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link as="image" href="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" rel="preload"/>
+<link as="image" href="assets/img/sectors/belleza/HERO.webp" rel="preload"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Poppins:wght@300;400;500;600&amp;family=Outfit:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <!-- Scripts -->
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
@@ -110,165 +110,127 @@
       line-height: 1.7;
     }
 
-    /* Premium Centered Carousel */
-    .premium-carousel-wrapper {
+    /* Mosaic Sectors */
+    .mosaic-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .mosaic-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+      }
+
+      .mosaic-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(5) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .mosaic-item:nth-child(6) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .mosaic-item {
+        min-height: 320px;
+      }
+    }
+
+    .mosaic-item {
       position: relative;
-      width: 100%;
-      padding: 2rem 0;
-    }
-
-    .premium-carousel-track {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-      padding: 4rem calc(50vw - 200px);
-      /* Centers the first 400px card precisely in the viewport */
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      /* Firefox */
-      -ms-overflow-style: none;
-      /* IE/Edge */
-      -webkit-overflow-scrolling: touch;
-      scroll-behavior: smooth;
-    }
-
-    .premium-carousel-track::-webkit-scrollbar {
-      display: none;
-    }
-
-    .premium-item {
-      flex: 0 0 400px;
-      height: 520px;
-      scroll-snap-align: center;
-      position: relative;
-      border-radius: 2rem;
+      border-radius: 1.5rem;
       overflow: hidden;
-      transform: scale(0.85);
-      opacity: 0.4;
-      transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-      cursor: pointer;
       border: 1px solid rgba(255, 255, 255, 0.05);
       background: #000;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+      transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
     }
 
-    .premium-item.active {
-      transform: scale(1);
-      opacity: 1;
+    .mosaic-item:hover {
       border-color: rgba(38, 204, 202, 0.4);
-      box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), 0 0 40px rgba(38, 204, 202, 0.2);
-      z-index: 10;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(38, 204, 202, 0.1);
+      z-index: 2;
     }
 
-    .premium-img {
+    .mosaic-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 1s ease, filter 0.6s ease;
-      filter: grayscale(80%) brightness(0.5);
+      transition: transform 0.8s ease, filter 0.4s ease;
+      filter: brightness(0.65) grayscale(15%);
     }
 
-    .premium-item.active .premium-img {
+    .mosaic-item:hover .mosaic-img {
       transform: scale(1.05);
-      filter: grayscale(0%) brightness(0.9);
+      filter: brightness(0.85) grayscale(0%);
     }
 
-    .premium-content {
+    .mosaic-content {
       position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 4rem 2.5rem 2.5rem;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.6) 60%, transparent 100%);
-      transform: translateY(30px);
-      opacity: 0;
-      transition: all 0.6s cubic-bezier(0.25, 1, 0.5, 1);
-      transition-delay: 0.1s;
+      inset: 0;
+      padding: 1.25rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.45) 30%, transparent 55%);
     }
 
-    .premium-item.active .premium-content {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .premium-title {
+    .mosaic-title {
       font-family: var(--font-display);
-      font-size: 1.8rem;
+      font-size: 1.4rem;
       color: #fff;
-      margin-bottom: 0.5rem;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.8);
+      margin: 0;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
       transition: color 0.3s ease;
+      line-height: 1.2;
     }
 
-    .premium-item.active .premium-title {
+    .mosaic-item:nth-child(1) .mosaic-title,
+    .mosaic-item:nth-child(4) .mosaic-title {
+      font-size: 1.85rem;
+    }
+
+    .mosaic-item:hover .mosaic-title {
       color: var(--accent);
     }
 
-    .premium-text {
-      font-size: 1rem;
-      color: rgba(255, 255, 255, 0.85);
-      line-height: 1.6;
+    .mosaic-text {
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.82);
+      line-height: 1.55;
       font-weight: 300;
       margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(5px);
+      transition: max-height 0.4s ease, opacity 0.35s ease, transform 0.35s ease;
     }
 
-    /* Controls */
-    .premium-controls {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      margin-top: 2rem;
+    .mosaic-item:hover .mosaic-text {
+      max-height: 10rem;
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 0.5rem;
     }
 
-    .premium-nav-btn {
-      width: 4rem;
-      height: 4rem;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      cursor: pointer;
-      backdrop-filter: blur(10px);
-      transition: all 0.3s ease;
-    }
-
-    .premium-nav-btn:hover {
-      background: var(--accent);
-      border-color: var(--accent);
-      color: #000;
-      transform: scale(1.1);
-      box-shadow: 0 0 20px rgba(38, 204, 202, 0.4);
-    }
-
-    .premium-nav-btn i {
-      pointer-events: none;
-      width: 1.5rem;
-      height: 1.5rem;
-    }
-
-    @media (max-width: 768px) {
-      .premium-carousel-track {
-        padding: 2rem calc(50vw - 150px);
-        gap: 1rem;
-      }
-
-      .premium-item {
-        flex: 0 0 300px;
-        height: 440px;
-      }
-
-      .premium-title {
-        font-size: 1.5rem;
-      }
-
-      .premium-text {
-        font-size: 0.95rem;
-      }
-    }
 
     /* Cartelería Section */
     .signage-card {
@@ -433,7 +395,7 @@
 </nav>
 <!-- ── 1. HERO ── -->
 <section id="belleza-hero">
-<div aria-hidden="true" class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1560750588-73207b1ef5b8?auto=format&amp;fit=crop&amp;q=80&amp;w=1200'); background-size: cover; background-position: center; opacity: 0.2;">
+<div aria-hidden="true" class="hero-bg" style="background-image: url('assets/img/sectors/belleza/HERO.webp'); background-size: cover; background-position: center; opacity: 0.2;">
 </div>
 <div aria-hidden="true" class="hero-bg"></div>
 <div class="bg-grid"></div>
@@ -497,101 +459,88 @@
 </div>
 </div>
 </section>
-<!-- ── 3. CAROUSEL SECTORES ── -->
+<!-- ── 3. APLICACIONES SECTORES ── -->
 <section class="section-py" id="subsectores">
 <div class="container">
 <div class="section-header reveal">
 <span class="section-eyebrow" style="color: var(--accent); margin-bottom: 1.2rem; display: block;">Subsectores</span>
 <h2 class="section-title">Aplicaciones por tipo de negocio</h2>
 </div>
-</div> <!-- End container -->
-<div class="premium-carousel-wrapper reveal">
-<div class="premium-carousel-track" id="premiumCarouselTrack">
+</div>
+<div class="container reveal">
+<div class="mosaic-wrapper">
 <!-- Item 1 -->
-<div class="premium-item">
-<img alt="Peluquerías y Salones" class="premium-img" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Peluquerías y Salones</h3>
-<p class="premium-text">Agenda automática 24/7, recordatorios y gestión experta de Instagram para elevar
-                tu marca y atraer clientes nuevos.</p>
+<div class="mosaic-item">
+<img alt="Peluquerías y Salones" class="mosaic-img" height="400" loading="eager" src="assets/img/sectors/belleza/Salon.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Peluquerías y Salones</h3>
+<p class="mosaic-text">Agenda automática 24/7, recordatorios y gestión experta de Instagram para elevar tu marca y atraer clientes nuevos.</p>
 </div>
 </div>
 <!-- Item 2 -->
-<div class="premium-item">
-<img alt="Barberías de Autor" class="premium-img" src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Barberías de Autor</h3>
-<p class="premium-text">Moderniza tu barbería con agenda optimizada y asistente virtual. Branding urbano
-                de alto impacto visual.</p>
+<div class="mosaic-item">
+<img alt="Barberías de Autor" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/barberia.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Barberías de Autor</h3>
+<p class="mosaic-text">Moderniza tu barbería con agenda optimizada y asistente virtual. Branding urbano de alto impacto visual.</p>
 </div>
 </div>
 <!-- Item 3 -->
-<div class="premium-item">
-<img alt="Centros de Estética" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1512290923902-8a9f81dc2069?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Centros de Estética y Láser</h3>
-<p class="premium-text">Asegura protocolos con agenda automática y proyecta confianza necesaria para
-                cobrar precios premium.</p>
+<div class="mosaic-item">
+<img alt="Centros de Estética" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/laser.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Centros de Estética y Láser</h3>
+<p class="mosaic-text">Asegura protocolos con agenda automática y proyecta confianza necesaria para cobrar precios premium.</p>
 </div>
 </div>
 <!-- Item 4 -->
-<div class="premium-item">
-<img alt="Spas y Bienestar" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1544161515-4af6b1d462c2?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Spas y Bienestar</h3>
-<p class="premium-text">Proyecta paz en tus redes sociales y transforma cada reserva en una experiencia
-                de lujo inolvidable.</p>
+<div class="mosaic-item">
+<img alt="Spas y Bienestar" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/spa.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Spas y Bienestar</h3>
+<p class="mosaic-text">Proyecta paz en tus redes sociales y transforma cada reserva en una experiencia de lujo inolvidable.</p>
 </div>
 </div>
 <!-- Item 5 -->
-<div class="premium-item">
-<img alt="Nail Studios" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1626413612304-fc99aa08f58b?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Nail Studios (Manicura)</h3>
-<p class="premium-text">Luce tus diseños con fotos de alta resolución y atrae a fanáticas del nail art
-                con un Instagram lleno de arte.</p>
+<div class="mosaic-item">
+<img alt="Nail Studios" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/nail.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Nail Studios (Manicura)</h3>
+<p class="mosaic-text">Luce tus diseños con fotos de alta resolución y atrae a fanáticas del nail art con un Instagram lleno de arte.</p>
 </div>
 </div>
 <!-- Item 6 -->
-<div class="premium-item">
-<img alt="Pestañas y Cejas" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Pestañas y Cejas (Lash &amp; Brow)</h3>
-<p class="premium-text">Agenda de retoques automática e imágenes impactantes para posicionarte como
-                experta certificada.</p>
+<div class="mosaic-item">
+<img alt="Pestañas y Cejas" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/pestaña.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Pestañas y Cejas</h3>
+<p class="mosaic-text">Agenda de retoques automática e imágenes impactantes para posicionarte como experta certificada.</p>
 </div>
 </div>
 <!-- Item 7 -->
-<div class="premium-item">
-<img alt="Tatuajes" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1598371839696-5c5bb00bdc28?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Tatuajes y Body Art</h3>
-<p class="premium-text">Consentimientos digitales y agenda automática para construir una marca artística
-                sólida y profesional.</p>
+<div class="mosaic-item">
+<img alt="Tatuajes" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/tatuajes.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Tatuajes y Body Art</h3>
+<p class="mosaic-text">Consentimientos digitales y agenda automática para construir una marca artística sólida y profesional.</p>
 </div>
 </div>
 <!-- Item 8 -->
-<div class="premium-item">
-<img alt="Micropigmentación" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Micropigmentación (PMU)</h3>
-<p class="premium-text">Formularios médicos digitales y educación visual que proyecta seguridad de nivel
-                médico internacional.</p>
+<div class="mosaic-item">
+<img alt="Micropigmentación" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/micropigmentacion.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Micropigmentación (PMU)</h3>
+<p class="mosaic-text">Formularios médicos digitales y educación visual que proyecta seguridad de nivel médico internacional.</p>
 </div>
 </div>
 <!-- Item 9 -->
-<div class="premium-item">
-<img alt="Maquillaje" class="premium-img" loading="lazy" src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp"/>
-<div class="premium-content">
-<h3 class="premium-title">Maquillaje y Novias</h3>
-<p class="premium-text">Organiza pruebas de novia con calendario de eventos y proyecta una imagen
-                sofisticada para futuras novias.</p>
+<div class="mosaic-item">
+<img alt="Maquillaje" class="mosaic-img" height="400" loading="lazy" src="assets/img/sectors/belleza/maquillaje.webp" width="600"/>
+<div class="mosaic-content">
+<h3 class="mosaic-title">Maquillaje y Novias</h3>
+<p class="mosaic-text">Organiza pruebas de novia con calendario de eventos y proyecta una imagen sofisticada para futuras novias.</p>
 </div>
 </div>
-</div>
-<div class="premium-controls">
-<button aria-label="Anterior" class="premium-nav-btn" id="pcPrev"><i data-lucide="chevron-left"></i></button>
-<button aria-label="Siguiente" class="premium-nav-btn" id="pcNext"><i data-lucide="chevron-right"></i></button>
 </div>
 </div>
 </section>
@@ -744,100 +693,6 @@
 </div>
 </div>
 </footer>
-<script src="assets/js/script.js"></script>
-<script>
-    lucide.createIcons();
-
-    // Premium CoverFlow Carousel Logic
-    (function () {
-      const track = document.getElementById('premiumCarouselTrack');
-      const items = track ? track.querySelectorAll('.premium-item') : [];
-      const nextBtn = document.getElementById('pcNext');
-      const prevBtn = document.getElementById('pcPrev');
-
-      if (track && items.length > 0) {
-        function updateActiveItem() {
-          const trackCenter = track.getBoundingClientRect().left + track.clientWidth / 2;
-          let closestItem = null;
-          let minDistance = Infinity;
-
-          items.forEach(item => {
-            const rect = item.getBoundingClientRect();
-            const itemCenter = rect.left + rect.width / 2;
-            const distance = Math.abs(trackCenter - itemCenter);
-            if (distance < minDistance) {
-              minDistance = distance;
-              closestItem = item;
-            }
-          });
-
-          items.forEach(item => {
-            if (item === closestItem) {
-              item.classList.add('active');
-            } else {
-              item.classList.remove('active');
-            }
-          });
-        }
-
-        // Listeners for centering logic
-        track.addEventListener('scroll', () => requestAnimationFrame(updateActiveItem));
-        window.addEventListener('resize', updateActiveItem);
-        // Initial setup
-        updateActiveItem();
-
-        // Control buttons
-        if (nextBtn && prevBtn) {
-          nextBtn.addEventListener('click', () => {
-            let activeIndex = Array.from(items).findIndex(i => i.classList.contains('active'));
-            if (activeIndex >= 0 && activeIndex < items.length - 1) {
-              items[activeIndex + 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
-          });
-
-          prevBtn.addEventListener('click', () => {
-            let activeIndex = Array.from(items).findIndex(i => i.classList.contains('active'));
-            if (activeIndex > 0) {
-              items[activeIndex - 1].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-            }
-          });
-        }
-
-        // Click on adjacent item brings it to center
-        items.forEach(item => {
-          item.addEventListener('click', () => {
-            item.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-          });
-        });
-
-        // Mouse drag support
-        let isDown = false;
-        let startX;
-        let scrollLeft;
-
-        track.addEventListener('mousedown', (e) => {
-          isDown = true;
-          track.style.cursor = 'grabbing';
-          startX = e.pageX - track.offsetLeft;
-          scrollLeft = track.scrollLeft;
-        });
-        const stopDrag = () => {
-          if (!isDown) return;
-          isDown = false;
-          track.style.cursor = '';
-        };
-        track.addEventListener('mouseleave', stopDrag);
-        track.addEventListener('mouseup', stopDrag);
-        track.addEventListener('mousemove', (e) => {
-          if (!isDown) return;
-          e.preventDefault();
-          const x = e.pageX - track.offsetLeft;
-          const walk = (x - startX) * 2; // Scroll-fast
-          track.scrollLeft = scrollLeft - walk;
-        });
-      }
-    })();
-  </script>
 <script src="assets/js/script.js"></script>
 <script>
     lucide.createIcons();

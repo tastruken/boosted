@@ -528,7 +528,7 @@ main {
   background: var(--boosted);
 }
 
-h1.hero-title {
+.hero-title {
   font-family: var(--font-bebas);
   font-size: clamp(3rem, 7vw, 6rem);
   /* Reducido del gigantesco 8rem a un más coherente máximo de 6rem */

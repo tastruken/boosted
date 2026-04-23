@@ -24,6 +24,7 @@
     rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="preload" as="image" href="assets/img/servicios/CharlieHero.webp" />
 
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"SoftwareApplication","name":"Charlie","applicationCategory":"BusinessApplication","operatingSystem":"Cloud","description":"Agente de inteligencia artificial que califica leads, automatiza seguimientos y opera 24/7.","provider":{"@type":"Organization","name":"Boosted","url":"https://boosted.cl"}}
@@ -43,7 +44,7 @@
     /* ─────────────── HERO ─────────────── */
     #charlie-hero {
       position: relative;
-      min-height: 100vh;
+      min-height: 80vh;
       display: flex;
       align-items: center;
       overflow: hidden;
@@ -96,7 +97,7 @@
 
     .ch-hero-title {
       font-family: var(--font-bebas);
-      font-size: clamp(3.5rem, 8vw, 6.5rem);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
       font-weight: 400;
       letter-spacing: 0.02em;
       line-height: 0.92;
@@ -899,7 +900,7 @@
     <!-- ── 1. HERO ── -->
     <section id="charlie-hero">
       <div class="ch-hero-bg" aria-hidden="true"
-        style="background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?auto=format&fit=crop&q=80&w=1200'); background-size: cover; background-position: center; opacity: 0.25;">
+        style="background-image: url('assets/img/servicios/CharlieHero.webp'); background-size: cover; background-position: center; opacity: 0.25;">
       </div>
       <div class="ch-hero-bg" aria-hidden="true"></div>
       <div class="bg-grid"></div>

@@ -187,9 +187,28 @@
       z-index: 1;
     }
 
-    .slide.active { opacity: 1; visibility: visible; z-index: 10; transform: translateX(0) translateZ(0) scale(1); }
-    .slide.prev { opacity: 0.5; visibility: visible; z-index: 5; transform: translateX(-70%) translateZ(-350px) scale(0.85); pointer-events: none; }
-    .slide.next { opacity: 0.5; visibility: visible; z-index: 5; transform: translateX(70%) translateZ(-350px) scale(0.85); pointer-events: none; }
+    .slide.active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
+      transform: translateX(0) translateZ(0) scale(1);
+    }
+
+    .slide.prev {
+      opacity: 0.5;
+      visibility: visible;
+      z-index: 5;
+      transform: translateX(-70%) translateZ(-350px) scale(0.85);
+      pointer-events: none;
+    }
+
+    .slide.next {
+      opacity: 0.5;
+      visibility: visible;
+      z-index: 5;
+      transform: translateX(70%) translateZ(-350px) scale(0.85);
+      pointer-events: none;
+    }
 
     .slide img {
       width: 100%;
@@ -208,9 +227,25 @@
       z-index: 20;
     }
 
-    .slide.active .slide-caption { opacity: 1; transform: translateY(0); }
-    .slide-caption h4 { font-family: var(--font-display); font-size: 1.5rem; color: #fff; margin-bottom: 0.25rem; }
-    .slide-caption span { font-family: var(--font-mono); font-size: 0.8rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.2rem; }
+    .slide.active .slide-caption {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .slide-caption h4 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.25rem;
+    }
+
+    .slide-caption span {
+      font-family: var(--font-mono);
+      font-size: 0.8rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.2rem;
+    }
 
     .showcase-controls {
       display: flex;
@@ -236,7 +271,12 @@
       transition: all 0.4s;
     }
 
-    .control-btn:hover { background: var(--boosted); color: #000; border-color: var(--boosted); transform: scale(1.1); }
+    .control-btn:hover {
+      background: var(--boosted);
+      color: #000;
+      border-color: var(--boosted);
+      transform: scale(1.1);
+    }
 
     .showcase-counter {
       font-family: var(--font-mono);
@@ -251,7 +291,10 @@
       border: 1px solid rgba(255, 255, 255, 0.05);
     }
 
-    .showcase-current { color: var(--boosted); font-weight: 700; }
+    .showcase-current {
+      color: var(--boosted);
+      font-weight: 700;
+    }
 
     .thumbnails {
       display: flex;
@@ -273,35 +316,143 @@
       background: rgba(255, 255, 255, 0.05);
     }
 
-    .thumb.active { border-color: var(--boosted); opacity: 1; transform: translateY(-8px); }
-    .thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .thumb.active {
+      border-color: var(--boosted);
+      opacity: 1;
+      transform: translateY(-8px);
+    }
+
+    .thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
     /* Solution Timeline/Grid */
-    #portfolio-solution { padding-block: 6rem; background: rgba(255, 255, 255, 0.01); border-block: 1px solid rgba(255, 255, 255, 0.05); }
-    .solution-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.5rem; }
-    @media (max-width: 1024px) { .solution-grid { grid-template-columns: 1fr; } }
-    .solution-card { background: rgba(255, 255, 255, 0.02); border-radius: 1.5rem; padding: 2.5rem; border: 1px solid transparent; transition: all 0.3s; }
-    .solution-card:hover { background: rgba(255, 255, 255, 0.04); border-color: rgba(38, 204, 202, 0.2); }
-    .solution-num { width: 3rem; height: 3rem; border-radius: 50%; background: rgba(38, 204, 202, 0.1); color: var(--boosted); display: flex; align-items: center; justify-content: center; font-family: var(--font-display); font-size: 1.25rem; font-weight: 800; margin-bottom: 1.5rem; }
-    .solution-card h3 { font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: #fff; margin-bottom: 1rem; line-height: 1.3; }
-    .solution-card p { color: var(--zinc-400); line-height: 1.7; margin-bottom: 1rem; font-weight: 300; }
+    #portfolio-solution {
+      padding-block: 6rem;
+      background: rgba(255, 255, 255, 0.01);
+      border-block: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .solution-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    @media (max-width: 1024px) {
+      .solution-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .solution-card {
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 1.5rem;
+      padding: 2.5rem;
+      border: 1px solid transparent;
+      transition: all 0.3s;
+    }
+
+    .solution-card:hover {
+      background: rgba(255, 255, 255, 0.04);
+      border-color: rgba(38, 204, 202, 0.2);
+    }
+
+    .solution-num {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: rgba(38, 204, 202, 0.1);
+      color: var(--boosted);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+    }
+
+    .solution-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .solution-card p {
+      color: var(--zinc-400);
+      line-height: 1.7;
+      margin-bottom: 1rem;
+      font-weight: 300;
+    }
 
     /* Impact */
-    #portfolio-impact { padding-block: 6rem; position: relative; }
-    .impact-box { background: radial-gradient(circle at center, rgba(38, 204, 202, 0.1) 0%, transparent 80%); border: 1px solid rgba(38, 204, 202, 0.2); border-radius: 2rem; padding: 5rem 3rem; text-align: center; max-width: 1000px; margin: 0 auto; }
-    .impact-box h3 { font-family: var(--font-bebas); font-size: clamp(3rem, 5vw, 4rem); color: var(--boosted); margin-bottom: 1.5rem; line-height: 1; letter-spacing: 0.05em; }
-    .impact-desc { font-size: 1.25rem; color: var(--zinc-300); max-width: 700px; margin: 0 auto; line-height: 1.6; }
+    #portfolio-impact {
+      padding-block: 6rem;
+      position: relative;
+    }
+
+    .impact-box {
+      background: radial-gradient(circle at center, rgba(38, 204, 202, 0.1) 0%, transparent 80%);
+      border: 1px solid rgba(38, 204, 202, 0.2);
+      border-radius: 2rem;
+      padding: 5rem 3rem;
+      text-align: center;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .impact-box h3 {
+      font-family: var(--font-bebas);
+      font-size: clamp(3rem, 5vw, 4rem);
+      color: var(--boosted);
+      margin-bottom: 1.5rem;
+      line-height: 1;
+      letter-spacing: 0.05em;
+    }
+
+    .impact-desc {
+      font-size: 1.25rem;
+      color: var(--zinc-300);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
 
     /* Section Headers */
-    .section-header { margin-bottom: 3rem; }
-    .section-header-label { font-family: var(--font-mono); font-size: 0.85rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.15em; margin-bottom: 0.5rem; display: block; }
-    .section-header-title { font-family: var(--font-display); font-size: 2.5rem; font-weight: 800; color: #fff; letter-spacing: -0.02em; }
+    .section-header {
+      margin-bottom: 3rem;
+    }
+
+    .section-header-label {
+      font-family: var(--font-mono);
+      font-size: 0.85rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      margin-bottom: 0.5rem;
+      display: block;
+    }
+
+    .section-header-title {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: -0.02em;
+    }
   </style>
 
   <!-- Favicon y Open Graph -->
   <link rel="icon" type="image/png" href="assets/img/boosted-logo.webp" />
   <meta property="og:title" content="Instruvalve: Proyecto Editorial Corporativo — Portafolio Boosted" />
-  <meta property="og:description" content="Descubre cómo transformamos la ingeniería dura de Instruvalve en una herramienta de venta ágil mediante un proyecto editorial de alta complejidad." />
+  <meta property="og:description"
+    content="Descubre cómo transformamos la ingeniería dura de Instruvalve en una herramienta de venta ágil mediante un proyecto editorial de alta complejidad." />
   <meta property="og:image" content="https://boosted.cl/assets/img/boosted-logo.webp" />
   <meta property="og:url" content="https://boosted.cl/portfolio-instruvalve.html" />
   <meta property="og:type" content="website" />
@@ -433,13 +584,16 @@
   <main>
     <!-- ── 1. HERO PORTFOLIO ── -->
     <section id="portfolio-hero">
-      <div class="hero-bg" aria-hidden="true" style="position: absolute; inset: 0; background-image: url('assets/img/portafolio/branding/instruvalve-editorial/hero.webp'); background-size: cover; background-position: center; opacity: 0.15; filter: brightness(0.4);"></div>
+      <div class="hero-bg" aria-hidden="true"
+        style="position: absolute; inset: 0; background-image: url('assets/img/portafolio/branding/instruvalve-editorial/hero.webp'); background-size: cover; background-position: center; opacity: 0.15; filter: brightness(0.4);">
+      </div>
       <div class="bg-grid"></div>
       <div class="container anim-fadeup">
         <span class="portfolio-badge">Proyecto Editorial Corporativo</span>
         <h1 class="portfolio-hero-title">Instruvalve: Sinergia para la Industria Pesada</h1>
         <p class="portfolio-hero-subtitle">
-          Transformamos la ingeniería dura en una herramienta de venta ágil mediante una arquitectura de información modular y evidencia visual de calidad.
+          Transformamos la ingeniería dura en una herramienta de venta ágil mediante una arquitectura de información
+          modular y evidencia visual de calidad.
         </p>
       </div>
     </section>
@@ -449,10 +603,14 @@
       <div class="container intro-grid">
         <div class="intro-text reveal">
           <p>
-            En el sector industrial, la venta de servicios críticos no se hace con promesas, se hace con documentación técnica impecable. PPS Marketing lideró estratégicamente este desafío, buscando en Boosted el partner ideal para la ejecución del Proyecto editorial de Instruvalve.
+            En el sector industrial, la venta de servicios críticos no se hace con promesas, se hace con documentación
+            técnica impecable. PPS Marketing lideró estratégicamente este desafío, buscando en Boosted el partner ideal
+            para la ejecución del Proyecto editorial de Instruvalve.
           </p>
           <p>
-            Nuestra misión fue traducir la complejidad técnica de válvulas, actuadores y bombas en piezas gráficas que transmitieran orden, metodología y confianza absoluta a gerentes de planta que no pueden permitirse paradas operativas.
+            Nuestra misión fue traducir la complejidad técnica de válvulas, actuadores y bombas en piezas gráficas que
+            transmitieran orden, metodología y confianza absoluta a gerentes de planta que no pueden permitirse paradas
+            operativas.
           </p>
         </div>
         <div class="intro-meta reveal" style="transition-delay: 0.2s;">
@@ -469,7 +627,8 @@
               <div class="meta-label">Alcance</div>
               <div class="meta-value">Diseño Editorial, Arquitectura B2B, Infografías Técnicas</div>
             </div>
-            <a href="assets/img/portafolio/branding/instruvalve-editorial/Brochure-ArchViz.pdf" class="btn-visit" target="_blank">
+            <a href="assets/img/portafolio/branding/instruvalve-editorial/Brochure-ArchViz.pdf" class="btn-visit"
+              target="_blank">
               <i data-lucide="download"></i> DESCARGAR BROCHURE
             </a>
           </div>
@@ -491,17 +650,20 @@
           <div class="solution-card reveal">
             <div class="solution-num">1</div>
             <h3>Arquitectura Modular</h3>
-            <p>Diseñamos un sistema de navegación inteligente con pestañas cromáticas por categorías (Válvulas, Actuadores, etc.), permitiendo al usuario encontrar soluciones en segundos.</p>
+            <p>Diseñamos un sistema de navegación inteligente con pestañas cromáticas por categorías (Válvulas,
+              Actuadores, etc.), permitiendo al usuario encontrar soluciones en segundos.</p>
           </div>
           <div class="solution-card reveal" style="transition-delay: 0.1s;">
             <div class="solution-num">2</div>
             <h3>Evidencia Probatoria</h3>
-            <p>Utilizamos comparativas visuales de equipos restaurados y checklists iconográficos para validar los protocolos técnicos sin necesidad de textos extensos.</p>
+            <p>Utilizamos comparativas visuales de equipos restaurados y checklists iconográficos para validar los
+              protocolos técnicos sin necesidad de textos extensos.</p>
           </div>
           <div class="solution-card reveal" style="transition-delay: 0.2s;">
             <div class="solution-num">3</div>
             <h3>Sinergia de Agencias</h3>
-            <p>Fusionamos la visión comercial de PPS Marketing con la excelencia gráfica de Boosted, logrando un entregable que eleva el estándar de comunicación en minería.</p>
+            <p>Fusionamos la visión comercial de PPS Marketing con la excelencia gráfica de Boosted, logrando un
+              entregable que eleva el estándar de comunicación en minería.</p>
           </div>
         </div>
       </div>
@@ -512,7 +674,8 @@
       <div class="container reveal-scale">
         <div class="impact-box">
           <h3>Ingeniería Documentada</h3>
-          <p class="impact-desc">Un Proyecto editorial técnico y corporativo que transforma el commodity del mantenimiento en una propuesta de valor basada en la transparencia y el rigor de fábrica.</p>
+          <p class="impact-desc">Un Proyecto editorial técnico y corporativo que transforma el commodity del
+            mantenimiento en una propuesta de valor basada en la transparencia y el rigor de fábrica.</p>
         </div>
       </div>
     </section>
@@ -521,8 +684,11 @@
     <section class="cta-section"
       style="padding-block: 5rem; background: #000; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
       <div class="container reveal">
-        <h2 style="font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2rem;">¿Necesitas proyectar la solidez técnica de tu empresa?</h2>
-        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA" target="_blank" rel="noopener noreferrer" class="btn-primary" style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">AGENDAR UNA ASESORÍA GRATUITA</a>
+        <h2 style="font-family: var(--font-display); font-size: 2.5rem; color: #fff; margin-bottom: 2rem;">¿Necesitas
+          proyectar la solidez técnica de tu empresa?</h2>
+        <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ0eLzWvh-yrlAvDqP4vCBpex5c2wtzqpp89n_C4VVp6Obx184OHVTcQxAJBAtq4CtJtcYmyMuuA"
+          target="_blank" rel="noopener noreferrer" class="btn-primary"
+          style="font-size: 1.1rem; padding: 1.25rem 2.5rem;">AGENDAR UNA ASESORÍA GRATUITA</a>
       </div>
     </section>
   </main>
@@ -534,11 +700,14 @@
         <!-- Columna 1: Marca y Redes -->
         <div>
           <a href="index.html" class="footer-logo">BOOSTED<span>.</span></a>
-          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
+          <p class="footer-desc">Agencia de Automatización y Marketing Digital. Diseñamos ecosistemas digitales
+            conectados con Inteligencia Artificial que eliminan tareas manuales y escalan tus ventas.</p>
           <div class="footer-social">
-            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
-            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
-            </div>
+            <a href="https://www.linkedin.com/company/boosted-ia/?originalSubdomain=cl" class="social-btn"
+              aria-label="LinkedIn" target="_blank" rel="noopener noreferrer"><i data-lucide="linkedin"></i></a>
+            <a href="https://www.instagram.com/boosted_design/" class="social-btn" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer"><i data-lucide="instagram"></i></a>
+          </div>
         </div>
 
         <!-- Columna 2: Servicios -->
@@ -574,22 +743,29 @@
             <li><a href="blog.html">Nuestro Blog</a></li>
             <li><a href="charlie.html">Conoce a Charlie</a></li>
             <li><a href="faq.html">Preguntas Frecuentes</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
             <li><a href="branding-y-contenido.html">Portafolio Branding</a></li>
             <li><a href="sitios-web.html">Portafolio Web</a></li>
-            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);"></li>
-            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
+            <li style="margin-top: 0.5rem; margin-bottom: 0.5rem; height: 1px; background: rgba(255,255,255,0.05);">
+            </li>
+            <li><a href="mailto:proyectos@boosted.cl" style="display: flex; align-items: center; gap: 0.5rem;"><i
+                  data-lucide="mail" style="width: 1rem; height: 1rem;"></i> proyectos@boosted.cl</a></li>
           </ul>
         </div>
       </div>
-      
+
       <div class="footer-bottom">
         <div style="display: flex; flex-direction: column; gap: 0.5rem; text-align: left;">
           <p>&copy; 2025 Boosted. Todos los derechos reservados.</p>
           <div style="display: flex; gap: 1rem; margin-top: 0.25rem;">
-            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de Privacidad</a>
+            <a href="privacidad.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Políticas de
+              Privacidad</a>
             <span style="color: rgba(255,255,255,0.1);">|</span>
-            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y Condiciones</a>
+            <a href="terminos.html" style="color: var(--zinc-500); text-decoration: none; transition: color 0.2s;"
+              onmouseover="this.style.color='#fff'" onmouseout="this.style.color='var(--zinc-500)'">Términos y
+              Condiciones</a>
           </div>
         </div>
         <div class="footer-status">
@@ -601,19 +777,19 @@
 
   <script src="assets/js/script.js"></script>
   <script>
-    (function() {
+    (function () {
       let index = 0;
       const slides = document.querySelectorAll('.slide');
       const thumbs = document.querySelectorAll('.thumb');
       const counter = document.querySelector('.showcase-current');
-      
+
       if (!slides.length) return;
 
       function update(newIdx) {
         index = (newIdx + slides.length) % slides.length;
         const prevIdx = (index - 1 + slides.length) % slides.length;
         const nextIdx = (index + 1) % slides.length;
-        
+
         slides.forEach((s, i) => {
           s.classList.remove('active', 'prev', 'next');
           if (i === index) s.classList.add('active');
@@ -630,10 +806,10 @@
 
       const btnP = document.querySelector('.btn-prev');
       const btnN = document.querySelector('.btn-next');
-      
+
       if (btnP) btnP.onclick = () => update(index - 1);
       if (btnN) btnN.onclick = () => update(index + 1);
-      
+
       thumbs.forEach((t, i) => {
         t.onclick = () => update(i);
       });
@@ -645,7 +821,7 @@
 
       try {
         if (typeof lucide !== 'undefined') lucide.createIcons();
-      } catch(e) {}
+      } catch (e) { }
 
       const obs = new IntersectionObserver((es) => {
         es.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
@@ -658,4 +834,3 @@
 </body>
 
 </html>
-

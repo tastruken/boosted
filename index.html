@@ -17,6 +17,139 @@
 <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 <!-- Estilos -->
 <link href="assets/css/styles.css" rel="stylesheet"/>
+<style>
+    /* Mosaic Sectors Layout */
+    .mosaic-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .mosaic-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 220px;
+        grid-auto-flow: dense;
+      }
+
+      .mosaic-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(5) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .mosaic-item:nth-child(6) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+    }
+
+    @media (max-width: 767px) {
+      .mosaic-item {
+        min-height: 280px;
+      }
+    }
+
+    .mosaic-item {
+      position: relative;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      background: #000;
+      transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+      text-decoration: none;
+      display: block;
+    }
+
+    .mosaic-item:hover {
+      border-color: rgba(38, 204, 202, 0.4);
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(38, 204, 202, 0.1);
+      z-index: 2;
+    }
+
+    .mosaic-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s ease, filter 0.4s ease;
+      filter: brightness(0.6) grayscale(15%);
+    }
+
+    .mosaic-item:hover .mosaic-img {
+      transform: scale(1.05);
+      filter: brightness(0.8) grayscale(0%);
+    }
+
+    .mosaic-content {
+      position: absolute;
+      inset: 0;
+      padding: 1.5rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%);
+    }
+
+    .mosaic-title {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #fff;
+      margin: 0;
+      transition: color 0.3s ease;
+      line-height: 1.2;
+    }
+
+    .mosaic-item:nth-child(1) .mosaic-title,
+    .mosaic-item:nth-child(4) .mosaic-title {
+      font-size: 1.75rem;
+    }
+
+    .mosaic-item:hover .mosaic-title {
+      color: var(--boosted);
+    }
+
+    .mosaic-text {
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.8);
+      line-height: 1.5;
+      font-weight: 300;
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: max-height 0.4s ease, opacity 0.35s ease, transform 0.35s ease;
+    }
+
+    .mosaic-item:hover .mosaic-text {
+      max-height: 8rem;
+      opacity: 1;
+      transform: translateY(0);
+      margin-top: 0.5rem;
+    }
+
+    .mosaic-label {
+      font-family: var(--font-mono);
+      font-size: 0.65rem;
+      color: var(--boosted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.4rem;
+      display: block;
+    }
+  </style>
 <!-- Preload Hero LCP Image -->
 <link as="image" href="assets/img/hero/hero-1.webp" rel="preload"/>
 <!-- Favicon y Open Graph -->
@@ -239,7 +372,7 @@
 </div>
 <div class="hero-ctas static-ctas">
 <a class="btn-primary" href="#contacto">Agenda un diagnóstico gratuito</a>
-<a class="btn-ghost glass-card" href="#charlie">
+<a class="btn-ghost glass-card" href="charlie.html">
               Conoce a Charlie <i data-lucide="play-circle"></i>
 </a>
 </div>
@@ -388,53 +521,59 @@
 <p class="section-desc" style="max-width: 600px; margin: 1rem auto 0;">Llevamos nuestra metodología digital a
             6 industrias clave en Chile. Cada sector tiene sus propios desafíos y nosotros conocemos sus soluciones.</p>
 </div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.25rem;">
-<a class="reveal" href="belleza.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,100,150,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-<img alt="Belleza y Estética" loading="lazy" src="https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
-<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
-                Belleza y Estética</h3>
+<div class="mosaic-wrapper">
+<!-- Belleza -->
+<a class="mosaic-item reveal" href="belleza.html">
+<img alt="Belleza y Estética" class="mosaic-img" loading="lazy" src="assets/img/sectors/belleza/HERO.webp"/>
+<div class="mosaic-content">
+<span class="mosaic-label">Sector</span>
+<h3 class="mosaic-title">Belleza y Estética</h3>
+<p class="mosaic-text">Agendamiento inteligente, presencia visual premium y captación digital para centros de estética, spas y salones.</p>
 </div>
 </a>
-<a class="reveal" href="construccion.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(100,150,255,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-<img alt="Construcción" loading="lazy" src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
-<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
-                Construcción e Inmobiliaria</h3>
+<!-- Construcción -->
+<a class="mosaic-item reveal" href="construccion.html" style="transition-delay: 0.1s;">
+<img alt="Construcción e Inmobiliaria" class="mosaic-img" loading="lazy" src="assets/img/sectors/construccion/HERO.webp"/>
+<div class="mosaic-content">
+<span class="mosaic-label">Sector</span>
+<h3 class="mosaic-title">Construcción e Inmobiliaria</h3>
+<p class="mosaic-text">Ecosistemas B2B que conectan constructoras, inmobiliarias y servicios con sus clientes finales y proveedores.</p>
 </div>
 </a>
-<a class="reveal" href="educacion.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,200,50,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-<img alt="Educación" loading="lazy" src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
-<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
-                Educación</h3>
+<!-- Educación -->
+<a class="mosaic-item reveal" href="educacion.html" style="transition-delay: 0.2s;">
+<img alt="Educación" class="mosaic-img" loading="lazy" src="assets/img/sectors/educacion/HERO.webp"/>
+<div class="mosaic-content">
+<span class="mosaic-label">Sector</span>
+<h3 class="mosaic-title">Educación</h3>
+<p class="mosaic-text">Comunicación fluida con familias, captación de alumnos y marca premium para colegios, universidades e institutos.</p>
 </div>
 </a>
-<a class="reveal" href="hospitalidad.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(255,150,50,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-<img alt="HORECA" loading="lazy" src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
-<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
-                Hospitalidad – HORECA</h3>
+<!-- Hospitalidad -->
+<a class="mosaic-item reveal" href="hospitalidad.html" style="transition-delay: 0.3s;">
+<img alt="Hospitalidad – HORECA" class="mosaic-img" loading="lazy" src="assets/img/sectors/hospitalidad/HERO.webp"/>
+<div class="mosaic-content">
+<span class="mosaic-label">Sector</span>
+<h3 class="mosaic-title">Hospitalidad – HORECA</h3>
+<p class="mosaic-text">Sistemas de reserva, menú digital y estrategias de fidelización para hoteles, restaurantes y cafeterías.</p>
 </div>
 </a>
-<a class="reveal" href="retail.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(255,255,255,0.06)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.3)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(50,200,100,0.1), rgba(0,0,0,0.8)); border: 1px solid rgba(255,255,255,0.06); transition: all 0.3s;">
-<img alt="Retail" loading="lazy" src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
-<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
-                Retail</h3>
+<!-- Retail -->
+<a class="mosaic-item reveal" href="retail.html" style="transition-delay: 0.4s;">
+<img alt="Retail" class="mosaic-img" loading="lazy" src="assets/img/sectors/retail/HERO.webp"/>
+<div class="mosaic-content">
+<span class="mosaic-label">Sector</span>
+<h3 class="mosaic-title">Retail</h3>
+<p class="mosaic-text">E-commerce estratégico, control de inventario y marketing automatizado para potenciar tus ventas locales y nacionales.</p>
 </div>
 </a>
-<a class="reveal" href="servicios-profesionales.html" onmouseout="this.style.transform='scale(1)'; this.style.borderColor='rgba(38,204,202,0.2)';" onmouseover="this.style.transform='scale(1.02)'; this.style.borderColor='rgba(38,204,202,0.5)';" style="text-decoration: none; border-radius: 1.25rem; overflow: hidden; display: block; position: relative; aspect-ratio: 3/2; background: linear-gradient(145deg, rgba(38,204,202,0.15), rgba(0,0,0,0.8)); border: 1px solid rgba(38,204,202,0.2); transition: all 0.3s;">
-<img alt="Servicios Profesionales" loading="lazy" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0;opacity:0.35;"/>
-<div style="position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: flex-end; padding: 1.5rem;">
-<span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 0.25rem;">Sector</span>
-<h3 style="font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin: 0;">
-                Servicios Profesionales</h3>
+<!-- Servicios Profesionales -->
+<a class="mosaic-item reveal" href="servicios-profesionales.html" style="transition-delay: 0.5s;">
+<img alt="Servicios Profesionales" class="mosaic-img" loading="lazy" src="assets/img/sectors/servicios-profesionales/hero.webp"/>
+<div class="mosaic-content">
+<span class="mosaic-label">Sector</span>
+<h3 class="mosaic-title">Servicios Profesionales</h3>
+<p class="mosaic-text">Autoridad digital y embudos de venta para estudios jurídicos, contables, arquitectura e ingeniería.</p>
 </div>
 </a>
 </div>
@@ -642,7 +781,7 @@
             todos los artículos →</a>
 </div>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
-<a class="glass-card reveal" href="blog.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;">
+<a class="glass-card reveal" href="blog-diseno-web-estrategico.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s;">
 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem; display: flex; gap: 0.5rem;">
 <span>Diseño Web</span>
 </div>
@@ -654,7 +793,7 @@
 <span style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
               artículo →</span>
 </a>
-<a class="glass-card reveal" href="blog.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s;">
+<a class="glass-card reveal" href="blog-automatizacion-procesos.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.1s;">
 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
               Automatización</div>
 <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">
@@ -664,7 +803,7 @@
 <span style="display: inline-block; margin-top: 1.25rem; font-family: var(--font-mono); font-size: 0.75rem; color: var(--boosted); margin-top: auto;">Leer
               artículo →</span>
 </a>
-<a class="glass-card reveal" href="blog.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.2s;">
+<a class="glass-card reveal" href="blog-beneficios-automatizacion-pymes.html" onmouseout="this.style.borderColor='rgba(255,255,255,0.05)'; this.style.transform='translateY(0)';" onmouseover="this.style.borderColor='rgba(38,204,202,0.3)'; this.style.transform='translateY(-4px)';" style="text-decoration: none; border-radius: 1.25rem; padding: 2rem; display: flex; flex-direction: column; height: 100%; border: 1px solid rgba(255,255,255,0.05); transition: all 0.3s; transition-delay: 0.2s;">
 <div style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--boosted); text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 1rem;">
               Pymes en Chile</div>
 <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; color: #fff; margin-bottom: 0.75rem; line-height: 1.4;">

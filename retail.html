@@ -40,7 +40,7 @@
 <link href="https://images.unsplash.com" rel="dns-prefetch"/>
 <link href="https://unpkg.com" rel="dns-prefetch"/>
 <!-- Preload LCP hero image -->
-<link as="image" href="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;q=80&amp;w=1200" rel="preload"/>
+<link as="image" href="assets/img/sectors/retail/HERO.webp" rel="preload"/>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Poppins:wght@300;400;500;600&amp;family=Outfit:wght@300;400;600;800;900&amp;family=JetBrains+Mono:wght@400;600&amp;display=swap" rel="stylesheet"/>
 <!-- ══ Structured Data – Organization + Service + FAQPage + ItemList (JSON-LD) ══ -->
 <script type="application/ld+json">
@@ -230,8 +230,8 @@
       font-weight: 300;
     }
 
-    /* Retail Vertical Grid (Subsectores) */
-    .retail-grid {
+    /* Mosaic Sectors */
+    .mosaic-wrapper {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1.5rem;
@@ -239,59 +239,82 @@
     }
 
     @media (min-width: 768px) {
-      .retail-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (min-width: 1100px) {
-      .retail-grid {
+      .mosaic-wrapper {
         grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 260px;
+        grid-auto-flow: dense;
+      }
+
+      .mosaic-item:nth-child(1) {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(4) {
+        grid-column: span 1;
+        grid-row: span 2;
+      }
+
+      .mosaic-item:nth-child(5) {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .mosaic-item:nth-child(6) {
+        grid-column: span 2;
+        grid-row: span 1;
       }
     }
 
-    .retail-item {
+    @media (max-width: 767px) {
+      .mosaic-item {
+        min-height: 320px;
+      }
+    }
+
+    .mosaic-item {
       position: relative;
       border-radius: 1.5rem;
       overflow: hidden;
       border: 1px solid rgba(255, 255, 255, 0.05);
       background: #000;
-      transition: border-color 0.4s ease, transform 0.4s ease;
+      transition: border-color 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
       cursor: pointer;
-      aspect-ratio: 4/5;
     }
 
-    .retail-item:hover {
+    .mosaic-item:hover {
       border-color: rgba(38, 204, 202, 0.4);
       transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5), 0 0 20px rgba(38, 204, 202, 0.1);
+      z-index: 2;
     }
 
-    .retail-img {
+    .mosaic-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       transition: transform 0.8s ease, filter 0.4s ease;
-      filter: brightness(0.5) grayscale(20%);
+      filter: brightness(0.65) grayscale(15%);
     }
 
-    .retail-item:hover .retail-img {
+    .mosaic-item:hover .mosaic-img {
       transform: scale(1.05);
-      filter: brightness(0.7) grayscale(0%);
+      filter: brightness(0.85) grayscale(0%);
     }
 
-    .retail-content {
+    .mosaic-content {
       position: absolute;
       inset: 0;
-      padding: 2rem;
+      padding: 1.25rem 1.75rem;
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.3) 40%, transparent 70%);
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.45) 30%, transparent 55%);
     }
 
-    .retail-title {
+    .mosaic-title {
       font-family: var(--font-display);
-      font-size: 1.5rem;
+      font-size: 1.4rem;
       color: #fff;
       margin: 0;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.9);
@@ -299,27 +322,33 @@
       line-height: 1.2;
     }
 
-    .retail-item:hover .retail-title {
+    .mosaic-item:nth-child(1) .mosaic-title,
+    .mosaic-item:nth-child(4) .mosaic-title {
+      font-size: 1.85rem;
+    }
+
+    .mosaic-item:hover .mosaic-title {
       color: var(--accent);
     }
 
-    .retail-text {
+    .mosaic-text {
       font-size: 0.88rem;
       color: rgba(255, 255, 255, 0.82);
-      line-height: 1.6;
+      line-height: 1.55;
       font-weight: 300;
-      margin-top: 0.75rem;
+      margin: 0;
       max-height: 0;
       overflow: hidden;
       opacity: 0;
-      transform: translateY(10px);
-      transition: max-height 0.5s ease, opacity 0.4s ease, transform 0.4s ease;
+      transform: translateY(5px);
+      transition: max-height 0.4s ease, opacity 0.35s ease, transform 0.35s ease;
     }
 
-    .retail-item:hover .retail-text {
-      max-height: 15rem;
+    .mosaic-item:hover .mosaic-text {
+      max-height: 10rem;
       opacity: 1;
       transform: translateY(0);
+      margin-top: 0.5rem;
     }
 
     /* Cartelería Section */
@@ -480,7 +509,7 @@
 </nav>
 <!-- ── 1. HERO ── -->
 <section aria-labelledby="hero-heading" id="retail-hero">
-<div aria-hidden="true" class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&amp;fit=crop&amp;q=80&amp;w=1200'); background-size: cover; background-position: center; opacity: 0.15;"></div>
+<div aria-hidden="true" class="hero-bg" style="background-image: url('assets/img/sectors/retail/HERO.webp'); background-size: cover; background-position: center; opacity: 0.15;"></div>
 <div aria-hidden="true" class="hero-bg" style="background: radial-gradient(ellipse at 50% 30%, rgba(38, 204, 202, 0.1) 0%, transparent 70%);"></div>
 <div aria-hidden="true" class="bg-grid"></div>
 <div class="container">
@@ -635,90 +664,85 @@
 <div class="section-header reveal">
 <span class="section-eyebrow" style="color: var(--accent); margin-bottom: 1.2rem; display: block;">Verticales</span>
 <h2 class="section-title" id="subsectores-heading">Aplicaciones por tipo de negocio</h2>
-<p style="color: var(--zinc-400); max-width: 40rem; margin-top: 1.5rem; font-weight: 300;">Cada vertical de
-            retail requiere funcionalidades precisas adaptadas a su modelo de venta y perfil de cliente.</p>
+<p style="color: var(--zinc-400); max-width: 40rem; margin-top: 1.5rem; font-weight: 300;">Cada vertical de retail requiere funcionalidades precisas adaptadas a su modelo de venta y perfil de cliente.</p>
 </div>
 </div>
 <div class="container reveal">
-<div class="retail-grid">
-<!-- Moda -->
-<article class="retail-item">
-<img alt="Moda y Vestuario – tienda de ropa omnicanal" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Moda y Vestuario</h3>
-<p class="retail-text">Inventario por tallas y colores sincronizado. Fotografías de alta fidelidad que proyectan autoridad y transforman seguidores en clientes.</p>
-</div>
-</article>
-<!-- Tecnología -->
-<article class="retail-item">
-<img alt="Tecnología y Electrónica – retail digital" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Tecnología y Electrónica</h3>
-<p class="retail-text">Gestión de especificaciones técnicas y comparativas avanzadas. Videos de rendimiento
-                y tutoría para destacar frente a multitiendas genéricas.</p>
-</div>
-</article>
-<!-- Automotriz -->
-<article class="retail-item">
-<img alt="Automotriz y Repuestos – catálogo técnico" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Automotriz (Repuestos)</h3>
-<p class="retail-text">Catálogo organizado por compatibilidad. Búsqueda inteligente que facilita la compra
-                técnica para mecánicos y particulares.</p>
-</div>
-</article>
-<!-- Especializado -->
-<article class="retail-item">
-<img alt="Especializado – Mascotas y Veterinaria" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1563941402622-4e7a488bbea4?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Especializado (TCG y Hobbies)</h3>
-<p class="retail-text">Gestión de inventario para nichos de coleccionismo. Automatización de eventos y programas de lealtad para comunidades activas.</p>
-</div>
-</article>
-<!-- Ferretería -->
-<article class="retail-item">
-<img alt="Ferretería y Construcción – retail especializado" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1581141849291-1125c7b692b5?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Ferretería y Construcción</h3>
-<p class="retail-text">Control de complejidad de SKUs y stock técnico online. Proyecta solidez mediante guías y visuales que atraen a contratistas.</p>
-</div>
-</article>
-<!-- Deportes -->
-<article class="retail-item">
-<img alt="Deportes y Outdoor – retail deportivo" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Deportes y Outdoor</h3>
-<p class="retail-text">Posicionamiento de marca con contenido aspiracional. Gestión eficiente de stock de
-                temporada y equipamiento técnico especializado.</p>
-</div>
-</article>
-<!-- Hogar -->
-<article class="retail-item">
-<img alt="Hogar y Decoración – visualización de ambientes" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Hogar y Decoración</h3>
-<p class="retail-text">Gestión de productos voluminosos y variantes. Fotografía premium que permite al
-                cliente proyectar el diseño en su propio espacio.</p>
-</div>
-</article>
-<!-- Salud -->
-<article class="retail-item">
-<img alt="Salud y Belleza – retail profesional" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Salud y Belleza</h3>
-<p class="retail-text">Fomenta la recurrencia con CRM estratégico y contenido que genera confianza médica y cosmética.</p>
-</div>
-</article>
-<!-- Mascotas -->
-<article class="retail-item">
-<img alt="Mascotas y Veterinaria – programas de lealtad" class="retail-img" height="750" loading="lazy" src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?auto=format&amp;fit=crop&amp;q=70&amp;w=600&amp;fm=webp" width="600"/>
-<div class="retail-content">
-<h3 class="retail-title">Mascotas y Veterinaria</h3>
-<p class="retail-text">Sistemas de suscripción y fidelidad recurrente. Comunicación pet-friendly efectiva integrando nutrición y accesorios.</p>
-</div>
-</article>
-</div>
-</div>
+<div class="mosaic-wrapper">
+      <!-- Moda -->
+      <article class="mosaic-item">
+        <img alt="Moda y Vestuario – tienda de ropa omnicanal" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/moda.webp" width="800"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Moda y Vestuario</h3>
+          <p class="mosaic-text">Inventario por tallas y colores sincronizado. Fotografías de alta fidelidad que proyectan autoridad y transforman seguidores en clientes.</p>
+        </div>
+      </article>
+      <!-- Tecnología -->
+      <article class="mosaic-item">
+        <img alt="Tecnología y Electrónica – retail digital" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/tecnologia.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Tecnología y Electrónica</h3>
+          <p class="mosaic-text">Gestión de especificaciones técnicas y comparativas avanzadas. Videos de rendimiento y tutoría para destacar frente a multitiendas genéricas.</p>
+        </div>
+      </article>
+      <!-- Automotriz -->
+      <article class="mosaic-item">
+        <img alt="Automotriz y Repuestos – catálogo técnico" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/automotriz.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Automotriz (Repuestos)</h3>
+          <p class="mosaic-text">Catálogo organizado por compatibilidad. Búsqueda inteligente que facilita la compra técnica para mecánicos y particulares.</p>
+        </div>
+      </article>
+      <!-- Especializado -->
+      <article class="mosaic-item">
+        <img alt="Especializado – Mascotas y Veterinaria" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/especialidad.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Especializado (TCG y Hobbies)</h3>
+          <p class="mosaic-text">Gestión de inventario para nichos de coleccionismo. Automatización de eventos y programas de lealtad para comunidades activas.</p>
+        </div>
+      </article>
+      <!-- Ferretería -->
+      <article class="mosaic-item">
+        <img alt="Ferretería y Construcción – retail especializado" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/ferreteria.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Ferretería y Construcción</h3>
+          <p class="mosaic-text">Control de complejidad de SKUs y stock técnico online. Proyecta solidez mediante guías y visuales que atraen a contratistas.</p>
+        </div>
+      </article>
+      <!-- Deportes -->
+      <article class="mosaic-item">
+        <img alt="Deportes y Outdoor – retail deportivo" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/deportes.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Deportes y Outdoor</h3>
+          <p class="mosaic-text">Posicionamiento de marca con contenido aspiracional. Gestión eficiente de stock de temporada y equipamiento técnico especializado.</p>
+        </div>
+      </article>
+      <!-- Hogar -->
+      <article class="mosaic-item">
+        <img alt="Hogar y Decoración – visualización de ambientes" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/hogar.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Hogar y Decoración</h3>
+          <p class="mosaic-text">Gestión de productos voluminosos y variantes. Fotografía premium que permite al cliente proyectar el diseño en su propio espacio.</p>
+        </div>
+      </article>
+      <!-- Salud -->
+      <article class="mosaic-item">
+        <img alt="Salud y Belleza – retail profesional" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/salud.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Salud y Belleza</h3>
+          <p class="mosaic-text">Fomenta la recurrencia con CRM estratégico y contenido que genera confianza médica y cosmética.</p>
+        </div>
+      </article>
+      <!-- Mascotas -->
+      <article class="mosaic-item">
+        <img alt="Mascotas y Veterinaria – programas de lealtad" class="mosaic-img" height="750" loading="lazy" src="assets/img/sectors/retail/mascotas.webp" width="600"/>
+        <div class="mosaic-content">
+          <h3 class="mosaic-title">Mascotas y Veterinaria</h3>
+          <p class="mosaic-text">Sistemas de suscripción y fidelidad recurrente. Comunicación pet-friendly efectiva integrando nutrición y accesorios.</p>
+        </div>
+      </article>
+    </div>
+  </div>
 </section>
 <!-- ── 4. CARTELERÍA DIGITAL ── -->
 <section aria-labelledby="signage-heading" class="section-py" style="background: #09090b;">
